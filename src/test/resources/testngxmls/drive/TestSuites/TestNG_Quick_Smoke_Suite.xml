@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Drive Quick Smoke Test Suite" thread-count="1" preserve-order="true">
+	<!-- <listeners> <listener class-name = 'com.automation.report.CustomizedEmailableReport'/> 
+		</listeners> -->
+
+ <test name="GTN Smoke Test">
+	<!-- <parameter name="browser" value="chrome"></parameter> -->
+	<groups>		
+       <run>
+      <!--  <include name = "GTN Smoke"/> -->
+       <!-- <include name = "Component Builder"/>
+       <include name = "Formula Builder" /> -->
+      <!--  <include name = "Tech Config" /> -->
+       <!-- <include name = "APM_Master" /> -->
+       <include name = "Test" />
+       <!-- <include name = "Close Approval" /> -->
+       </run>
+     </groups>
+		<classes>
+			<class name="testCases.InvokeBrowser"/>
+			
+		</classes>
+	</test>
+	
+ <!-- <test name="Smoke Test IE">
+   <parameter name="browser" value="chrome"></parameter>
+   <classes>
+			<class name="com.dRive.tests.quicksmoke.TechConfigCBFB_test"/>
+		</classes>
+	</test> 
+ -->
+</suite>
