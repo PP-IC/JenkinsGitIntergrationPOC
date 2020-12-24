@@ -11,7 +11,7 @@ pipeline{
 
     stages{
         stage("SmokeExecution"){
-            
+             echo 'Smoke Execution'
             when { 
                 expression { params.Run_Smoke }
                 }
