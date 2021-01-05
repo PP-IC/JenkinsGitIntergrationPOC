@@ -25,9 +25,9 @@ pipeline {
                     
                     if (RE_ENV == 'X94Q1') {
                         echo 'I only execute on the QA2 Env'
-                        sh 'IF EXIST Screenshots rmdir /s /q Screenshots'
+                        sh 'IF EXIST "Screenshots" rmdir /s /q "Screenshots"'
                         echo 'Deleted Screenshots folder'
-                        sh 'IF EXIST **\/*.zip del **\/*.zip'
+                        sh 'IF EXIST "*.zip" del "*.zip"'
                         echo 'Deleted Zip folders'
                         bat """
                         java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome X94Q1
