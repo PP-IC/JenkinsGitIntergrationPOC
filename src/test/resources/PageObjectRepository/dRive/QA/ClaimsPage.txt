@@ -1,0 +1,77 @@
+#ClaimsPage 
+#elementname: locatortype: locatorvalue
+
+list_claimsMenuItem: xpath: //td[contains(text(),'Claims')]
+#also -- (//td[@class='toolStripButtonOver'][contains(.,'Claims')])[2]
+
+claimsSection: xpath: //*[text()='${section}']
+lnkView: xpath: //a[text()='${link}']
+btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+
+#ClaimsOptions
+lnk_dashboardOption: xpath: //div[contains(text(),'Dashboard')]
+lnk_submissionOption: xpath: //div[contains(text(),'Submission')]
+lnk_validationOption: xpath: //div[contains(text(),'Validation')]
+lnk_paymentOption: xpath: //div[contains(text(),'Payment')]
+lnk_customDataOption: xpath: //td[@class='menuTitleFieldOver']//div[contains(text(),'Custom Data')]
+lnk_reportsOption: xpath: //div[contains(text(),'Reports')]
+lnk_rebateChangeOption: xpath: //div[contains(text(),'Rebate Change')]
+
+#Dashboard
+lnk_dashboardOption1: xpath: //table[@id='isc_6Xtable']//div[@role='presentation'][contains(text(),'Dashboard')]
+verifyClaimsDashboard: xpath: //div[@class='breadCrumbToolStrip']
+
+#Common components from existing files
+lnk_filterDrop: xpath: //label[text()='${filterName} ']/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
+lnk_filterDrop1: xpath: //label[text()='${filterName}']//img[contains(@src,'comboBoxPicker')]
+lnk_dropDownItem: xpath: //tr[contains(@id,'PickListMenu')][.='${drpDownValue}']
+list_filterDropValues: xpath: //tr[contains(@id,'PickListMenu')]
+btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+
+#Submission
+btn_submissionAction: xpath: //td[text()='${btnName}']
+btn_filter: xpath: //img[@name='isc_1OMicon']
+submissionSection: xpath: //*[text()='Submission'][@class='activeBreadCrumbTitle']
+#headersSection: xpath: //*[@class='headerButton'][label='Headers']
+rightPanelSection: xpath: //b[text()='${titleName}']
+btn_mainTab: xpath: //*[text()='Main']
+btn_attachmentsTab: xpath: //*[text()='Attachments']
+btn_fileManagerTab: xpath: //*[text()='File Manager']
+lbl_workflowID: xpath: //label[text()='WorkflowID']
+lbl_workflowName: xpath: //label[text()='WorkflowName']
+list_headerDetails: xpath: //td[class='headerTitle']//div[text()='${list}']
+header: xpath: //td[contains(@id,'HeadersTreeGrid')][contains(text(),'${headerName}')]
+workflowStatus: xpath: //td[@class='treeCellSelected'][contains(text(),'${statusValue}')]
+inp_headerFilter: xpath: //tr[@role='listitem']/td[1]//input[@type='TEXT'][1]
+inp_statusFilter: xpath: //tr[@role='listitem']/td[1]//input[@type='TEXT'][1]/ancestor::td/following-sibling::td//input
+
+
+#Status Flag
+img_completeStatus: xpath: //img[contains(@src,'completed')]
+img_pendingStatus: xpath: //img[contains(@src,'pending')]
+
+#Sumbission#Main
+Submission Header: xpath: (//b[contains(.,'Submission')])[3]
+tbMain: xpath: //b[text()='Main']/../../following-sibling::td[.='${IdText}']
+lblOrganizationName: xpath: //label[text()='Organization Name']
+lblContractType: xpath: //label[text()='Contract Type']
+lblState: xpath: //label[text()='State']
+lblLabeler: xpath: //label[text()='Labeler']
+lblSubmissionPeriod: xpath: //label[text()='Submission Period *']
+lblContractname: xpath: //label[text()='Contract Name']
+
+#CustomData
+lnk_pharmacyCustomData: xpath: //div[text()='Pharmacy Custom Data']
+
+#RebateChange
+lnk_ROSI: xpath: //div[text()='ROSI']
+lnk_PQAS: xpath: //div[text()='PQAS']
+lnk_NDCPaymentHistoryReport: xpath: //div[text()='NDC Payment History Report']
+lnk_PaymentRequestReport: xpath: //div[text()='Payment Request Report']
+lnk_CommentHistoryReport: xpath: //div[text()='Comment History Report']
+lnk_StateClaimComparisonReport: xpath: //div[text()='State Claim Comparison Report']
+lnk_CheckRequestReport: xpath: //div[text()='Check Request Report']
+
+
+
+

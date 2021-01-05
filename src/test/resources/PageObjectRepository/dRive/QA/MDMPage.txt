@@ -1,0 +1,53 @@
+#Generic elements
+btn_Action:	//div[contains(text(),'${btnname}')]
+btn_Open:	//img[contains(@src,'print.png')]
+btn_Download:	//img[contains(@src,'download.png')]
+btn_Refresh:	//img[contains(@src,'refresh.png')]
+btn_Filter:	//img[contains(@src,'filter.png')]
+btn_Cascade:	//img[contains(@src,'cascade.png')]
+btn_Minimize:	//img[contains(@src,'minimize.png')]
+
+#Master Data management -> Business Entities
+lbl_breadcrumbs	//div[@class='normal']//ancestor::td[text()= 'Business Entities']	
+lbl_AdvanceSearch	//td[contain()[text(), 'Advanced Search']]
+lbl_field: 	//div[text()='Field']
+lbl_Opertor:	//div[text()='Operator']
+lbl_Value:	//div[text()='Value']
+lbl_relation:	//div[text()='Relation to Next']
+chk_box_BusinessEntity:	//table[@id='isc_C8table']//ancestor::span[1]
+
+	
+#Master Data Management -> Relationship Management	
+lnk_RelationshipMgmt:	//td[@class='menuTitleField' and contains(text(),'Relationship Management')]
+img_SearchBusinessEntity1:	(//label[contains(text(),'Business Entity Name')])[1]//ancestor::tr//img[contains(@src,'Simplicity/images/actions')] 
+img_SearchBusinessEntity2:	(//label[contains(text(),'Business Entity Name')])[2]//ancestor::tr//img[contains(@src,'Simplicity/images/actions')] 
+#Select Business Entity 1 Popup Window	
+txt_SelectBusinessEntity:	(//td[contains(text(),'Select Business Entity')]//ancestor::div//tr[@role='listitem'])[2]
+btn_Select: //td[@class="buttonTitle"]//div[contains(text(),'Select')]
+#Select Business Entity 2 Popup Window	
+txt_SelectBusinessEntity:	(//td[contains(text(),'Select Business Entity')]//ancestor::div//tr[@role='listitem'])[2]
+btn_Select:	class=//td[@class="buttonTitle"]//div[contains(text(),'Select')]
+
+#Relationship
+dropdown_RelationshipType:	//img[contains(@src,'comboBoxPicker')]
+value_RelationshipType:	//td[@class="pickListCell"]//div[contains(text(),'Parent Child')]
+dateWidget_RelationshipStartDate:	//label[contains(text(),'Relationship Start Date')]//ancestor::td//following-sibling::td//img[contains(@src,'date_control')] 
+txtField_RelationshipStartDate:	//input[@name="RELATIONSHIP_START_DATE_dateTextField"]
+dateWidget_RelationshipEndDate:	//label[contains(text(),'Relationship End Date')]//ancestor::td//following-sibling::td//img[contains(@src,'date_control')]
+txtField_RelationshipEndDate:	//input[@name="RELATIONSHIP_END_DATE_dateTextField"]
+btn_Add:	//td[contains(text(),'Add')]
+
+#Advanced Search	
+textArea_BusinessEntityName1:	((//tr[@role='listitem'])[1]//input)[1]
+textArea_BusinessEntityName2:	((//tr[@role='listitem'])[1]//input)[2]
+textArea_BusinessEntityName3:	((//tr[@role='listitem'])[1]//input)[3]
+txtField_AdvanceSearch:	(//tr[@role='listitem'])[2]
+txtField_RelationshipStartDate:	//input[@name="RELATIONSHIP_START_DATE_dateTextField"]
+txtField_RelationshipEndDate:	//input[@name="RELATIONSHIP_END_DATE_dateTextField"]
+btn_Add:	//td[contains(text(),'Update')]
+
+#Eligible Customer Groups
+btn_NewEligibleCustomerGroup:	//td[@class='buttonTitle']//div[text()='New']
+btn_OpenEligibleCustomerGroup:	//td[@class='buttonTitle']//div[text()='Open']
+btn_CloneEligibleCustomerGroup:	//td[@class='buttonTitle']//div[text()='Clone']
+btn_DeleteEligibleCustomerGroup:	//td[@class='buttonTitle']//div[text()='Delete']

@@ -1,0 +1,19 @@
+#HomePage 
+#elementname: locatortype: locatorvalue
+
+img_ICLogo: xpath: //img[contains(@src,'integrichain_logo_header.png')]
+btn_ModuleTabs: xpath: //td[text()='${ModuleName}']
+lnk_DropDownValues: xpath: //table[@class='menuTable']//*[text()='${itemName}']
+btn_logout: xpath: //td[text()='Logout']
+btn_onDialog: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[text()='${btnName}']
+txt_alertMsg: xpath: ((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span)
+btn_tabs: xpath: (//div[@class='toolStrip']//*[text()='${tab}'])[last()]
+lbl_loader: xpath: //div[@role='label']//td[text()='Loading...']
+btn_OkDialog: xpath: //div[contains(@role,'alertdialog') and not(contains(@style,'visibility: hidden'))]//div[text()='OK']
+loader:   xpath:  //*[contains(text(),'Loading..')]
+headerText:						xpath:           (//td[@class='windowHeaderText' and text()='${heading}'])[${index}]
+dialogHeader:  					xpath:				(//td[@class='dialogHeaderText' and text()='${heading}'])[${index}]
+txt_breadCrumbList:				xpath:			//div[@class='breadCrumbToolStrip']//div[@role='label']
+lnk_EditorsList: xpath: //*[@class='breadCrumbTitle' and text()='${listName}']
+txt_alertMsg_comp: xpath: (((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span))[2]
+btn_refreshGrid: xpath: //div[@aria-label='Refresh Grid']

@@ -1,0 +1,9 @@
+#IndexPage
+#elementname: locatortype: locatorvalue
+Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
+
+img_driveLogo: xpath: //img[contains(@src,'d-RiveRA-logo.png')]
+inp_emailPwd: xpath: //nobr[text()='${fieldLabel}']/../../../following-sibling::td//input
+btn_loginReset: xpath: //div[text()='${btnName}']
+lnk_forgotPwd: xpath: //nobr[text()='Forgot password?']
+buildVersion: xpath: //*[@class='windowHeaderText']//following::span[contains(text(),'d-Rive Release')]

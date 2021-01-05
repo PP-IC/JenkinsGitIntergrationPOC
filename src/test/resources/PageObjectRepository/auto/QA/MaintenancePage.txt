@@ -1,0 +1,321 @@
+#IndexPage
+#elementname: locatortype: locatorvalue
+Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
+
+lnk_system_price_list:xpath://table[contains(@id,'table')]/tbody/tr/td[1][.='${listName}']/following-sibling::td[6][.='SYSTEM']
+btn_editors_page:xpath://*[contains(text(),'${btn_name}')]
+inp_filterlastUpdatedby: xpath: (//td[@class='recordEditorCell'])[7]//input
+inp_cloneTitle: xpath: //label[contains(text(),'List Name')]/../../../following-sibling::td//input
+txt_alertMsg: xpath: //div[contains(@role,'dialog')]//td[@class='formCell']//span
+btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+txt_listStatus: xpath: (//table[@class='listTable']//*[text()='${pkgName}'])[1]//ancestor::tr[@role='listitem']//td[9]
+txt_snapshotCount: xpath: (//table[@class='listTable']//*[text()='${pkgName}'])[1]//ancestor::tr[@role='listitem']//td[8]
+btn_windowBody: xpath: //div[@class='windowBody']//td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+btn_cmntHistory: xpath: //div[@aria-label='Comment History']
+txt_cmntInHistory: xpath: //td[5][starts-with(.,'${newVal}')]/following-sibling::td[.='${cmnt}']
+span_updateImg: xpath:(//div[@class='gridBody'][2]//tr[@role='listitem'])[1]//td[${index}]//span[contains(@style,'color: red')]
+span_updateColImg: xpath:(//div[@class='gridBody'][2]//tr[@role='listitem'])[${rowIndex}]//td[${index}]//span[contains(@style,'color: red')]
+
+#User uploads
+txt_userListName: xpath: (//table[@class='listTable']//*[text()='${listName}']/..)[1]
+inp_userUploadName: xpath: //label[text()='Enter User Uploads List Name']/../../../following-sibling::td//input
+txt_firstCell: xpath: //tr[@role='listitem']//td[1]|//div[@class='gridBody'][2]//tr[@role='listitem']//td[1]
+txt_recordCell: xpath: //div[@class='gridBody'][2]//tr[@role='listitem']//td[${columnIndex}]
+inp_firstCell: xpath: //tr[@role='listitem']//td[1]//input|//div[@class='gridBody'][2]//tr[@role='listitem']//td[1]//input
+inp_recordCell: xpath: //div[@class='gridBody'][2]//tr[@role='listitem']//td[${columnIndex}]//input
+txtarea_userComment: xpath: //b[text()='User Comment:']/../../../following-sibling::tr//textarea
+list_allSystemLists: xpath: //div[@class='gridBody']//td[7][.='SYSTEM']
+txt_rowRecordCell: xpath: //div[@class='gridBody'][2]//tr[@role='listitem'][${rowIndex}]//td[${columnIndex}]
+inp_rowRecordCell: xpath: //div[@class='gridBody'][2]//tr[@role='listitem'][${rowIndex}]//td[${columnIndex}]//input
+
+#Editors_Lists
+btn_editors_page:xpath://*[contains(text(),'${btn_name}')]
+btn_clone_list:xpath://*[text()='Clone List']
+btn_clone_price_list:xpath://div[text()='Clone Price List']
+btn_add_comment:xpath://*[text()="Add Comment"]
+btn_validate_values:xpath://div[text()='Validate Values']
+btn_Save:xpath://div[text()='Save']
+input_field_list_name:xpath://input[@name="LIST_NAME"]
+inp_last_updated_by:xpath://input[contains(@name,'LAST_UPDATED_BY')]
+alert_text_listName:xpath://b[contains(text(),'${listName}')]
+alert_text_message:xpath://*[contains(text(),'${msg}')]
+
+#Price_List
+lnk_system_price_list:xpath://table[contains(@id,'table')]/tbody/tr/td[1][.='${listName}']/following-sibling::td[6][.='SYSTEM']
+lnk_cloned_price_list:xpath://table[contains(@id,'table')]/tbody/tr/td[1][contains(.,'${listName}')]
+
+lnk_first_package_price:xpath://div[@class='gridBody']//table[@class='listTable']/tbody/tr[1]/td[6]
+input_first_package_price:xpath://div[@class='gridBody']//table[@class='listTable']/tbody//tr[1]//td[6]//input
+input_comment_box:xpath://textarea[@name="COMMENT_VALUE"]
+btn_add_record:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[1]//td[1]//span
+btn_delete_record:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[1]//td[2]//span
+lnk_last_package_price:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[position()=last()]/td[6]
+input_last_package_price:xpath://div[@class='gridBody']//table[@class="listTable"]/tbody//tr[position()=last()]/td[6]//input
+lnk_last_start_date:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[position()=last()]/td[7]
+input_last_start_date:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[position()=last()]/td[7]//input
+lnk_last_end_date:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[position()=last()]/td[8]
+input_last_end_date:xpath://div[@class='gridBody']//table[@class="listTable"]//tbody//tr[position()=last()]/td[8]//input
+lnk_value_rows_pl:xpath://div[@class='gridBody']//table//tbody//tr
+
+#Metric_Summary_List
+btn_new:xpath://*[text()='Open']/following::*[text()='New']
+dropdown_create_list_fields:xpath://label[text()='${fieldName}']/ancestor::td/following-sibling::td//img
+dropdown_value:xpath://tr[contains(@id,'PickListMenu')]//*[text()='${value}']
+input_new_list_name:xpath://input[@name="NEW_METRIC_SUMMARY_LIST_NAME"]
+btn_clone_metric_summary_list:xpath://div[text()='Clone Metric Summary']
+txt_pkgCount: xpath: (//table[@class='listTable']//*[text()='${listName}'])[1]//ancestor::tr[@role='listitem']//td[10]
+list_msItemsGrid: xpath: (//div[@class='gridBody'])[1]//table//tr[@role='listitem']
+list_msValueGrid: xpath: (//div[@class='gridBody'])[2]//table//tr[@role='listitem']
+lbl_copiedBrandName: xpath: //div[@class='gridBody'][1]//table//tr[1]//td[1]//span/../..//following-sibling::td[2]
+lbl_copiedGTNType: xpath: //div[@class='gridBody'][1]//table//tr[1]//td[1]//span/../..//following-sibling::td[3]
+lnk_editNewRowAdded: xpath: ((//div[@class='gridBody'])[1]//table//tr[@role='listitem'])[${rowIndex}]//td[4]//span
+lbl_typeCodeGTNChooser: xpath: //div[@class='windowBody']//td[.='${typeCode}']
+btn_addRecord:xpath://div[@class='gridBody'][1]//table//tbody//tr[${rowIndex}]//td[1]//span
+lnk_firstRecordValueOfRow: xpath: //div[@class='gridBody'][2]//table//tbody//tr[${rowIndex}]//td[1]
+inp_firstRecordValueOfRow: xpath: //div[@class='gridBody'][2]//table//tbody//tr[${rowIndex}]//td[1]//input
+list_searchResults: xpath: //div[@class='gridBody'][1]//table//tr//td[${colNum}]//span/../..//following-sibling::td[2][.='${value}']
+div_tooltip: xpath:(//div[contains(@eventproxy,'isc_DynamicFormSection')])//div[@class='staticTextItem' and contains(text(),'Comment :')]
+lbl_itemNameInGrid:xpath: //table//tbody//tr[${index}]//td[.='${brndName}']//following-sibling::td[1][.='${gtnType}']
+
+lnk_first_value:xpath://div[@class='gridBody'][2]//table//tbody//tr[1]//td[1]
+input_first_value:xpath://div[@class='gridBody'][2]//table//tbody//tr[1]//td[1]//input
+btn_add_record_msl:xpath://div[@class='gridBody'][1]//table//tbody//tr[1]//td[1]//span
+btn_delete_record_msl:xpath://div[@class='gridBody'][1]//table//tbody//tr[1]//td[2]//span
+lnk_value_rows:xpath://div[@class='gridBody'][2]//table//tbody//tr
+lnk_editRecordWACList: xpath: //div[@class='gridBody'][1]//table//tbody//tr[1]//td[6]
+inp_editRecordWACList: xpath: //div[@class='gridBody'][1]//table//tbody//tr[1]//td[6]//input
+
+dwnld_btn_main:  xpath  :(//td[@class='buttonTitle']//img[contains(@src,'${option}')])[1]
+dwnld_option:  xpath  ://div[@class="normal" and not(contains(@style, "visibility: hidden"))]//td[@class='menuTitleField'][.='${option}']
+
+#Transaction Summary List
+dropdwn_dataType:                   xpath       ://label[text()='${menuLable}']/following::table[@class="selectItemControl"]//img[contains(@src,'comboBoxPicker')]
+list_drpdwnValues:                  xpath      	://table[@class='listTable']//tr[contains(@id,'PickListMenu')]
+img_blankFieldError:				xpath		://*[text()='${mandatFieldName}']/following::input[1]/../preceding-sibling::td//img[contains(@src,'exclamation')]
+list_ndcChooserValues:				xpath		:(//div[@role='dialog']//tr[@role='listitem'])[1]//td
+txt_isLocked:						xpath		:(//table[@class='listTable']//*[text()='${listName}'])[1]//ancestor::tr[@role='listitem']//td[9]
+txt_listUneditable:					xpath		://td[.=' *This list cannot be edited. It is used in an Assumption Package. ']
+lnk_startEndYr: 					xpath		://label[text()='${yrLabel}']/following::table[1][@class="selectItemControl"]//img[contains(@src,'comboBoxPicker')]
+
+#APM
+lnk_mandatoryAssign:				xpath		://div[@class='gridBody']//td[5][.='Y']/following-sibling::td//img
+lnk_assignItem:                     xpath       :(//div[@class='gridBody']//td[5][.='Y']/following-sibling::td//img)[${index}]
+lbl_priceListName:                  xpath      	:(//tr[not(@aria-selected='true')]//td[contains(@class,'myHighGridCell') and starts-with(.,'${listName}')])[last()]
+chkbx_priceList:  					xpath		://div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//td[contains(@class,'myHighGridCell') and starts-with(.,'${listName}')]/preceding-sibling::td
+lnk_attachedDataSrc:				xpath		:(//div[@class='gridBody']//td[5][.='Y'])[${index}]//following-sibling::td//a
+Inp_ForcastAccrualPkgName:	        xpath		://*[text()='GTN Forecast Accrual Assumption Package Name']/following::input[1]
+list_atchdSources:					xpath		://div[@class='gridBody']//td[5][.='Y']//following-sibling::td//a
+chkbox_systemList:					xpath		://div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//tr[@role='listitem']//td[5][.='SYSTEM']/preceding-sibling::td//span[@eventpart='valueicon']
+lbl_systemListAttached:				xpath		:(//div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//tr[@role='listitem']//td[5][.='SYSTEM']/preceding-sibling::td)[2]
+img_assignList:						xpath		://div[@class='gridBody']//td[2][.='${input}']/following-sibling::td[1][.='${src}']/following-sibling::td//img[contains(@src,'edit')]
+lnk_listAttached:					xpath		://div[@class='gridBody']//td[2][.='${input}']/following-sibling::td[1][.='${src}']/following-sibling::td//a
+
+
+# Section copied from APMScenarioPageObjects
+#TC11
+GTNScenario: 						xpath		://*[text()='${option}']
+DropDown: 							xpath		://*[text()='${option}']/following::img[1]
+
+#TC12
+Btn_PricingScenarioNew: 			xpath		://*[text()='New']
+Inp_PricingScenarioCollectioName: 	xpath		://*[text()='Pricing Scenario Collection Name']/following::input[1]
+TxtAr_PricingSceanrioNote: 			xpath		://*[text()='Note']/following::textarea[1]
+Inp_PricingScenarioForecast: 		xpath		://*[text()='Forecast Cycle']/following::input[1]
+ChkBox_SelectCurrentSigned: 		xpath		://*[text()='Select Current Signed']/preceding::span[1]
+Btn_PricingScenarioCollSave: 		xpath		://*[text()='Save']
+Btn_PricingScenarioDown: 			xpath		://*[text()='Done']
+Table_PricingScenario: 				xpath		://div[@class='gridBody']//table[@class="listTable"]/tbody/tr
+Table_PricingScenarioData:			xpath		://div[@class='gridBody']//table[@class="listTable"]/tbody/tr[${option}]/td[2]
+TableChkBox_PricingScenario:		xpath		://div[@class='gridBody']//table[@class="listTable"]/tbody/tr[${option}]/td[1]/following::span[1]
+BtnOk_PricingScenarioSave:			xpath		://*[text()='OK']
+chkbx_scenarioName:					 xpath: //div[@class='gridBody']//table[@class="listTable"]//td[.='${scenarioName}']/preceding-sibling::td//span[@eventpart='valueicon']
+chkbx_allScenarios:					xpath: //div[@class='headerBar']//img[contains(@src,'check')]
+chkbx_slctScenario:					xpath: 	(//div[@class='gridBody']//table[@class="listTable"]//span[@eventpart='valueicon'])[${index}]
+
+#TC82
+Table_PricingScenarioCurrent:			xpath		://div[@class='gridBody']//table[@class="listTable"]/tbody/tr[${option}]/td[6]
+Table_PricingScenarioSigned:			xpath		://div[@class='gridBody']//table[@class="listTable"]/tbody/tr[${option}]/td[7]
+Table_PricingScenarioNameCol:				xpath		://div[@class='gridBody']//table[@class="listTable"]/tbody/tr[${option}]/td[2]
+Filter_PricingCustomer:					xpath		://div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[3]
+Filter_InpPricingCustomer:					xpath		://div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[3]//input[1]
+Filter_PricingStartDate:				xpath		://div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[5]
+Filter_InpPricingStartDate:				xpath		://div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[5]//input[1]
+Filter_InpScenarioName: 				xpath		: //div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[2]
+inp_scenarioName: 						xpath		: //div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[2]//input
+inp_marketType:							xpath		: //div[contains(@eventproxy,'filterEditor')]//table[@class='listTable']/tbody/tr/td[4]//input
+
+#TC83
+Table_PricingScenarioCustomerField:			xpath		://div[@class='gridBody']//table[@class="listTable"]//td[.='${scenarioName}']/following-sibling::td[3]
+Table_PricingScenarioStartDateField:		xpath		://div[@class='gridBody']//table[@class="listTable"]//td[.='${scenarioName}']/following-sibling::td[5]
+Span_UncheckAll:							xpath		://div[@class='headerBar']//table/tbody/tr/td[1]//span
+
+#TC13
+Btn_CloseAccuralAssumptionNew:		xpath		://*[text()='New']
+Inp_CloseAccrualAssumptionPkgName:	xpath		://*[text()='GTN Close Accrual Assumption Package Name']/following::input[1]
+TxtAr_CloseAccuralNote:				xpath		://*[text()='Note']/following::textarea[1]
+Inp_CloseAccuralForecastCycle:		xpath		://*[text()='Forecast Cycle']/following::input[1]
+Btn_CloseAccuralAssumptionSave:		xpath		://*[text()='Save']
+BtnOK_AfterCloseAccuralAssumption:	xpath		://*[text()='OK']
+Btn_CloseAccuralDone:				xpath		://*[text()='Done']
+txtarea_apmNote:					xpath		:(//*[text()='Note']/following::textarea)[1]
+
+#TC23
+Btn_TransactionSummaryListNew:		xpath		://*[text()='New']
+Inp_TransacSummaryListName:			xpath		://*[text()='Transaction Summary List Name']/following::input[1]
+Inp_TransactionAsOfDate:			xpath		://*[text()='As Of Date']/following::input[1]
+Btn_TransactionSave:				xpath		://*[text()='OK']
+Label_TransactionSavedSuccessfully:	xpath		://*[text()='Transaction list created successfully']
+List_DropDown:						xpath		://*[text()='${option}']/following::img[1]
+Sel_Text:							xpath		://*[starts-with(@id, 'isc_PickListMenu')]/td[.='${option}']
+Sec_DropDown:						xpath		://*[text()='Data Type']/following::*[contains(text(),'${option}')]
+
+#TC24
+Table_TransactionSummaryMainTable:	xpath		://*[text()='List Name']/following::table[@class='listTable']//*[contains(text(),'${option}')]
+Btn_TransactionClone:				xpath		://*[text()='Clone List']
+Inp_TransactionCloneName:			xpath		://*[text()='Enter Transaction Summary List Name']/following::input[1]
+Btn_TransactionCloneSubmit:			xpath		://*[text()='Enter Transaction Summary List Name']/following::div[1]
+Btn_OKForClonedList:				xpath		://*[text()='OK']
+
+#TC25
+Table_SummaryListMainCell:			xpath		:(//table[@class='listTable']/tbody[2]/tr/td[5])[2]
+Cell_EditExistTranscListFirst:		xpath		:((//table[@class='listTable'])[2]//tbody/tr/td[1])[1]
+Cell_EditExistTranscListFirstEdit:	xpath		:((//table[@class='listTable'])[2]//tbody/tr/td[1]//input[1])[1]
+Img_EditExistTranscMarketType:		xpath		:((//table[@class='listTable'])[1]//tbody/tr[${option}]/td[7])[1]
+Cell_EditExistTranscMarketType:		xpath		:((//table[@class='listTable'])[1]//tbody/tr[${option}]/td[7])[1]
+Select_TranscMarketType:			xpath		://*[contains(text(),'Market Chooser')]/following::*[text()='${option}']
+Btn_OKTransactionChnage:			xpath		://*[contains(text(),'Market Chooser')]/following::*[text()='OK']
+Table_EditExistTranscList:			xpath		:(//table[@class='listTable'])[1]//tbody/tr
+Table_ExistTranscNewRowVal:			xpath		:((//table[@class='listTable'])[2]//tbody/tr[${option}]/td[${option}])[1]
+TxtAr_TransactionCommentBox:		xpath		://*[contains(text(),'User Comment')]/following::textarea[1]
+Btn_TransactionAddComment:			xpath		://*[text()='Add Comment']
+Btn_TransactionSummaryOpen:			xpath		://*[text()='Open']
+Btn_TranscSummaryValidateValues:	xpath		://*[text()='Validate Values']
+Btn_EditTransactionSummarySave:		xpath		://*[text()='Save']
+Btn_NewRowAdd:						xpath		:((//table[@class='listTable'])[1]//tbody/tr[${option}]/td[1])[1]
+Btn_NewRowDelete:					xpath		:((//table[@class='listTable'])[1]//tbody/tr[${option}]/td[2])[1]
+Btn_OKDeleteconfirm:				xpath		://*[text()='OK']
+dropdwn_MetricSummaryType:			xpath		:(//label[text()='${menuLable}']/following::table[@class="selectItemControl"])[1]
+btn_assignNew: 						xpath		://div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//td[@class='buttonTitle']//div[text()='Assign']
+inp_smryListFilter:     			xpath  		://div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//input[contains(@name,'EDITOR_LIST_NAME')]
+
+#Additional_APM
+inp_filterTypeCode:  xpath:  (//td[@class='recordEditorCell'])[2]//input
+btn_add_year:        xpath:  //*[text()='Add Year']
+lbl_year:            xpath:  //*[text()='Y-${year}']
+lnk_list_NMS:        xpath:  (//table[contains(@id,'table')]/tbody/tr/td[2][.='NATIONAL_MARKET_SHARE'])[1]
+lnk_listWithTypeName: xpath: (//table[contains(@id,'table')]/tbody/tr/td[2][.='${typeName}'])[1]
+lnk_system_list:     xpath:  //table[contains(@id,'table')]/tbody/tr[1]
+lnk_EditorsList: xpath: //*[@class='breadCrumbTitle' and text()='${listName}']
+loader:   xpath:  //*[text()='Loading...']
+
+#TC71&73
+Btn_Generic:      xpath  ://*[text()='${option}']
+Table_PSCMain:      xpath  ://*[@class='headerTitle']
+Table_PCSRow:      xpath  :(//table[@class='listTable'])[2]/tbody/tr
+Cell_PSCTableCellValue:    xpath  :(//table[@class='listTable'])[2]/tbody/tr[${option}]/td[${option}]
+Cell_PSCNameVal:     xpath  :(//table[@class='listTable'])[2]/tbody/tr[${option}1]/td[1]
+Cell_PSCTable:      xpath  :(//table[@class='listTable'])[2]/tbody/tr/td[1][.='${option}']
+Cell_PSCTablecase:xpath  :(//table[@class='listTable'])[2]/tbody/tr/td[1]
+ToolTip_PSC:      css   :.ui-tooltip
+
+#TC75
+Inp_PSCCloneName:     xpath  ://*[text()='Pricing Scenario Collection Name']/following::input[1]
+Inp_PSCCloneForecastCycle:   xpath  :(//*[text()='Forecast Cycle']/following::input[1])[2]
+Inp_PSCCloneNote:     xpath  ://*[text()='Note']/following::textarea[1]
+Btn_PSCClone:      xpath  ://*[text()='Note']/following::*[text()='Clone']
+Btn_PSCCancel:      xpath  ://*[text()='Done']/preceding::*[text()='${option}']
+Inp_filterPricingScenarioName: xpath: (//td[@class='recordEditorCell'])[1]//input
+inp_searchFilterRow:   xpath: (//td[@class='recordEditorCell'])[${index}]//input
+
+div_tooltipPricing:   xpath:      (//div[contains(@eventproxy,'isc_Label')])//td[@class='gridHover']
+div_firstValue:    xpath:      //div[@class='gridBody'][${index}]//table//tbody//tr[1]//td[${value}]
+
+img_buttonSrc:    xpath:      (//td[@class='buttonTitle']//img[contains(@src,'${option}')])[2]
+
+#Upload Section
+lbl_uploadColumns: xpath: //td[contains(@class,'headerTitle')][.='${columnName}']
+hdr_uploadModal: xpath: //div[@role='dialog']//div[@role='label']//td[@class='windowHeaderText' and text()='${hdr}']
+inp_uploadField: xpath: //*[contains(.,'${fieldName}')]/ancestor::td/following-sibling::td//*[contains(@class,'selectItemText') or contains(@class,'TextItem') or contains(@class,'textItem')]
+inp_fileBrowse: xpath: //*[contains(.,'File Name')]/ancestor::div//following-sibling::div//input[@class='gwt-FileUpload']
+lnk_dataTypeDropdown: xpath: //*[contains(.,'Data Type')]/ancestor::td/following-sibling::td//div/../following-sibling::td//img[contains(@src,'comboBoxPicker')]
+txt_dropdownHdr: xpath: //div[@class='scrollingMenu']//td[@class='headerTitle'][.='${valueLabel}']
+img_captcha: xpath: //img[contains(@src,'Captcha')]
+img_captchaRefresh: xpath: //img[contains(@src,'Captcha')]/ancestor::div[@class='normal']/following-sibling::div//img[contains(@src,'refresh')]
+lnk_viewDropdown: xpath: //label[text()='View']/../following-sibling::td//td[@class='selectItemPickerIcon']
+txt_viewListOption: xpath: //div[@class='pickListMenuBody']//td[.='${listItem}']
+lbl_noDataAvail: xpath: //td[@class='emptyMessage'][.='No Data Available']
+list_uploadedLists: xpath: //td[@class='headerTitle']/ancestor::div//following-sibling::div//div[@class='gridBody']//table[@role='presentation']//tr[@role='listitem']
+btn_filterIcon: xpath: //img[contains(@src,'RecordEditor/filter')]
+list_fileNameResults: xpath: (//div[@class='gridBody']//table[@class='listTable'])[1]//td
+list_searchedUploads: xpath: (//div[@class='gridBody']//table[@class='listTable'])[2]//td[${columnIndex}]
+lnk_uploadedOn: xpath: (//td[@class='recordEditorCell'])[17]
+inp_DateRange: xpath: (//div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//input)[${index}]
+pnl_fromToDate: xpath: //div[@role='dialog']//label[text()='${lblTxt}']/../following-sibling::td
+lnk_fromToDropdown: xpath: //div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and contains(@eventproxy,'RelativeDateItem')][${index}]//img[contains(@src,'comboBoxPicker')]
+inp_criteriaQuantity: xpath: //div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and contains(@eventproxy,'RelativeDateItem')][${index}]//input[contains(@name,'quantityField')]
+txt_fromToDate: xpath: //div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and contains(@eventproxy,'RelativeDateItem')][${index}]//td[@class='formHint']
+btn_dialogFilter: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//td[text()='Filter']
+lnk_datePicker: xpath: //div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and contains(@eventproxy,'RelativeDateItem')][${index}]//img[contains(@src,'date_control')]
+img_monthChooser: xpath: //div[@class='normal' and not(@aria-hidden='true') and not(contains(@eventproxy,'navigationLayout'))]//div[@class= 'dateChooserNavButton' and contains(@eventproxy,"monthChooserButton")]
+lnk_monthChoose: xpath: //div[@class="dateChooserMonthMenu" and not(@aria-hidden="true")]//td[contains(@id,'showMonth')][.='${month}']
+img_yearChooser: xpath: //div[@class='normal' and not(@aria-hidden='true') and not(contains(@eventproxy,'navigationLayout'))]//div[contains(@eventproxy,"yearChooserButton")]//tr//td[contains(@class,'button')]
+lnk_yearChoose: xpath: //div[@class="dateChooserYearMenu" and not(@aria-hidden="true")]//td[contains(@id,'showYear')][.='${yr}']
+lnk_dateToSelect: xpath: //div[@class='normal' and not(@aria-hidden='true') and not(contains(@eventproxy,'navigationLayout'))]//td[contains(@class,'dateChooser') and not(contains(@class,'dateChooserDisabled'))][.='${date}']
+Img_ScrollRight:					xpath		://img[contains(@name,'corner')]/following::img[6]
+img_horizScroll:					xpath		://div[@class='listGrid']//img[contains(@src,'hscroll_track')]
+img_scrollHoriz:					xpath		://div[@class='listGrid']//img[contains(@src,'hthumb_grip')]
+
+#Release History
+lnk_print: xpath: //img[contains(@src,'actions/print')]
+txt_printPreview: xpath: //div[@role='label']//td[@class='windowHeaderText' and text()='Print Preview']
+lnk_closeIcon: xpath: //div[contains(@eventproxy,'PrintWindow')]//img[contains(@src,'close.png')]
+lbl_printCol: xpath: //td[@class='printHeader'][.='${columnName}']
+list_releaseRows: xpath: //tr[@role='listitem']
+list_releaseRecords: xpath: //div[@class='gridBody']//tr[@role='listitem']//td[${columnIndex}]
+iframe_printCanvas: xpath: //iframe[contains(@id,'isc_PrintCanvas')]
+txt_buildId: xpath: //label[text()='Build ID ']/../../following-sibling::td[.='${IdText}']
+txt_buildNum: xpath: //div[@class='gridBody']//tr[@role='listitem']//td[3][.='${buildNo}']
+lbl_ReleaseText: xpath: //td[@class='impMsg'][text()='${lbl}']
+
+#Product Labels
+chkbx_ndc11: xpath: //tr[@role='listitem']//*[text()='${ndc11}']/ancestor::tr//span[@eventpart='valueicon']
+lbl_listLabels: xpath: //div[@class='scrollingMenu']//td[contains(@class,'pickListCell')][.='${label}']
+txt_LabelsForNDC: xpath: //tr[@role='listitem']//*[text()='${ndc11}']/ancestor::tr//td[last()]
+inp_assignLabel: xpath: //label[text()='Assign Label']/ancestor::td/following-sibling::td//input
+inp_filterByLabel: xpath: //label[text()='Filter by Label']/ancestor::td/following-sibling::td//input
+downloadFirst:					xpath:				(//img[contains(@src,'${values}')])[2]
+
+txt_commentInHistory: xpath: //td[11][starts-with(.,'${newVal}')]/following-sibling::td[.='${cmnt}']
+inp_priceListName: 			xpath:					//label[text()='Enter Price List Name']/../../../following-sibling::td//input
+
+#Explain Report Download
+dwnld_btn_ExplainReport:  xpath  :(//td[@class='buttonTitle']//img[contains(@src,'${option}')])[2]
+lnk_print_ExplainReport: xpath: (//img[contains(@src,'actions/print')])[2]
+
+#Close Month
+lnk_filterDrop: xpath: //label[text()='${filterName}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
+list_filterDropValues: xpath: //tr[contains(@id,'PickListMenu')]
+lnk_dropDownItem: xpath: //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.='${name}']
+
+#Smoke Editors:
+list_allListsDisplayed: xpath: //td[@class='headerTitle']/ancestor::div//following-sibling::div[@class='gridBody']//table[@role='presentation']//tr[@role='listitem']
+txt_listOpen: xpath: //td[@class='formTitle'][contains(.,'${fieldLabel}')]/following-sibling::td[@class='formCell'][1]
+list_enteriesOnList: xpath: //div[@class='gridBody']//table[@role='presentation']//tr[@role='listitem']
+img_greenTicksPriceList: xpath: //div[@class='gridBody']//table[@role='presentation']//tr[@role='listitem']//*[contains(@style,'ok_status')]
+drpIcon_dataType: xpath: //td[@class='formTitle'][contains(.,'Data Type')]/following-sibling::td//td[@class='selectItemPickerIcon']
+lnk_datePickerAsOfDate: xpath: //td[@class='formTitle'][contains(.,'As Of Date')]/following::input/../following-sibling::td//img[contains(@src,'date')]
+
+#New Transaction Smry
+list_allDataTypes: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//tr//td[2]
+chkbx_dataType: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//tr//td[1]
+txt_listNameTrans: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//tr//td[3]
+inp_listNameTrans: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//tr//td[3]//input
+txt_asOfDate: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//tr//td[4]
+txt_newListStatus: xpath: (//table[@class='listTable']//*[text()='${listName}'])[1]//ancestor::tr[@role='listitem']//td[11]
+btn_refreshGrid: xpath: //div[@aria-label='Refresh Grid']
+chkbx_forDatatype: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//td[2][.='${dataType}']/preceding-sibling::td
+txt_nameDate: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//td[2][.='${dataType}']/following-sibling::td[${index}]
+inp_newListName: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//td[2][.='${datatype}']/following-sibling::td[1]//input
+inp_newListDate: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//td[2][.='${datatype}']/following-sibling::td[2]//input
+btn_OkDialog: xpath: //div[contains(@role,'alertdialog') and not(contains(@style,'visibility: hidden'))]//div[text()='OK']
+hrd_dialogColumns: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[@class='headerBar']//td[.='${hdrTitle}']

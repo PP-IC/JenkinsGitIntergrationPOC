@@ -1,0 +1,151 @@
+#IndexPage
+#elementname: locatortype: locatorvalue
+Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
+
+#common
+Btn:								xpath		:(//*[contains(text(),'${option}')])[1]
+DropDown: 							xpath		://*[text()='${option}']/following::img[1]
+btn_mainActions:					 xpath		://td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+btn_SaveMutiple:                    xpath		://div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//td[@class='buttonTitle']//div[text()='Save']
+btn_CancelMutiple:                    xpath		://div[@role="dialog" and not(contains(@style, "visibility: hidden"))]//td[@class='buttonTitle']//div[text()='Cancel']
+
+#TC35
+Table_GTNScenario:					xpath		://div[starts-with(@id,'isc_GTNScenarioSearch')]/following::table[1]/tbody/tr/td[.='${option}']
+Inp_CloseAccuralScenarioName:		xpath		:(//*[text()='Scenario Name']/following::input[1])[2]
+Inp_CloseAccuralSnapshotName:		xpath		://*[@class='windowBody']//*[contains(text(),'Close Month')]/preceding::input[1]
+Inp_ForecastAccuralSnapshotName:	xpath		://*[contains(text(),'Forecast Start Month')]/preceding::input[1]
+Img_CloseAccuralCloseMnthDropDown:	xpath		://*[contains(text(),'Close Month')]/following::img[1]
+Img_ForecastAccuralStartMnthDropDwn:xpath		://*[contains(text(),'Forecast Start Month')]/following::img[1]
+Img_CloseAccuralForecastCyDropDown:	xpath		://*[contains(text(),'Notes')]/preceding::img[2]
+DropDown_CloseAccuralForecastInp:	xpath		://*[contains(text(),'Notes')]/preceding::input[2]
+Img_CloseAccuralAssptnPkgDropDown:	xpath		://*[contains(text(),'Notes')]/preceding::img[1]
+DropDown_CloseAccuralAssptPkg:		xpath		://*[contains(text(),'Notes')]/preceding::input[1]
+List_CloseAccuralListVal:			xpath		://*[starts-with(@class, 'pickListMenuBody')]//td[.='${option}']
+TxtArea_CloseAccuralNote:			xpath		://*[contains(text(),'Notes')]/following::textarea[1]
+Label_closeAccuralSaveMessg:		xpath		://*[text()='Batch calculation started.']
+GTNScenario: 						xpath		://*[text()='${option}']
+
+#TC
+Table_GTNSnapShot:					xpath		:(//table[@class='listTable'])[4]/tbody/tr/td[.='${option}']
+Table_GTNSnapShotRows:				xpath		:(//table[@class='listTable'])[4]/tbody/tr
+Table_GTNSnapShotStatus:			xpath		:(//table[@class='listTable'])[4]/tbody/tr[${option}]/td[${option}]
+
+#TC SnapShot details
+Img_SnapshotFilterIcon:				xpath		://*[text()='Highlight Alerts']/following::img[contains(@src,'filter')]
+Inp_ItemLevel:						xpath		://*[text()='Item Level']/following::input[1]
+Radio_Label:						xpath		://*[text()='Label']/preceding::input[1]
+Radio_Item:							xpath		://*[text()='Item']/preceding::input[1]
+Inp_Label:							xpath		://*[text()='Label']/following::input[1]
+Inp_Item:							xpath		://*[text()='Item']/following::input[1]
+Inp_ValueType:						xpath		://*[text()='Value Type']/following::input[1]
+Inp_View:							xpath		://*[text()='View']/following::input[1]
+Inp_frequency:						xpath		://*[text()='Frequency']/following::input[1]
+
+Btn_Apply:							xpath		://*[text()='Apply']
+ChkBox_ShowReport:					xpath		://*[text()='Show Report and Chart']
+Table_GTNDetailColumnCount:			xpath		://td[@class='headerTitle']
+Table_GTNDetailRowCount:			xpath		:(//*[@class='listTable'])[1]/tbody/tr
+Table_GTNDetailsExpendRow:			xpath		:(//*[@class='listTable'])[1]/tbody/tr[${option}]//span[1]
+Table_GTNDetailsInnerExpendRow:		xpath		:((//*[@class='listTable'])[1]/tbody/tr[${option}]//span[1])[2]
+Table_GTNDetailsRowVal:				xpath		:(//*[@class='listTable'])[1]/tbody/tr[${option}]/td
+Table_GTNDetailRowvalue:			xpath		:(//*[@class='listTable'])[1]/tbody/tr[${option}]/td[1]
+Table_GTNDetailsCellValue:			xpath		:(//*[@class='listTable'])[2]/tbody/tr[${option}]/td[${option}]
+Table_GTNDetailsColCount:			xpath		:(//*[@class='listTable'])[2]/tbody/tr[${rownum}]/td
+Span_ListExpandIcon:				xpath		:(//*[@class='listTable'])[1]//tr[${index}]//*[contains(@id,'open_icon')]
+Img_ScrollLeft:						xpath		://img[contains(@name,'corner')]/following::img[4]
+Img_ScrollRight:					xpath		://img[contains(@name,'corner')]/following::img[6]
+Table_GTNDetailsLastCol:			xpath		:((//*[@class='listTable'])[2]/tbody/tr[${row}]/td)[last()]
+Table_GTNDetailsFirstCol:			xpath		:((//*[@class='listTable'])[2]/tbody/tr[${row}]/td)[1]
+txt_GTNScenarioDetails:				xpath		:(//tr[@role='treeitem'])[${index}]//table[.='${listName}']//ancestor::tr[@role='treeitem' and not(contains(@aria-expanded,'true')) and not(contains(@aria-expanded,'false'))]
+Table_ExplainReportRows:			xpath		:(//*[@class='listTable'])[3]/tbody/tr
+Txt_ExplainReportCellVal:			xpath		:(//*[@class='listTable'])[3]/tbody/tr[${rownum}]/td[${colnum}]
+Txt_ExplainRowValues:				xpath		:(//*[@class='listTable'])[3]/tbody/tr[${rownum}]/td[1]//td[3]
+Table_SliptBar:      				xpath  		://img[contains(@src,'Splitbar/hsplit_snap')]
+Table_GTNDetailTblValue:			xpath		:(//*[@class='listTable'])[1]/tbody/tr[${rownum}]/td//ancestor::tr[@role='treeitem' and not(contains(@aria-expanded,'true')) and not(contains(@aria-expanded,'false'))]
+
+#SubExplain Report
+Txt_subExplainCellVal:				xpath:		//div[@role='dialog']//*[@class='listTable']/tbody/tr[${rownum}]/td[${colnum}]
+lbl_subReportComponentId:			xpath:		//div[@role='dialog']//*[@class='listTable']/tbody/tr[${rownum}]/td[2]
+table_subExplainReportRows: 		xpath: 		//div[@role='dialog']//*[@class='listTable']/tbody/tr
+
+#GTNUI - New
+Cell_GTNEditorPrevious:				xpath		://div[contains(@id,'GTNEditWindow')]//following-sibling::table/tbody/tr/td[2]
+Cell_GTNEditorInherited:			xpath		://div[contains(@id,'GTNEditWindow')]//following-sibling::table/tbody/tr/td[3]
+Body_GtnEditor:						xpath		://div[@class='normal' and @role='dialog' and contains(@eventproxy,'GTNEditWindow')]//div[@class='listGrid' and @role='list']//div[@class='gridBody']
+Cell_GTNEditorOverride:    			xpath  		://div[@class='normal' and @role='dialog' and contains(@eventproxy,'GTNEditWindow')]//div[@class='listGrid' and @role='list']//div[@class='gridBody']//table[@class='listTable' and not(contains(@style, "visibility:hidden"))]/tbody/tr/td[4]
+CellInp_GTNEditorOverride:			xpath		://div[@class='normal' and @role='dialog' and contains(@eventproxy,'GTNEditWindow')]//div[@class='listGrid' and @role='list']//div[@class='gridBody']//table[@class='listTable' and not(contains(@style, "visibility:hidden"))]/tbody/tr/td[4]//input[1]
+Cell_GTNEditorComment:    			xpath  		://div[contains(@id,'GTNEditWindow')]//following-sibling::table/tbody/tr/td[6]
+CellInp_GTNEditorComment:   xpath  :			//div[contains(@id,'GTNEditWindow')]//following-sibling::table/tbody/tr/td[6]//input[1]
+ToolTip_OldOverridePercent:			xpath		:(//div[contains(@eventproxy,'isc_DynamicFormSection_')]//table//td[contains(.,'${ChannelName}')]/..//following-sibling::tr[1]/td[2])
+ToolTip_NewOverridePercent:			xpath		:(//div[contains(@eventproxy,'isc_DynamicFormSection_')]//table//td[contains(.,'${ChannelName}')]/..//following-sibling::tr[2]/td[2])
+ToolTip_OverrideComment:			xpath		:(//div[contains(@eventproxy,'isc_DynamicFormSection_')]//table//td[contains(.,'${ChannelName}')]/..//following-sibling::tr[3]/td[2])
+
+
+#GTN UI
+btn_editCell: xpath: //div[@class='normal' and contains(@style,'visibility: inherit')]//td[.='Edit']
+lbl_itemNameInGrid: xpath: //table[.='${listName}']//ancestor::tr[@role='treeitem' and not(contains(@aria-expanded,'true')) and not(contains(@aria-expanded,'false'))]
+lnk_collapseAll: xpath: //img[contains(@src,'group_opened')]/ancestor::tr[1]
+hdr_editorModal: xpath: //div[@role='dialog']//div[@role='label']//td[@class='windowHeaderText' and text()='${hdr}']
+lbl_editorColumns: xpath: //div[@role='dialog']//td[@class='headerTitle' and text()='${columnName}']
+list_editorRowValues: xpath: (//div[contains(@role,'dialog')]//tr[@role='listitem'])[1]//td
+inp_editorModal: xpath: //div[contains(@role,'dialog')]//tr[@role='listitem']//td[${columnIndex}]//input
+lnk_parentItem: xpath: //table[.='${itemName}']//ancestor::tr[@role='treeitem' and contains(@aria-expanded,'false')]
+txt_valueInToolTip: xpath: (//div[contains(@eventproxy,'isc_DynamicFormSection_')]//table//td[contains(.,'${itemName}')]/..//following-sibling::tr/td[2])
+lnk_filterDrop: xpath: //label[text()='${filterName}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
+list_filterDropValues: xpath: //tr[contains(@id,'PickListMenu')]
+lnk_reportTab: xpath: //div[@class='tabBar']//td[contains(@class,'tabTitle') and text()='${tabName}']
+lnk_dropDownItem: xpath: //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.="${name}"]
+lbl_listItemOnGrid: xpath: (//*[@class='listTable'])[1]/tbody/tr/td[.='${listName}']
+lbl_IDexplainReport: xpath: (//*[@class='listTable'])[3]/tbody/tr[${rownum}]/td[2]
+btn_SubExplainReport: xpath: (//*[@class='listTable'])[3]/tbody/tr[${rowNum}]/td[2]//img[contains(@src,'subExplainReport.png')]
+lnk_expandAll: xpath: //img[contains(@src,'group_closed.png')]/ancestor::tr[1]
+
+#Forecasted Backend
+lbl_forecastPeriod: xpath: (//div[@class='headerBar'])[2]//div[@role='label']//td[.='${period}']
+lnk_periodCell: xpath: ((//*[@class='listTable'])[2]/tbody/tr[${rowNum}]/td)[2]
+lnk_periodSecondCell: xpath: ((//*[@class='listTable'])[2]/tbody/tr[${rowNum}]/td)[3]
+lbl_overrideCell: xpath: //td[.='${valueType}']//following-sibling::td[3]
+inp_overrideCell: xpath: //td[.='${valueType}']//following-sibling::td[3]//input
+lbl_overrideCmnt: xpath: //td[.='${valueType}']//following-sibling::td[5]
+inp_overrideCmnt: xpath: //td[.='${valueType}']//following-sibling::td[5]//input
+
+#Snapshot Scenarios
+inp_NewSnapshotDetail: xpath: //label[contains(.,'${fieldName}')]/ancestor::td/following-sibling::td//input
+lnk_fieldDetailDropdown: xpath: //label[contains(.,'${fieldName}')]/ancestor::td/following-sibling::td//input/../following-sibling::td//img[contains(@src,'comboBoxPicker')]
+btn_refreshGrid: xpath: //div[@aria-label='Refresh Grid']
+txt_statusSnapshot: xpath: (//table[@class='listTable'])[4]/tbody/tr//td[.='${SnapshotName}']//following-sibling::td[5]
+txt_explnReportTooltip: xpath: //div[contains(@eventproxy,'isc_Label_')]//td[@class='gridHover']
+txt_noItemsInGrid: xpath: //table//td[@class='myHighGridEmptyMessage' and text()='No items to display']
+
+#Close Summary
+txt_snapshotName: xpath: //label[text()='${snpshtType}']/ancestor::td/following-sibling::td[1][.='${snpshotName}']
+list_snapHeaders: xpath: ((//div[@class='headerBar'])[2]//div[@role='label' and contains(@eventproxy,'CloseSummary')]//td)
+list_periodHeaders: xpath: ((//div[@class='headerBar'])[2]//div[@role='label' and not(contains(@eventproxy,'CloseSummary'))])
+hdr_periodTitle: xpath: ((//div[@class='headerBar'])[2]//div[@role='label' and not(contains(@eventproxy,'CloseSummary'))]//td)[${index}]
+img_filterIcon: xpath: //img[contains(@src,'filter')]
+txt_cellRowItemValue: xpath: ((//*[@class='listTable'])[2]/tbody/tr[${rowIndex}]/td)[${colIndex}]
+list_closeMonths: xpath: (//div[@class='headerBar'])[2]//div[@role='label' and not(contains(@eventproxy,'CloseSummary'))]//td[.='${period}']
+hdr_periodOnGrid: xpath: ((//div[@class='headerBar'])[2]//div[@role='label' and not(contains(@eventproxy,'CloseSummary'))]//td[.='${period}'])[${index}]
+txt_valueInPeriodCell: xpath :((//*[@class='listTable'])[2]/tbody/tr[${row}]/td)[${index}]
+lnk_lineCollapseIcon: xpath: (//*[@class='listTable'])[1]//*[contains(@style,'opener_opened')]
+
+#Internal BS Reconciliation Screen
+list_bsColumns: xpath: //td[contains(@class,'headerTitle')]
+lbl_bsColumns: xpath: //td[contains(@class,'headerTitle')][.='${columnName}']
+
+#External BS Reconciliation Screen
+list_columnHdrs: xpath: //table[@role='grid']//td[contains(@class,'jrcolHeader interactiveElement')]
+list_bsAccNames: xpath: //td[contains(@class,'jrcel cel_GTN')]
+txt_extrnlColValue: xpath: (//td[contains(@class,'jrcel cel_${colName}')])[${rowIndex}]
+iframe: xpath://iframe[contains(@src,'jasperserver')]
+
+#Smoke:
+txt_snapName: xpath: (//div[contains(@eventproxy,'GTNSnapshotGrid')]//div[@class='gridBody']//tr[@role='listitem'])[1]//td[1]
+txt_snapStatus: xpath: (//div[contains(@eventproxy,'GTNSnapshotGrid')]//div[@class='gridBody']//tr[@role='listitem'])[1]//td[6]
+txt_listOpen: xpath: //td[@class='formTitle'][contains(.,'${fieldLabel}')]/following-sibling::td[@class='formCell'][1]
+txt_smrySnapStatus: xpath: //label[text()='${snapshotType}']/ancestor::td/following-sibling::td[1]
+txt_closeMonth: xpath: //label[text()='${fieldName}']/ancestor::td/following-sibling::td[1]
+txt_snapshotNotStale: xpath: //div[contains(@eventproxy,'GTNSnapshotGrid')]//div[@class='gridBody']//tr[@role='listitem']//td[6][not(.='Stale') and not(.='Pending Recalculation')]/..//td[1]
+txt_calculatedSnap: xpath: //div[contains(@eventproxy,'GTNSnapshotGrid')]//div[@class='gridBody']//tr[@role='listitem']//td[6][.='Calculated']/..//td[1]
+btn_actionsAvailable: xpath: //div[text()='${btnName}']/parent::td[contains(@class,'buttonTitle')]
+btn_editAction: xpath: (//div[text()='Edit']/parent::td[contains(@class,'buttonTitle')])[2]

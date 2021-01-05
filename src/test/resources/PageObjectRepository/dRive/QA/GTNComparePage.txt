@@ -1,0 +1,55 @@
+#GTN Compare
+#elementname: locatortype: locatorvalue
+Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
+
+#Common
+CmnText:							xpath		:(//*[not(contains(@style, "visibility: hidden")) and contains(text(),'${Text}')])[1]
+btn_mainActions:					xpath		://td[contains(@class,'buttonTitle') and not(contains(@style, "visibility: hidden"))]//div[text()='${Text}']
+txt_alertMsg: 						xpath		:((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span)
+Label_Txt:							xpath		://label[text()='${Text}']/following::td[1]
+
+#GTN
+Table_GTNSnapShot:					xpath		:(//table[@class='listTable'])[4]/tbody/tr/td[.='${option}']
+ColName_ComparePage:				xpath		://div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[.='${blockName}']/ancestor::div[1]//following-sibling::div//div[@role='label'][.='${ColumnName}']
+Table_AvailableScenariosRow:		xpath		:(//div[@role='tree' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'AvailableScenariosGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr
+Table_AvailableScenariosName:		xpath		:(//div[@role='tree' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'AvailableScenariosGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr/td[.='${RowName}']
+Table_AvailableScenarioActionCol:	xpath		:(//div[@role='tree' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'AvailableScenariosGrid')]//div[@class='gridBody'])[2]/div//table[@class='listTable']/tbody/tr[${rownumber}]/td[1]
+Table_ChosenSnapshotRow:			xpath		:(//div[@role='list' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'SelectFiltersWindow')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr
+Table_ChosenSnapshotRowVal:			xpath		:(//div[@role='list' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'SelectFiltersWindow')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr[${rownumber}]
+Table_ItemLevel:					xpath		://div[@class='pickListMenuBody']//table[@class='listTable']//td[.='${Value}']
+Label_ItemLevel:					xpath		://label[text()='Item Level']/following::table[@class='selectItemControl']
+RadioBtn_Label:						xpath		://*[contains(text(),'Label :')]/preceding::input[1]
+RadioBtn_Item:						xpath		://*[contains(text(),'Item')]/preceding::input[1]
+Table_SelectItemName:				xpath		:(//div[@role='list' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'ListGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]/td[.='${ItemName}']
+Table_CollapseLineItem:				xpath		://div[@role='tree' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'LineItemTreeGrid')]//div[@class='gridBody']/div//table[@class='listTable']/tbody/tr[@aria-expanded='true']
+Table_LineItemValueExpand:			xpath		://div[@class='normal' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'GTNSelectFiltersWindow')]//div[@class='gridBody' and contains(@eventproxy,'LineItemTreeGrid')]/div[not(contains(@style, "visibility: hidden"))]//table[@class='listTable']/tbody/tr[contains(@aria-expanded,'true')]/td[.='${ItemName}']
+Table_LineItemValue:		    	xpath		://div[@class='normal' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'GTNSelectFiltersWindow')]//div[@class='gridBody' and contains(@eventproxy,'LineItemTreeGrid')]/div[not(contains(@style, "visibility: hidden"))]//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]/td[.='${ItemName}']
+Btn_MoveRight:						xpath		://div[@role='dialog' and contains(@eventproxy,'GTNSelectFiltersWindow') and not(contains(@style, "visibility: hidden"))]//td[contains(@class,'buttonTitle')]//div[text()='>>']
+Btn_MoveLeft:						xpath		://div[@role='dialog' and contains(@eventproxy,'GTNSelectFiltersWindow') and not(contains(@style, "visibility: hidden"))]//td[contains(@class,'buttonTitle')]//div[text()='<<']
+Btn_OK:								xpath		://div[@class='normal' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'GTNSelectFiltersWindow')]//div[text()='OK']
+Btn_Cancel:							xpath		://div[@class='normal' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'GTNSelectFiltersWindow')]//div[text()='Cancel']
+Table_ActualsEarned:				xpath		://div[starts-with(@id,'isc_GTNScenarioSearch')]/following::table[1]/tbody/tr/td[.='GTN Actuals Earned']
+Table_DataSlicerAvailableActionCol:	xpath		:(//div[@role='tree' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'AvailableScenariosGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr[${rownumber}]/td[1]
+Table_DataSlicerAvailableSnapshot:	xpath		:(//div[@role='tree' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'AvailableScenariosGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr/td[.='${ItemName}']
+Table_DataSlicerSelectItemName:		xpath		:(//div[@role='list' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'ListGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]/td[.='${ItemName}']/preceding::span[1]
+Table_DataSlicerSelectItemNameRow:	xpath		:(//div[@role='list' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'ListGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]
+Table_VerifySelectItemNameSelected:	xpath		:(//div[@role='list' and not(contains(@style,'visibility: hidden')) and contains(@eventproxy,'ListGrid')]//div[@class='gridBody'])[1]/div//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]/td[contains(@class,'CellSelected')][.='${ItemName}']
+Table_DataSlicerSelectValRow:		xpath		:(//div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='sectionStack' and @role='tablist']//div[@class='listGrid'])[2]//div[@class='gridBody']//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]
+Table_DataSlicerSelectVal:			xpath		:(//div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='sectionStack' and @role='tablist']//div[@class='listGrid'])[2]//div[@class='gridBody']//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]/td[.='${ItemName}']/preceding::span[1]
+Table_VerifySelectValSelected:		xpath		:(//div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='sectionStack' and @role='tablist']//div[@class='listGrid'])[2]//div[@class='gridBody']//table[@class='listTable']/tbody/tr[not(contains(@aria-expanded,'true'))]/td[contains(@class,'CellSelected')][.='${ItemName}']
+Table_DataSlicerLineItemNoExpand:	xpath		://div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and @role='dialog' and contains(@eventproxy,'Window')]//div[@class='gridBody']//table[@class='listTable']/tbody/tr/td[.='${ItemName}']
+Table_DataSlicerLineItemExpand:		xpath		://div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and @role='dialog' and contains(@eventproxy,'Window')]//div[@class='gridBody']//table[@class='listTable']/tbody/tr[contains(@aria-expanded,'true')]/td[.='${ItemName}']
+Table_DataSlicerLineItemRowVal:		xpath		://div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and @role='dialog' and contains(@eventproxy,'Window')]//div[@class='gridBody']//table[@class='listTable']/tbody/tr[${RowNum}]/td
+Table_DataSlicerLineItemRow:		xpath		://div[@role='dialog' and not(contains(@style,'visibility: hidden'))]//div[@class='normal' and @role='dialog' and contains(@eventproxy,'Window')]//div[@class='gridBody']//table[@class='listTable']/tbody/tr
+Table_DataSlicerMnthCol:			xpath		://div[contains(@eventproxy,'GTNDataSlicerDetailsGrid')]//div[@class='headerBar' and @role='toolbar']//td[@class='headerTitle' and contains(@align,'center')]
+Img_SnapshotFilterIcon:				xpath		://div[@class='imgButton' and @role='button']/img[contains(@src,'filter')]
+Accural_Dollar:						xpath		:(//*[not(contains(@style, "visibility: hidden")) and contains(text(),'${Text}')])[1]/preceding::span[1]
+Table_DataSlicer:					xpath		:(//*[@class='listTable'])[1]/tbody/tr[${RowNum}]/td[${ColNum}]
+Table_DataSlicerRow:				xpath		:(//*[@class='listTable'])[1]/tbody/tr
+Table_DataSlicerLastCol:			xpath		:((//*[@class='listTable'])[2]/tbody/tr[${RowNum}]/td)[last()]
+Table_DataSlicerSliptBar:      		xpath  		:(//img[contains(@src,'Splitbar/hsplit_snap')])[1]
+Table_DataSlicerExplainReportRow:	xpath		://div[contains(@eventproxy,'GTNExplainReportTreeGrid') and @class='listGrid']//table[@class='listTable']/tbody/tr
+Table_DataSlicerExplainReport:		xpath		://div[contains(@eventproxy,'GTNExplainReportTreeGrid') and @class='listGrid']//table[@class='listTable']/tbody/tr[${RowNum}]/td[${ColNum}]
+Img_ScrollRight:					xpath		://img[contains(@name,'corner')]/following::img[6]
+img_horizScroll:					xpath		://div[@class='listGrid']//img[contains(@src,'hscroll_track')]
+img_scrollHoriz:					xpath		://div[@class='listGrid']//img[contains(@src,'hthumb_grip')]

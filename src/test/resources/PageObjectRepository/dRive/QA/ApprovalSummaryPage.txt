@@ -1,0 +1,94 @@
+#Admin Page
+#elementname: locatortype: locatorvalue
+
+btn_ActionButtons: xpath: //*[text()='${ActionName}']
+#lbl_priceChangeInput: xpath: //*[text()='${input}']
+dropdownValue: xpath: (//*[text()='${section}'])[1] | (//*[text()='${section}'])[2]
+dropdownValue2: xpath: //*[contains(@id,'PickListMenu')]//*[text()='${section}']
+img_dropDownLabel: xpath: //*[text()='${input}']/following::img[1]
+chkbx_selectAll: xpath: (//*[text()='Select All'])[1]
+chkbx_selectAll_unchecked: xpath: (//*[text()='Select All'])[1]/../span[contains(@style,'unchecked')]
+chkbx_selectAll_span: xpath: (//*[text()='Select All'])[1]/../span
+lbl_Category: xpath: //*[text()='${input}']
+hover_text: xpath: //*[@class='staticTextItem' and contains(text(),'${input}')]
+snapshot_List: xpath: //*[contains(@id,'PickListMenu') and @aria-selected='true']/td[contains(@class,'pickListCellSelected')]/div[not(span)]
+snapshot_select: xpath: //*[contains(@id,'PickListMenu') and @aria-selected='true']//*[text()='${snapshotName}']/../..//span
+snapshot_reSelect: xpath: //*[contains(@id,'PickListMenu')]//*[text()='${snapshotName}']/../..//span
+fa_workflow_static: xpath: //*[@class='staticTextItem']//*[contains(text(),'*Workflow actions will not be applicable when multiple snapshots are selected.')]
+
+chkbx_selectAll2: xpath: (//*[text()='Select All'])[2]
+chkbx_selectAll2_span: xpath: (//*[text()='Select All'])[2]/../span
+chkbx_selectAll_update: xpath: (//*[text()='Select All'])
+chkbx_selectAll_update_span: xpath: (//*[text()='Select All'])/../span
+windowHeader: xpath: (//*[@class='windowHeaderText' and text()='${input}'])[1]
+windowCategoryGrid: xpath: (//*[contains(@id,'GTNNewSnapshotWindow_GTNTreeGrid') and text()='${input}'])[1]
+btn_onDialog: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[text()='${btnName}']
+
+
+lbl_CloseValue: xpath: (//tr[@aria-posinset='1']//div/span)[1]
+lbl_TrueUpValue: xpath: (//tr[@aria-posinset='1']//div/span)[2]
+lbl_PipeLineValue: xpath: (//tr[@aria-posinset='1']//div/span)[3]
+lbl_RequiredReserveValue: xpath: (//tr[@aria-posinset='1']//div/span)[4]
+lbl_BalancedSheetValue: xpath: (//tr[@aria-posinset='1']//div/span)[5]
+
+Expand_All: xpath: //img[contains(@src,'group_closed')]
+Expand_All_span: xpath: //img[contains(@src,'group_closed')]/../span
+icon_chkbx: xpath: //*[text()='${section}']/ancestor::tr//*[contains(@id,'extra')]
+icon_expand: xpath: //*[text()='${section}']/ancestor::tr//*[contains(@id,'open')]
+icon_status: xpath: //*[text()='${section}']/ancestor::tr//*[contains(@id,'icon')]
+
+lbl_Line: xpath: //*[contains(text(),'${lineName}')]
+lbl_LineTR: xpath: //*[contains(text(),'${lineName}')]/ancestor::tr[2]
+lbl_Line_CloseValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[1]
+lbl_Line_TrueUpValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[2]
+lbl_Line_PipeLineValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[3]
+lbl_Line_RequiredReserveValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[4]
+lbl_Line_BalancedSheetValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[5]
+lbl_Line_CloseSummaryBalancedSheetValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[4]
+lbl_Line_CloseSummaryPOSValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[6]
+all_lines: xpath: (//*[@class='gridBody'])[1]//*[(@aria-posinset) and not(@aria-expanded)]//descendant::td[4]
+
+
+
+
+drp_closemonth_apm: xpath: //input[@name='CLOSE_MONTH']
+drp_closemonth_close_summary: xpath: //input[@name='CLOSE_MONTH']/following::td//img[contains(@src,'comboBoxPicker')]
+list_filterDropValues: xpath : //tr[contains(@id,'PickListMenu')]
+btn_radio: xpath: //label[contains(text(),'${radio_button}')]	
+selectall_chk_box: xpath: //td[@class='headerTitle']//span[@eventpart='valueicon']	
+item_checkbox: xpath: //td[@class='myHighGridCell']//div[contains(text(),'${item}')]/preceding::td[1]//span
+chkbox_parent_cat_name: xpath: //*[text()='${CategoryName}']/ancestor::td//span[2]
+lbl_category: xpath: //*[text()='${CategoryName}']
+btn_action: xpath: //td[contains(@class,'button')]//div[text()='${action_btn}']	
+expand_icon: xpath: //*[text()='${CategoryName}']/ancestor::td//span[1]	
+lbl_cat_value: xpath: //tr[@role='treeitem']//td[contains(text(),'${Cat_name}')]/following::td[1]
+
+all_lines_close_summary: xpath: //td[contains(@id,'isc_GTNCloseSummary_GTNCloseSummaryTreeGrid')]
+radio_options: xpath: //td[contains(@class,'labelAnchor')]
+radio_selected: xpath: //td[contains(@class,'labelAnchor')]//label[contains(text(),'${radio_option}')]//preceding::td[1]//input
+toggle1btn_selected: xpath: (//td[contains(@class,'buttonSelected')])[1]
+toggle2btn_selected: xpath: (//td[contains(@class,'buttonSelected')])[2]
+lbl_radio: xpath: //td[contains(@class,'labelAnchor')]//label[contains(text(),'${radiobutn}')]
+toggle_button: xpath: //div[contains(@eventproxy,'isc_Button')]//table//td[contains(@class,'buttonSelected')]//div[text()='${Toggle_button}']
+toogle_tooltip: xpath: //div[contains(@aria-label,'${Toogle_btn}')]
+lbl_cat_status: xpath: //table[@role='presentation']//tr//td[contains(@class,'myOtherGridCell')]//*[text()='${cat_name}']/preceding::span[contains(@style,'${status}')]
+lbl_items: xpath: //tr[@role='listitem']//td[2]//div
+checkbox_items: xpath: //tr[@role='listitem']//td[2]/preceding::td[1]//span
+list_grid_headers: xpath: //div[contains(@eventproxy,'isc_ImgButton')][contains(@class,'headerButton')]
+lbl_Line_CloseSummary: xpath: //*[text()='${lineName}']
+lbl_LineTR_CloseSummary: xpath: //*[text()='${lineName}']/ancestor::tr[2]
+all_lines_closesummary: xpath: (//*[@class='listTable'])[2]//*[(@aria-posinset) and not(@aria-expanded)]//descendant::td[4]
+all_lines_closeSummaryexNetSales: xpath: (//*[@class='listTable'])[2]//*[(@aria-posinset) and not(@aria-expanded)]//descendant::td[4][not(text()='Net Sales')]
+all_discount_lines: xpath: (//*[@class='listTable'])[2]//*[(@aria-posinset) and not(@aria-expanded)]//descendant::td[4][not(text()='Net Sales')][not(contains(text(),'Gross'))]
+all_discount_line_value: xpath: (//*[@class='listTable'])[2]//*[(@aria-posinset) and not(@aria-expanded)]//descendant::td[4][not(text()='Net Sales')][not(contains(text(),'Gross'))]/following::td[1]//div
+
+legend_calculating: xpath: //*[@class='staticTextItem' and contains(text()[1],'Calculating')]/img[contains(@src,'Calculating')]
+legend_calculated: xpath: //*[@class='staticTextItem' and contains(text()[2],'Calculated')]/img[contains(@src,'Calculated')]
+legend_pendingRecalculation: xpath: //*[@class='staticTextItem' and contains(text()[3],'Pending Recalculation')]/img[contains(@src,'Recalculation')]
+legend_rejected: xpath: //*[@class='staticTextItem' and contains(text()[4],'Rejected')]/img[contains(@src,'Reject')]
+legend_withdrawn: xpath: //*[@class='staticTextItem' and contains(text()[5],'Withdrawn')]/img[contains(@src,'withdrawn')]
+legend_approved: xpath: //*[@class='staticTextItem' and contains(text()[6],'Approved')]/img[contains(@src,'Approved')]
+legend_pendingApproval: xpath: //*[@class='staticTextItem' and contains(text()[7],'Pending Approval')]/img[contains(@src,'pending')]
+legend_unapproved: xpath: //*[@class='staticTextItem' and contains(text()[8],'Unapproved')]/img[contains(@src,'unapproved')]
+legend_pendingUnapproval: xpath: //*[@class='staticTextItem' and contains(text()[9],'Pending Unapproval')]/img[contains(@src,'pending_unapprove')]
+legend_publish: xpath: //*[@class='staticTextItem' and contains(text()[10],'Published')]/img[contains(@src,'publish')]

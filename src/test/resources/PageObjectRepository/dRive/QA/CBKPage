@@ -1,0 +1,40 @@
+#Chargeback page
+#elementname: locatortype: locatorvalue
+
+btn_logout: xpath: //td[text()='Logout']
+btn_onDialog: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[text()='${btnName}']
+txt_alertMsg: xpath: ((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span)
+btn_tabs: xpath: (//div[@class='toolStrip']//*[text()='${tab}'])[last()]
+lbl_loader: xpath: //div[@role='label']//td[text()='Loading...']
+btn_OkDialog: xpath: //div[contains(@role,'alertdialog') and not(contains(@style,'visibility: hidden'))]//div[text()='OK']
+loader:   xpath:  //*[contains(text(),'Loading..')]
+headerText:						xpath:           (//td[@class='windowHeaderText' and text()='${heading}'])[${index}]
+dialogHeader:  					xpath:				(//td[@class='dialogHeaderText' and text()='${heading}'])[${index}]
+txt_breadCrumbList:				xpath:			//div[@class='breadCrumbToolStrip']//div[@role='label']
+
+#Submissions
+btn_submissionAction: xpath: //div[text()='${actionButton}'] #It will work for Submission table column as well on Chrome browser
+btn_ImageAction: xpath: //img[contains(@src,'actions/${imageButton}')]
+window_editSubmissionHeaderDetails: xpath: //td[@class='windowHeadertext'][contains(text(),'Edit Submission Header Details')]
+tab_submissionHeader: xpath: //div[contains(text(),'Submission Header')]
+tab_submissionLineDetails: xpath: //div[contains(text(),'Submission Line Details')]
+btn_UploadSubmissionLineItems: xpath: //td[@class='buttonTitle'][contains(text(),'Upload Submission Line Items')]
+lbl_FileUploadStatus: xpath: //label[contains(text(),'File Upload Status')]
+#New Submission
+lbl_DocumentID: xpath: //label[contains(text(),'${label}')]
+txt_DocumentDate: xpath: //input[@name='DOCUMENT_DATE_dateTextField']
+txt_PostMarkDate: xpath: //input[@name='POSTMARK_DATE_dateTextField']
+txt_LineCount: xpath: //input[@name='LINE_COUNT']
+txt_TotalRequestedCBKAmount: xpath: //input[@name='REQUESTED_CBK_AMOUNT']
+
+#Submission Table - IE
+col_submissionTable: xpath: //td[contains(text(),'${column}')]
+btn_cascade: xpath: //img[contains(@src,'opener')]
+a_links: xpath: //a[contains(text(),'${link}')]
+chkBox_check: xpath: //span[contains(@style,'${status}')]
+
+#Validation Setup
+radio_Level: xpath: //input[@type='RADIO'][@value='${level}']
+
+#Adjudication Headers
+dropDown_status: xpath: //img[contains(@style,'comboBoxPicker')]

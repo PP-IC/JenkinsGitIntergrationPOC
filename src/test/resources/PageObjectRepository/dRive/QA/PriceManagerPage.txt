@@ -1,0 +1,102 @@
+#IndexPage
+#elementname: locatortype: locatorvalue
+Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
+
+PricingManager: xpath: //td[text()='${option}']
+optionMenuItem:                           xpath:                           //tr[@role='menuitem']/td[@class='menuTitleField']/div[contains(text(),'${option}')]
+pricingSection:	                          xpath:                           //*[text()='${section}']					
+lbl_priceChangeInput:                     xpath:                           //*[text()='${input}']
+img_dropDownLabel:                        xpath:                           //*[text()='${input}']/following::img[1]
+div_inplabel:                             xpath:                           //*[text()='${value}']/following::div[1]
+inp_inputText:                            xpath:                           //*[text()='${value}']/following::input[1]
+inp_labelText:							  xpath:						   //label[text()='${value}']/following::input[1]
+check_boxTop:							  xpath:						   (//span[@eventpart='valueicon'])[${index}]
+table_data:								  xpath:							//div[contains(@class,'toolStrip')]//following-sibling::div//tr[@role='listitem']//td[${index}]
+inp_newScenario:						  xpath:							//input[@name='newScenario']
+btn_TransferArrow:						  xpath:							//div[@eventproxy='isc_TransferImgButton_0']/img
+lst_item:							      xpath:                            (//table[@class='listTable'])[2]//tr//td[${index}]
+chk_box_selectPriceTerm:       			  xpath:     						(//table[@class='listTable'])[1]//tr//td[contains(text(),'${value}')]
+tier_ID_txtbox:       					  xpath:      						(//div[@class='gridBody'])[${index}]//table//tbody//tr[${index1}]//td[${index2}]
+inp_textField:							  xpath:							//div[@class='gridBody']//table[@class="listTable"]//tbody//tr[${index1}]//td[${index2}]//input
+txt_alertMsg:                             xpath:                   			//span[contains(text(),'The Price Change: ')]
+data_PCM:								  xpath:                   			(//div[@class='gridBody'])[${index}]//tr//td[1]
+lnk_DropDownValues:						  xpath: 							//table[@class='menuTable']//*[text()='${itemName}']
+option_scenario:						  xpath:								//td[text()='${input}']
+optionitem:								  xpath:                             (//table[@class='menuTable'])[1]//tr[@role='menuitem']//td[2]
+div_staticValue:						xpath:							(//td/div[@class='staticTextItem'])[${index}]
+btn_basic:								xpath:                            //td[contains(@class,'buttonTitle')]//td[text()='${value}']
+wac_Number:								xpath:							//div[contains(text(),'W-')]
+priceNumber:							xpath:								//div[contains(text(),'P-')]
+chkbx_NDC:								xpath:								//table[@class='listTable' and contains(@id,'table')]//td[.='${ndcName}']/preceding::span[1]
+list_selectedNDC:						xpath:								(//div[@role='dialog']//div[@class='listGrid'])[2]//div[@class='gridBody']//table[@class='listTable']//tr//td[2]
+btn_mainActions:						xpath:								//td[contains(@class,'buttonTitle') and text()='${btnName}']
+search_new_scenario:                      xpath:                                //input[@name="NAME$148l"]
+btnApply: xpath: //table[@role='presentation']//td[@class='buttonTitle']//div[contains(text(),'Apply')]
+
+Pricing_Manager-Contract/BG
+lbl_customerName:						  xpath:                               //label[text()='${input}']
+img_dropDown_customerName:                xpath:                               //label[text()='${input}']/following::img[1]
+chkbox_customerNumber:                    xpath:                               (//*[text()='${input}']//ancestor::tr//span)[1]
+lnk_pcm_status:                           xpath:                               //*[contains(text(),'(${status})')]
+lnk_startDate:							  xpath:                               (//div[@class='gridBody'])[1]//table[@class='listTable']//tr//td[2]
+lnk_expiringDate:						  xpath:                               (//div[@class='gridBody'])[1]//table[@class='listTable']//tr//td[3]
+commentbox_reject_pcm:                    xpath:                               (//label[text()='Comments'])[1]/ancestor::td/following-sibling::td/textarea
+btn_comments:                             xpath:                              (//td[text()='Comments'])[2]
+txt_Comment:							xpath:							//table//label[contains(text(),'Comments')]/../..//following-sibling::td//textarea
+
+#Pricing_Scenario_Manager
+btn_expand_Customer:                      xpath:                                (//*[text()='McKesson']/preceding-sibling::td)[2]//span
+lnk_new_scenario:                         xpath:                                //*[text()='${scenarioName}']
+field_pcmNumber:                          xpath:                                //*[.='${pcmCode}']
+field_startDate:                          xpath:                                //*[.='${pcmCode}']/following-sibling::td[5][.='${startDate}']
+field_endDate:                            xpath:                                //*[.='${pcmCode}']/following-sibling::td[6][.='${endDate}']
+field_priceTerm:                          xpath:                                //*[.='${pcmCode}']/following-sibling::td[8][.='${priceTerm}']
+field_priceTermValue:                     xpath:                                //*[.='${pcmCode}']/following-sibling::td[9][contains(.,'${priceTermValue}')]
+
+#Pricing_Additional_Test
+column_heading:							xpath:							(//table//tr//td[@class='headerTitle']/div[text()='${value}'])|(//table//tr//td[@class='headerTitle'and text()='${value}'])
+div_ColumnValue:						xpath:							(//div[@class='gridBody'])[${index}]//table[@class="listTable"]//tbody[1]//tr[${value}]//td[2]/div
+div_priceTermNDC:						xpath:							 (//div[@class='gridBody'])[${index}]//tr[${index}]//td[${index}]
+chkbox_Override:						xpath:							(//div[@class='gridBody'])[${index}]//tr[${Index}]//td[${index}]//span
+gmailLogo:								xpath:							//div[contains(@class,'gmail-logo')]
+inputField:								xpath:							//input[@type='${value}']
+daviztaLogo:							xpath:							//a[@title='Mail']//span//img[@src='https://www.google.com/a/davizta.com/images/logo.gif?alpha=1&service=google_default']
+firstMail:								xpath:							(//tbody)[5]//tr[${index}]//td[6]
+mailId:									xpath:							//*[text()='${section}']
+userHomeButton:							xpath:							//a[contains(@title,'Google Account: qait davizta')]
+
+nextButton:								xpath:							//input[@name='signIn' and @type='submit']
+mailHeading:										xpath:							(//div[@role='main']//table)[1]//h2
+backToInbox:							xpath:							 //span/a[contains(@href,'inbox')]
+
+#TC304
+DropDown_Status:						xpath:							//label[text()='Status']/following::table//div[@class="dvzTextItem"]
+Table_StatusCheckBox:					xpath:							//*[@class='listGrid' and @role='listbox' and contains(@eventproxy,'PickListMenu') and @aria-hidden='false']//table/tbody/tr/td[.='${value}']/preceding::span[1]
+Table_SelectSubscriber:					xpath:							//div[@class='listGrid' and @role='list' and contains(@eventproxy,'NotifierListGrid')]//table/tbody/tr/td[.='${value}']
+
+#Smoke:
+dialog_dashboard: xpath: //div[@class="breadCrumbToolStrip"]//following-sibling::div//div[@role='dialog']
+txt_dialogHdrs: xpath: //div[@class="breadCrumbToolStrip"]//following-sibling::div//div[@role='dialog']//div[@role="label"]//td[@class='windowHeaderText']
+hdr_sceMgr: xpath: //div[@class="breadCrumbToolStrip"]//following-sibling::div//div[@class='toolStrip']//b[text()='Scenario Manager']
+txt_priceChangeNum: xpath: (//div[@class='gridBody']//tr//td[contains(@class,'cell')][1])[1]
+inp_priceChangeNum: xpath: (//td[@class='recordEditorCell'])[1]//input
+list_searchPCMResult: xpath: //div[@class='gridBody']//td[contains(@class,'cell')]/parent::tr
+list_custNames: xpath: //div[@class='gridBody']//tr//td[contains(@class,'cell')][1]
+lnk_pcmReport: xpath: //a[text()='${linkText}']
+
+#Reports:
+lnk_filterDrop: xpath: //label[text()='${filterName}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
+list_filterDropValues: xpath: //tr[contains(@id,'PickListMenu')]
+btn_GenerateReport: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//*[text()='${btnName}']
+iframe: xpath: //iframe[@class='gwt-Frame']
+
+#Dashboard:
+lnk_pcmsDashboard: xpath: (//div[@class="breadCrumbToolStrip"]//following-sibling::div//div[@role='dialog'])[${index}]//table[@class='listTable']//td[contains(@class,'cell')][1]
+txt_fieldValue: xpath: //label[text()='${fieldName}']/ancestor::td/following-sibling::td[1]
+
+img_datePicker: xpath: //label[.='${lbl}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'date_control')]
+img_monthChooser: xpath: //div[contains(@eventproxy,"monthChooserButton")]//tr//td[contains(@class,'button')]
+lnk_monthChoose: xpath: //td[contains(@id,'showMonth')][.='${monthName}']
+img_yearChooser: xpath: //div[contains(@eventproxy,"yearChooserButton")]//tr//td[contains(@class,'button')]
+lnk_yearChoose: xpath: //td[contains(@id,'showYear')][.='${monthName}']
+lnk_dateToSelect: xpath: //td[contains(@class,'dateChooser') and not(contains(@class,'dateChooserDisabled'))][.='${date}']

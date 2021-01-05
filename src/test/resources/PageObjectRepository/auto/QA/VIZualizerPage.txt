@@ -1,0 +1,38 @@
+#IndexPage
+#elementname: locatortype: locatorvalue
+Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
+
+list_viewReport:				xpath:				//ul[@id='resultsList']//li//a[text()='${value}']
+iframe:							xpath:				//iframe[@class='gwt-Frame']
+loader:							xpath:				//p[@class='message' and contains(text(),'Loading…')]
+btn_toolbar:					xpath:				//ul[@class='list buttonSet']//button[@aria-label='${value}']
+div_window:						xpath:				//div[@id='${value}']
+businessEntity:					xpath:				//div[contains(@id,'BUSINESS_ENTITY_NAME')]//input
+xyz:							xpath:				//table[@class='jrPage']//tbody//tr[6]//td[4]
+btn_inputControl:				xpath:				//button[@id='${value}']
+column_data:					xpath:				//table[@class='jrPage']//tr//td[${value}]/span
+date_Time:						xpath:				//div[@id='dataTimestampMessage']
+dropdown_list:					xpath:				//div[@id='menu']//ul[@id='menuList']//p[text()='${text}']
+txt_reportParameters:			xpath:				//span[contains(text(),'${fieldName}')]/../following-sibling::td[contains(@style,'nowrap')][1]//span[text()='${fieldValue}']
+txt_lineItem:					xpath:				//td[contains(@class,'rowfloating')]//span[text()='${lineItem}']
+txt_filterDollarVal:			xpath:				//span[contains(text(),'${fieldName}')]/../following-sibling::td[contains(@style,'nowrap')][1]//span[text()='Accrual $']
+txt_colHeader:					xpath:				//td[contains(@class,'colfloating')]//span[text()='${colHdr}']
+lbls_lineItemRecords:			xpath:				//td[contains(@class,'rowfloating')]//span[text()='${lineItem}']/..//following-sibling::td
+
+# GTN Snapshot Variance Summary Report ("Input Control")
+DropDown_InputControl:       	xpath:				//div[@id='${HeadingTitle}']//a[contains(@class,'Singleselect')]
+Select_Value:					xpath:				//div[@id='${HeadingTitle}']//input[contains(@class,'mInput-search')]
+Select_ValueFromDropDwn:		xpath:				//div[contains(@class,'select-dropdown') and contains(@style,'display: block')]//li[contains(@title,'${HeadingTitle}')]
+Span_SelectedVal:				xpath:				//div[@id='${HeadingTitle}']//a[contains(@class,'Singleselect')]//span[contains(@class,'selection')]
+List_Category:					xpath:				//div[@id='Category']//ul[contains(@class,'mSelectlist')]//li[not(contains(@class,'isSelected')) and @title='${CategoryName}']
+Btn_apply:						xpath:				//button[@id='apply']
+Btn_Ok:							xpath:				//button[@id='ok']
+Btn_Deselect:					xpath:				//div[@id='Category']//span[text()='Deselect All']
+txt_valueType:					xpath:				//div[contains(@class,'select-dropdown') and contains(@style,'display: block')]//li[contains(@title,'Accrual $')]
+TblCol_ColumnHeading:			xpath:				//table[@class='jrPage']//tr//td[@class='jrxtcolfloating']
+TblColSpan_ColumnHeading:		xpath:				//table[@class='jrPage']//tr//td[@class='jrxtcolfloating']//span
+TblRow_RowHeading:				xpath:				//table[@class='jrPage']//tr//td[@class='jrxtrowfloating']
+TblRowSpan_RowHeading:			xpath:				//table[@class='jrPage']//tr//td[@class='jrxtrowfloating']//span
+Tblcel_Cell:					xpath:				(//table[@class='jrPage']//tr//td[contains(@style,'text-align: right')])[1]
+TblcelSpan_Cell:				xpath:				(//table[@class='jrPage']//tr//td[contains(@style,'text-align: right')])[1]//span
+inp_searchList:					xpath:				//input[@id='secondarySearchInput']

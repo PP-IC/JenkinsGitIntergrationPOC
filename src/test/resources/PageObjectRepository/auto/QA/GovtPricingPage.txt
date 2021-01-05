@@ -1,0 +1,46 @@
+#HomePage 
+#elementname: locatortype: locatorvalue
+
+lnk_filterDrop: xpath: //label[text()='${filterName}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
+lnk_dropDownItem: xpath: //tr[contains(@id,'PickListMenu')][.='${drpDownValue}']
+list_filterDropValues: xpath: //tr[contains(@id,'PickListMenu')]
+btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+pnl_calculationGrid: xpath: //td[contains(.,'Calculations')]/ancestor::div/following-sibling::div[@class='listGrid']
+txt_valForField: xpath: //label[text()='${lblName}']/ancestor::td/following-sibling::td[1]//input
+list_searchResults: xpath: //td[contains(.,'Calculations')]/ancestor::div/following-sibling::div[@class='listGrid']//table[@class='listTable']//tr
+txt_valueInResult: xpath: //td[contains(.,'Calculations')]/ancestor::div/following-sibling::div[@class='listGrid']//table[@class='listTable']//tr[${rowIndex}]//td[${colIndex}]
+hdr_dialogBox: xpath: //div[@role='dialog']//div[@role='label']//td[@class='windowHeaderText' and text()='${hdr}']
+inp_fieldValue: xpath: //div[@role='dialog']//label[text()='${fieldName}']/ancestor::td/following-sibling::td[1]//input[not(@type='HIDDEN')]
+img_datePicker: xpath: //label[text()='${fieldName}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'date_control')]
+txt_statusRecord: xpath: //td[contains(.,'Calculations')]/ancestor::div//table[@class='listTable']//tr//td[1][.='${priceType}']/following-sibling::td[.='${period}']/following-sibling::td[7]
+lnk_matchingRecord: xpath: //td[contains(.,'Calculations')]/ancestor::div//table[@class='listTable']//tr//td[1][.='${priceType}']/following-sibling::td[.='${period}']
+txt_versionOfRecord: xpath: //td[contains(.,'Calculations')]/ancestor::div//table[@class='listTable']//tr//td[1][.='${priceType}']/following-sibling::td[.='${period}']/following-sibling::td[1]
+txt_sectionHdr: xpath: //td[contains(@class,'imgSectionHeaderTitle')][.='${sectionHdr}']
+pnl_details: xpath: //div[@class='listGrid' and contains(@eventproxy,'GPCalculationDetails')]//table[@class='listTable']
+btn_actionsAvailable: xpath: //div[text()='${btnName}']/parent::td[contains(@class,'buttonTitle')]
+btn_onDialog: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[text()='${btnName}']
+
+#Calculation Details:
+txt_recordCell: xpath: //div[@class='gridBody'][2]//tr[@role='listitem'][${rowIndex}]//td[2]
+inp_recordCell: xpath: //div[@class='gridBody'][2]//tr[@role='listitem'][${rowIndex}]//td[2]//input
+txtarea_userComment: xpath: //b[text()='User Comment:']/../../../following-sibling::tr//textarea
+lnk_commentAdded: xpath: //div[@class='gridBody'][1]//tr[@role='listitem'][${rowNum}]//td[4]
+txt_cmntTooltip: xpath: //div[contains(@eventproxy,'isc_DynamicFormSection')]//div[@class='staticTextItem'][.='${comment}']
+txt_printPreview: xpath: //div[@role='label']//td[@class='windowHeaderText' and text()='Print Preview']
+lnk_closeIcon: xpath: //div[contains(@eventproxy,'PrintWindow')]//img[contains(@src,'close.png')]
+list_releaseRows: xpath: //tr[@role='treeitem']
+iframe_printCanvas: xpath: //iframe[contains(@id,'isc_PrintCanvas')]
+txt_ndcNames: xpath: //div[@class='gridBody'][1]//tr[@role='listitem']//td[3]
+txt_tooltipValue: xpath: //div[contains(@eventproxy,'isc_DynamicFormSection')]//td[1]//div[@class='staticTextItem']
+txt_netUnits: xpath: //div[@class='gridBody'][2]//tr[@role='listitem'][${rowIndex}]//td[4]
+lnk_ndcToSelect: xpath: //div[@class='gridBody'][1]//tr[@role='listitem'][contains(.,'${ndcName}')]
+
+#Explain Report Download
+dwnld_btn_ExplainReport:  xpath  ://div[contains(@eventproxy,'SectionStackStrip')]//img[contains(@src,'download')]
+lnk_print_ExplainReport: xpath: //div[contains(@eventproxy,'SectionStackStrip')]//img[contains(@src,'actions/print')]
+dwnld_option:  xpath  ://div[@class="normal" and not(contains(@style, "visibility: hidden"))]//td[@class='menuTitleField'][.='${option}']
+
+#Explain Report
+txt_valueInExplainReport: xpath: (//*[@class='listTable'])[3]/tbody/tr[contains(.,'${itemName}')]//td[${colIndex}]
+txt_valueBasedOnComponentID: xpath: (//*[@class='listTable'])[3]/tbody//td[2][.='${id}']//ancestor::tr//td[${colIndex}]
+txt_explainReportTooltip: xpath: (//div[contains(@eventproxy,'isc_Label_') and not(contains(@style,'visibility: hidden'))]//div//td[@class='gridHover'])

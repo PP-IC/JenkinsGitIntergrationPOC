@@ -1,0 +1,1255 @@
+Login:
+  url: https://drivesit2.davizta.com:8443/davizta/login.html
+  
+alertMessage:
+  successfully_cloned: clone is created successfully.
+  successfully_saved: list values are saved successfully.
+  new_list_created: New list is created successfully
+  valid_data: contains valid data
+  invalid_data: Please fix issue before proceeding.
+  revert: Any unsaved changes will be lost. Do you want to continue with the Revert?
+  newTransactionListSuccess: Transaction list created successfully
+  apmCreateSuccess: Package Saved Successfully
+  approvalRequestSent: Package Approval Request Sent Successfully
+  approvedPackage: Package Approved Successfully
+  deleteAPMsuccess: Assumption package deleted successfully
+  cantDeletePkg: Can not delete this assumption packaage, since this is used in one or more snapshot.
+  cantEditPkgWithSnap: Assigned list can not be changed because this Assumption Package is in Approved status.
+  pkgRejectRequest: Package Reject Request Sent Successfully
+  transListExistsAlert: Provided Clone List name already exist, please use different name.
+  canDeleteAssignedList: Can not delete this list, since this is used in one or more assumption packages
+  pkgWithDrawn: Package Withdrawn Successfully
+  pkgReject: Package Rejected Successfully
+  GTNValueSave: GTN Value saved successfully
+  enterCommentAlert: Please enter comment before saving the override.
+  snapshotCalculationAlert: Batch calculation started.
+  requestApprovalSnapAlert: Are you sure you want to request for approval?
+  withdrawSnapAlert: Are you sure you want to withdraw?
+  withdrawSnapAlertNew: Are you sure you want to withdraw?
+  requestSentSnapAlert: GTN snapshot sent for Approval.
+  withdrawnSentSnapAlert: GTN details withdrawn.
+  approveSnapConfirm: Are you sure you want to approve?
+  gtnApprovedAlert: GTN Details approved.
+  rejectSnapConfirm: Are you sure you want to reject?
+  gtnRejectAlert: GTN details rejected.
+  gtnCompareOnlyTwoError: Please select only 2 snapshots.
+  userUploadDeleteMsg: Are you sure to delete
+  systemFileDeleteMsg: Base list can not be deleted
+  noCmntHistory: No comment history to show
+  selectListAlert: Please select at least one editor list from search grid
+  createPSCOverlapDateMesg: Pricing Scenario Collection saved successfully
+  publishConfirmAlert: Are you sure you want to publish?
+  publishedSnapAlert: GTN Snapshots Published.
+  gpDetailsSaved: GP Details has been saved.
+  gpApprovalSent: GP details sent for Approval.
+  gpWithdrawn: GP details withdrawn.
+  gpApproved: GP Details approved.
+  gpPublished: GP Details published.
+  transactionListCreationAlert: Starting the selected lists creation.
+  selectTransListAlert: Please select at least one record
+  claimsHeaderSetupComplete: Header's status saved successfully
+  confirmDeleteHeader: Are you sure you want to delete the header
+  unlockcompalert: If any methodologies using this component, their status will get changed to 'Pending Validation'. Do you still want to Unlock?
+  compcreatedalert: FB Component have been created successfully
+  validationUpdateSnapshot: Update snapshot can not be performed for lines/items having status in Calculating, Pending Approval, Approved and Pending Unapproval
+  validationUpdateSnapshotClose: Update snapshot can not be performed for lines/items having status in Calculating, Pending Approval, Approved, Published and Pending Unapproval
+  validationUpdateWithoutCategory: Please select at least one category.
+  validationUpdateDependentCategory: Please select pre-requisites from dependent category
+  alertMsg_updateConfirmationMessage: Are you sure you want to update this snapshot?
+  alertMsg_dependentLineWarningMessage: Dependent Lines are not approved for selected forecast start month
+  alertMsg_dependentLineWarningMessageClose: Dependent Lines are not approved or published for selected close month
+  alertMsg_submitForApproval: Are you sure you want to request for approval?
+  alertMsg_sentForApproval: Line sent for request to approval.
+  alertMsg_questionApproval: Are you sure you want to approve?
+  alertMsg_Approved: Requested lines are approved.
+  alertMsg_submitForUnapproval: Are you sure you want to request for unapproval?
+  alertMsg_submitForUnapproval_New: Are you sure you want to request for unapproval? Please note that it will also update all the dependent Line Item(s) and calculations with Pending Unapproval.
+  alertMsg_sentForUnapproval: Line sent for request to unapproval.
+  alertMsg_questionUnapproval: Are you sure you want to unapprove?
+  alertMsg_questionUnapproval_New: Are you sure you want to unapprove? Please note that, Unapproving it will also unapprove all the dependent Line Item(s) and calculations.
+  alertMsg_Unapproved: Requested lines are unapproved.
+  alertMsg_validationErrMessage: Only calculated lines can be sent for request approval
+  alertMsg_updateConfirmationMessage: Are you sure you want to update this snapshot?
+  alertMsg_batchStartMessage: Batch calculation started.
+  alertMsg_withdraw: Are you sure you want to withdraw?
+  alertMsg_withdraw_New: Are you sure you want to withdraw? Please note that, Withdrawing it will also withdraw all the dependent Line Item(s) and calculations.
+  alertMsg_withdrawSuccess: Requested lines are Withdrawn.
+  alertMsg_rejectConfirm: Are you sure you want to reject?
+  alertMsg_rejectConfirm_New: Are you sure you want to reject? Please note that, Rejecting it will also reject all the dependent Line Item(s) and calculations.
+  alertMsg_rejected: Requested lines are Rejected.
+
+users:
+  analyst:
+     user_name: testuserA_a@client3.com
+     password: Admin@1234
+  manager:
+     user_name: testuserA_m@client3.com
+     password: Admin@1234
+  implementation analyst:
+     user_name: testuserA_a@client3.com
+     password: Admin@1234
+  gp analyst:
+     user_name: testuserA_a@client3.com
+     password: Admin@1234
+  gp manager:
+     user_name: testuserA_m@client3.com
+     password: Admin@1234
+  admin:
+     user_name: atiwari_admin@davizta.com
+     password: Feb@2020
+
+users1:
+  analyst:
+     user_name: generic_user_test@amneal.com
+     password: Admin@123
+  manager:
+     user_name: generic_user_m@amneal.com
+     password: Admin@123
+  implementation analyst:
+     user_name: generic_user_test@amneal.com
+     password: Admin@123
+  gp analyst:
+     user_name: generic_user_test@amneal.com
+     password: Admin@123
+  gp manager:
+     user_name: generic_user_m@amneal.com
+     password: Admin@123
+  admin:
+     user_name: atiwari_adm@amneal.com
+     password: Feb@2020
+
+users2:
+  analyst:
+     user_name: testuserB_a@client3.com
+     password: Admin@1234
+  manager:
+     user_name: testuserB_m@client3.com
+     password: Admin@1234
+  implementation analyst:
+     user_name: testuserB_a@client3.com
+     password: Admin@1234
+  gp analyst:
+     user_name: testuserB_m@client3.com
+     password: Admin@1234
+
+users3:
+  analyst:
+     user_name: atiwari_a@davizta.com
+     password: Admin@123
+  manager:
+     user_name: atiwari_m@davizta.com
+     password: Admin@123
+  implementation analyst:
+     user_name: atiwari_a@davizta.com
+     password: Admin@123
+  gp analyst:
+     user_name: atiwari_a@davizta.com
+     password: Admin@123
+  gp manager:
+     user_name: atiwari_m@davizta.com
+     password: Feb@2020
+  admin:
+     user_name: atiwari_admin@davizta.com
+     password: Feb@2020
+     
+AdminPage:
+  ProcessConfiguration:
+    defaultRecord: Default Process Configuration Set
+
+
+MDM:
+  primaryCustIDType: MANUAL
+  COT: Clinic
+  primaryCustID: 101
+  
+CB:
+  comptitle: ST_QA_CB_10012020_v7
+  compkey: ST_QA_CB_KEY_10012020_v7
+  clonecomptitle: ST_QA_CB_10012020_v1_Cloned
+  clonecompkey: ST_QA_CB_KEY_10012020_v1_Cloned
+  apmname: Wholesaler Admin Fee Amount
+  datasrc: Rebate Summary
+  value: Value
+  comptype: Transaction	
+  cb_filtertype: Include	
+  cb_filtername: Customer
+
+FB:
+  methoname: ST_QA_FB_10012020_v5
+  
+TC:
+  external_id: MN-00020718
+  parentcategory: New Parent Category
+  channel: MED - Medicaid 
+  categoryname: ST_QA_DISCOUNT_10012020_v6
+  linename: ST_QA_Line_09212020_v9
+  description: Line in Category Automation
+  linetype: Discount
+  startdate: 01/01/2003
+  enddate: 12/31/2020
+  Calc_type_one: Actuals Earned
+  Calc_type_two: Close Accrual
+  Market_Type_one: MC-COMM
+  Market_Type_two: GPO
+  filtertype: INCLUDE
+  filtername: Market Type
+  gl_name: A/R Trade - Reconciliation - 121011
+  
+
+AssumptionPkgMg:
+  Packagename: Base Assumption Package
+  NewAPMTitle: ST_QA_APM_10012020_v7
+  cloneAPMTitle: ST_QA_APM_10012020_Cloned_v7
+  closemonth: 2021-M03
+  
+GTNHome:  
+  Scenarioname: GTN Close Accrual Scenario
+NewSnapwindow:
+  SnapshotName: ST_QA_GTN_CA_APM_09212020
+  closemonthlabel:  Close Month
+  APMlabel:  Assumption Package
+  ItemlevelPC: CP
+  ItemlevelNDC: 66666001130
+  ItemlevelBrand: ACIPHEX
+Opendetails:
+  value: $1,931,583.56
+
+pricingManager:
+  Wholesaler: 
+     marketType: WHL - Wholesaler
+     startDate: 01/01/2015
+     startDateInPSCTable: "2015-01-01"
+     startDate2: 01/01/2017
+     endDate: 12/31/2020
+     endDate2: 12/31/2021
+     scenarioName: QA Automation PCM WHL
+     customerName: Cardinal - SRC1100200
+     customerName2: AETNA
+     marketTypeInPSCTable: Wholesaler
+     customerNameInPSCTable: MCKESSON
+     alert_scenariocreated: saved in Draft status
+     alertMsg_submitForApproval: The Price Change has been submitted for approval
+     alertMsg_ApprovedPCM: The Price Change has been approved
+     alert_priceChange: Price Change signed successfully
+     withdrawMessage: The Price Change has been withdrawn.
+     test_Comment: Test Comment
+     reject_Message: The Price Change has been rejected
+     withdrawConfirmation: Are you sure you want to withdraw this Price Change ?
+     alert_scenariodelete: The Price Change has been deleted.
+     alert_stratendDate: Effective End Date must be greater than Effective Start Date
+     alert_copySuccessful: The Price Change has been successfully copied. The newly generated Price Change Number is
+     navigationErrorMessage: You made some changes, do you want to navigate away from this page?
+     PCM_PriceTerm: Wholesaler Admin Fee %
+     PCM_multiPriceTerm1: Direct Price
+     PCM_multiPriceTerm2: Purchase Rebate Discount %
+     PCM_PriceTermValue:  10
+     NDC11_name: 66666-0011-30
+     NDC11_name2: 66666-0011-60
+     NDC11_name3: 66666-0011-90
+     
+  WAC:
+     endDate: 12/12/2018
+      
+Contract_BG:
+   Wholesaler: 
+     marketType: WHL - Wholesaler
+     customerName: Cardinal - SRC1100200
+     customerName2: AETNA
+     customerNumber: SRC1100200 - Cardinal
+     customerNumber2: SRC1100100 - MCKESSON
+     contractNumber: Cardinal Cardinal
+     contractNumber2: McKesson McKesson
+     startDate: 01/01/2018
+     endDate: 12/31/2018
+     startDate2: 01/01/2019
+     expiringDate: 12/31/2019
+     rejectPCMComment: Test Comment
+
+APM:
+  PricingScenario:
+    APMPageVar: GTN Scenarios
+    PricingCollectioName: QA_AutoTest
+    PricingCollectioName2: AutoTestForAP
+    Note: Test
+    ForecastCycle: 2018-M12
+    PricingScenarioName: QA Automation PCM WHL;922
+    CurrentSignedCheckBox: false
+    PSCColumns: Pricing Scenario;Customer;Market Type;Start Date;Current;Signed
+    
+  CloseAccural:
+    CloseAccuralAssumpPackageName: AutoTesting Close APM 
+    Note: Test
+    CloseMnth: 2016-M11
+    
+  TransactionSummaryList:
+    TransacSummaryName: APMTransactionNew
+    TransacSummaryNameToBeCloned: Assistance Program Rebate Amount
+    DuplicateTransactionListName: Cash Discount Amount
+    Asofdate: 10/17/2018 11:47
+    DropDown: Data Type
+    DataTypeVal: Assistance Program Rebate Amount
+    NewClonedListName: QA_APMTransaction_Cloning
+    
+  ForecastAccural:
+    forecastAccuralAssumpPackageName: AutoTesting Forecast APM
+    Note: Forecast Automation Test
+    ForecastCycle: 2018-M12
+  
+  EditTransactionList:
+    TransactionMarketType: Hospital
+
+APM_Clone_List:
+     price_list: WAC 
+     price_list2: ANFAMP
+     metric_summary_list:
+        type: National Market Growth Factor
+        source: National Market Volume
+        typeName: Yearly National Market Growth Factor
+        t13TypeCode: NATIONAL_MARKET_SHARE
+        t13ListName: National Market Share
+        t13NewGtnType: WHL
+     message:
+        successfully_cloned: clone is created successfully.
+        successfully_saved: list values are saved successfully.
+        new_list_created: New list is created successfully
+        revert: Any unsaved changes will be lost. Do you want to continue with the Revert?
+        
+GTN:
+   GTNActualEarnedSnapshot: QA Earned Snapshot
+   GTNActualEarnedScenario: GTN Actuals Earned Scenario
+   GTNActualEarnedCloseMonth: 2016-M11
+   GTNActualEarnedNotes: test
+   GTNActualEarnedTypeFilter: item
+   GTNActualEarnedValueTypeFilter: Actual $
+   GTNActualEarnedViewTypeFilter: Default
+   
+   GTNActualPaidScenario: GTN Actuals Paid Scenario
+   GTNActualPaidSnapshot: QA Paid Snapshot
+   GTNActualPaidCloseMonth: 2016-M11
+   GTNActualPaidNotes: test
+   
+   GTNCloseAccuralForecastCycle: 2018-M12
+   GTNCloseAccuralSnapshot: QA_Close_Accural
+   GTNCloseAccuralCloseMnth: 2016-M11
+   GTNCloseAccuralNotes: test
+   GTNCloseAccuralAssmpPkg: M12APM-Testing-GOR-1633CLONED
+   
+   GTNForecastAccuralSnapshot: QA_Forecast_Accural
+   GTNForecastAccuralStartMonth: 2018-M12
+   GTNForecastPriorMonth: 2016-M11
+   GTNForecastAccuralForecastCycle: test
+   GTNForecastAccuralNotes: test
+   GTNForecastAccuralAssmpPkg: test
+   
+   GTNCloseAccItemLevelFilter: NDC11
+   GTNCloseAccTypeFilter: item
+   GTNCloseAccTypeValueFilter: 66666001130  Bromide -30 mg
+   GTNCloseAccTypeValueFilter1: 61958040101  1001-VIREAD 300MG TABLETS
+   Filter_AccrualDollar: Accrual $
+   Filter_AccrualPercent: Accrual %
+   Filter_AccrualDiscountPercent: Accrual Discount %
+   Filter_AccrualUtilizationPercent: Accrual Utilization %
+   Filter_AccrualUnits: Accrual Units
+   Filter_PerUnitRebatePercent: Per Unit Rebate $
+   Filter_Accruals: Accruals
+   Filter_AccrualsOverActuals: Accruals Over Actuals
+   Filter_AccrualsOverActuals_History: Accruals Over Actuals With History
+   Filter_Frequency: Month
+   
+   GTNCloseAccRowName: Tricare;Tricare
+   GTNCloseAccRowName1: Federal Chargebacks;VA
+   GTNCloseAccRowName2: Cash Discount;Cash Discount
+   GTNCloseAccRowName3: Federal Chargebacks - Invoiced;FFS
+   Explain_CloseAccrual_Dollar: Close Accrual $
+   Explain_AccrualPercent: Accrual %
+   Explain_DiscountPercent: Discount %
+   Explain_UtilizationPercent: Utilization %
+   Explain_Units: Units
+   Explain_DiscountPercentPerUnit: Discount $ Per Unit
+   Explain_ForecastAccrualDollar: Forecast Accrual $
+   Explain_ForecastedUnits: Forecasted Units
+   Explain_ManualCashDiscountAdjustmenetPercent: Manual Cash Discount Adjustment %
+   GTNCloseAccExplainReportColstr: 4
+   TricareLookBackPeriodstr: 9
+   
+   Explain_CashDiscount_Percent: Cash Discount %
+   CashDiscountOverrideValue: "12.00"
+   CashDiscountOverrideComment: override the value by 12 percent.
+   Explain_ManualCashDiscountAdjustmenetPercent: Manual Cash Discount Adjustment %
+   Filter_Brand: Brand
+   Filter_Company: Company
+   Filter_BrandName: Fontbalnc
+   Filter_CompanyName: Demo Pharmaceuticals
+   ndc1_name: 66666002230  Chloride -30 mg
+   ndc2_name: 66666002260  Chloride -60 mg
+   ndc3_name: 66666002290  Chloride -90 mg
+   ndc4_name: 66666001160  Bromide -60 mg
+   ndc5_name: 66666001190  Bromide -90 mg
+
+   SnapshotName_MC: MT_MC_HCV_CP_20200328
+   NDC11: 61958080101
+   closeMonth: 20191215
+   fullNDC: 61958080101  1703-LETAIRIS 5MG TABLETS 30 COUNT BOTTLE
+   ERName: GLD_GAP_MC_RBT_M101_CLOSE_V3
+   LineName_MC: RxSolutions (OptumRx, Inc.) - Commercial
+   
+   SnapshotName_MED: PerformanceTest_Medi_0412
+   fullNDC_MED: 61958180101  1304-HARVONI 90/400 MG TABLETS
+   NDC11_MED: 61958180101
+   ERName_MED: GLD_GAP_Medicaid Close Accrual_MEDI_M101_V1
+   LineName_MED: WI_FFS
+   
+   SnapshotName_CG: CG test - defect 191 and 419
+   fullNDC_CG: 61958180101  1304-HARVONI 90/400 MG TABLETS
+   NDC11_CG: 61958180101
+   ERName_CG: GLD_GAP_Coverage Gap Close2_CG_M101
+   LineName_CG: Coverage Gap (Donut Hole)
+   
+   SnapshotName_Returns: Returns - SIT2 - R2
+   fullNDC_Returns: 61958180101  1304-HARVONI 90/400 MG TABLETS
+   NDC11_Returns: 61958180101
+   ERName_Returns: GLD_GAP_Returns Close_RET_M101_v1
+   LineName_Returns: Product Returns
+   
+   SnapshotName_CD: CA-G2N 3169 Cash Discount
+   fullNDC_CD: 15584010101  1011-ATRIPLA 600/200MG TABLETS
+   NDC11_CD: 15584010101
+   ERName_CD: GLD_Cash Discount Close Accrual_CD_M101
+   LineName_CD: Cash Discount Line REG
+
+   
+CloseApproval:
+  Organization1: R951_Client_3_Org1
+  CloseMonth1: 2020-M05
+  CloseName1: CloseWorkflowDependency
+  CloseName1: ST_QA_GTN_CA_APM_09212020
+  LineCategoryName1: G2N_2889_Child
+  LineName1: ST_QA_Line_09212020_v2
+
+  Organization: R951_Client_3_Org2
+  CloseMonth: 2020-M05
+  CloseName: Org2CloseWorkflowDependency
+  CloseName1: ST_QA_GTN_CA_APM_09212020
+  LineCategoryName: G2N_2889_Child
+  LineName: ST_QA_Line_09212020_v2
+
+  Organization1: Org_1-R941 Client 1
+  CloseMonth1: 2019-M12
+  CloseName1: Dependent_E2E_Workflow_ONC_MG0413
+  CloseName1: CloseWorkflow_Auto_Viread
+  LineCategoryName1: Auto_Workflow
+  LineName1: Auto_workflow_line
+
+  alertMsg_submitForApproval: Are you sure you want to request for approval?
+  alertMsg_sentForApproval: Line sent for request to approval.
+  alertMsg_questionApproval: Are you sure you want to approve?
+  alertMsg_Approved: Requested lines are approved.
+  alertMsg_submitForUnapproval: Are you sure you want to request for unapproval?
+  alertMsg_sentForUnapproval: Line sent for request to unapproval.
+  alertMsg_questionUnapproval: Are you sure you want to unapprove?
+  alertMsg_Unapproved: Requested lines are unapproved.
+  alertMsg_validationErrMessage: Only calculated lines can be sent for request approval
+  alertMsg_updateConfirmationMessage: Are you sure you want to update this snapshot?
+  alertMsg_batchStartMessage: Batch calculation started.
+  alertMsg_withdraw: Are you sure you want to withdraw?
+  alertMsg_withdrawSuccess: Requested lines are Withdrawn.
+  alertMsg_rejectConfirm: Are you sure you want to reject?
+  alertMsg_rejected: Requested lines are Rejected.
+  lineItemToChoose: Cash Discount;Cash Discount
+  CashDiscountOverrideValue: "10.00"
+  GTNCloseAccTypeValueFilter: 61958040101  1001-VIREAD 300MG TABLETS
+  itemName: 61958040101 1001-VIREAD 300MG TABLETS
+  
+  Dependency:
+    LineCategoryName_: G2N_2889_Child
+    LineName1_: ChildLine_OtherCatagory
+    DependentLineCategoryName_: G2N_2889_Parent
+    DependentLineName1_: ChildLine_2889
+    DependentLineName2_: ParentLine_2889
+
+    LineCategoryName: Org2_G2N_2889_Child
+    LineName1: Org2_ChildLine_OtherCatagory
+    DependentLineCategoryName: Org2_G2N_2889_Parent
+    DependentLineName1: Org2_ChildLine_2889
+    DependentLineName2: Org2_ParentLine_2889
+ 
+Release_Info:
+  buildId: 10
+  buildNum: 10
+  buildText: "This is R6.0 d-Rive QA Environment (Build-87)"
+  columnsOnPage: d-Rive Version;Ticket ID;Build No.;Build Type;Description;Deployment Date;Approved By;Tested By
+  driveVersion: "8.0.0.10"
+  ticketID: CM-492
+  buildTypeToSearch: Minor Upgrade
+  descriptionToSearch: Admin, GP, FB, ETL, GTN, Tech Config, PCM Modules
+  deployDate: 10/27/2017
+  approver: Pankaj
+  tester: Reshma Israni
+  
+Product Label:
+ label: test
+ NDC11: 66666001130
+ columnsOnPage: NDC11;NDC11 Name;Brand Name;Default Market Basket;Organization;Drug Code;Labels
+ ndc11name: Bromide -30 mg
+ brandName: Montblanc
+ orgName: Demo
+ 
+User_Uploads:
+ columnsOnPage: File Name;File Description;Data Type;Layout Type;Run Status;Load Errors;Runtime Errors;Run Start Time;Run End Time;Run ID;File Log ID;Record Count;Added;Suspended;Changed;Active;Uploaded On;Uploaded By
+ fileName: "CONTRACT_MASTER_DAT.csv"
+ fileDesc: Test
+ dataType: CONTRACT_MASTER
+ layoutType: METRIC_BY_CONTRACT_NDC_CSV
+ runStatus: PENDING
+ fromDate: 04/16/2017
+ toDate: 10/9/2017
+ uploadedOn: 09/11/2018
+ uploadedBy: nhande_analyst@davizta.com
+ lastMonthFrom: 3
+ 
+WholeSaler Explain Report Verification:
+   Closed_Accrual_Snapshot: PRODQA_Close_Accural_1521797020006
+   Forecast_Accrual_Snapshot: PRODQA_Forecast_Accural_1521797019972
+   lineItemToChoose: Wholesaler Admin Fees;MCKESSON
+   CashDiscountOverrideValue: "10.00"
+   wholesaleAdminFeeDisc: 10
+   manualAdminFeeDiscount: "5.00"
+   manualAdjustment: "10.00"
+   directGrossAmtList: QA_1521619557034_0
+ 
+CompareSnapshot:
+   Item_RadioButton: Item  
+   Item_Level: NDC11
+   Item_itemName: Bromide -60 mg
+   LineItemValue: Cash Discount
+   Snapshot1: QA_Close_Accrual_Test
+   Snapshot2: QA_Close_Accural_1517613749961
+   
+DataSlicer:
+   LineItemHeading: Commercial
+   LineItemsvalue: Aetna;Optum
+   ItemNames: Bromide -30 mg;Bromide -60 mg
+   ValueTypes: Accrual %
+   ItemLevel: NDC11
+   updateItemLevel: NDC11
+   updateItemNames: Bromide -90 mg
+   updateValueTypes: Accrual Discount %
+   updateLineItemHeading: Commercial
+   updateLineItemsvalue: Aetna
+   ExplainReportName: Total Rebate $
+   ExplainReportColNum: 4
+   
+GmailUrl: "https://www.google.com/gmail/about/#"
+GmailEmailId: "QA@davizta.com"
+GmailPwd: "A@hg*(^z42!"
+
+Subscriber:
+   FirstName: Test
+   LastName: Test
+   Email: test
+   Status: Submitted
+     
+Vizualizer:
+   summaryListName: GTN Snapshot Variance Summary Report
+   scenarioName: GTN Close Accrual Scenario
+   Frequency: MONTH
+   FromPeriod: 2018-M01
+   ToPeriod: 2016-M11
+   itemLevel: NDC11
+   Item: Bromide -30 mg
+   ValueType: Accrual $
+   Category: Tricare
+   year: 2018
+   quarter1: Q1
+   quarter2: Q2
+   quarter3: Q3
+   quarter4: Q4
+   firstMonth: 1-January
+   lastMonth: 11-November
+   field1: Snapshot 1
+   field2: Snapshot 2
+   field3: Variance
+   field4: Variance %
+   lineID: 1551
+   levelID: 1
+   calcDateID: 20181115
+   closeExplainMetaID: 130701
+   trueUpExplainMetaID: 150101
+   pipelineExplainMetaID: 160201
+   
+sqlConnectionCommand:
+ url: jdbc:sqlserver://20.20.1.9;DatabaseName=X951Q3_DERIVE
+ username2: atiwari
+ pwd2: Work@2020
+ username1: pkhairnar
+ pwd1: Admin@123
+ username3: abelsare
+ pwd3: Test@1234
+ username: ppandit
+ pwd: Admin@123
+ 
+MetricSummaryList:
+ brand_name: Fontbalnc
+ gtn_type: Managed Care Part D
+ 
+PriceListsT11:
+  priceLists: ANFAMP;QAMP;WAC;FCP;FORECASTED_ANFAMP;FORECASTED_FCP;FORECASTED_QAMP;FORECASTED_WAC
+  
+Brand Level Inputs:
+ valueTypes: Please select a value;Accrual $;Accrual %;Accrual Units;Contract Gross $;Contract Net $
+ ndc11_names_forAggregate: 66666001130  Bromide -30 mg;66666001160  Bromide -60 mg;66666001190  Bromide -90 mg
+ brandName: Montblanc
+ line_contractGross: Specialty Pharmacy Rebates and Fees;Walgreens
+ valueType: Accrual $
+ view: Accruals
+ frequency: Month
+ 
+GTN_Scenarios_Data:
+ TrueUpSnapshot_name: QA_True_Up_Snapshot
+ PipelineSnapshot_name: QA_PipeLine_Snapshot
+ RequiredReserveSnapshot_name: QA Required Reserve Snapshot
+ BlncSheetAdjSnapshot_name: QA Balance Sheet Adj Snapshot
+ 
+Snapshot_Details:
+ TrueUp:
+   itemLevel: NDC11
+   item: 66666001130  Bromide -30 mg
+   Line1_With_AccrualDollar: Managed Care;Commercial
+   Line2_With_AccrualDollar: Federal Chargebacks;DOD
+   Line1_Sales: Net Sales
+   Line2_Sales: Gross Shipment Sales
+   Line1_explainReport_Verification: Tricare;Tricare
+   trueup_valueTypes: Please select a value;Accrual $
+   explainReportName: True Up Accrual $
+   frequency: Month
+ Pipeline:
+   itemLevel: NDC11
+   item: 66666001130  Bromide -30 mg
+   Line1_With_AccrualDollar: Managed Care;Commercial
+   Line2_With_AccrualDollar: Federal Chargebacks;DOD
+   Line1_explainReport_Verification: Tricare;Tricare
+   explainReportName: Pipeline Reserve Adjustment
+ CloseAccrual:
+  lineForPrint: Medicaid;FFS;TX
+ Required Reserve:
+   itemLevel: NDC11
+   item: 66666001130  Bromide -30 mg
+   Line1_explainReport_Verification: Tricare;Tricare
+   frequency: Month
+ Balance Sheet Adjustment:
+   itemLevel: NDC11
+   item: 66666001130  Bromide -30 mg
+   Line1_explainReport_Verification: Tricare;Tricare
+  
+GTN_UI:
+ noEditLine1: Net Sales
+ noEditLine2: Gross Shipment Sales;Gross Demand Sales
+ noEditLine3: Coverage Gap;Coverage Gap
+ noEditLine4: Federal Chargebacks;DOD
+ noEditParentLevelLine: Managed Care;Commercial
+ editChildLevelLine: Managed Care;Part D;Aetna
+ 
+Chargeback Explain Report Verification:
+ FED VA:
+   Closed_Accrual_Snapshot: DRIVE-403Snap
+   Forecast_Accrual_Snapshot: QA Fed VA CBK 0205 Forecast Snapshot
+   lineItemToChoose: Federal Chargebacks;VA
+   GTNActualPaidCloseMonth: 2016-M11
+   isCloseMonth: "Yes"
+   itemLevel: NDC11
+   itemName: 66666001130  Bromide -30 mg
+   fixedContractPrice: $5
+   forecastPeriod: 2018-M12
+   
+Specialty Pharmacy Chargebacks Explain Report Verification:
+  T52:
+    Closed_Accrual_Snapshot: PRODQA_Close_Accural_1521797020006
+    lineItemToChoose: Specialty Pharmacy Chargebacks;Walgreens
+    GTNActualPaidCloseMonth: 2016-M11
+    isCloseMonth: "Yes"
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    fixedContractPrice: $0
+    
+  T58:
+    Forcast_Accrual_Snapshot: QA Forecast Snapshot M0916
+    lineItemToChoose: Specialty Pharmacy Chargebacks;Walgreens
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    fixedContractPrice: $0
+    
+  T87:
+    Actual_Earned_Snapshot: QA ActualEarned 0319
+    lineItemToChoose: Specialty Pharmacy Chargebacks;Walgreens
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    
+GPO and Hospital Chargebacks Explain Report Verification:
+  T59:
+    Forecast_Accrual_Snapshot: QA Forecast Snapshot M0916
+    lineItemToChoose: GPO and Hospital Chargebacks;Novation
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    fixedContractPrice: $0
+
+Tricare Explain Report Verification:
+  T60:
+    Closed_Accrual_Snapshot: QA Close Snapshot M0916
+    lineItemToChoose: Tricare;Tricare
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    
+  T61:
+    Forecasted_Accrual_Snapshot: QA Forecast Snapshot M0916
+    lineItemToChoose: Tricare;Tricare
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    
+IFF Admin Fee Explain Report Verification:
+  T62:
+    Closed_Accrual_Snapshot: QA Close Snapshot M0916
+    lineItemToChoose: IFF Admin Fee;IFF Admin Fee
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+  
+Copay Program Explain Report Verification:
+  T54:
+    Closed_Accrual_Snapshot: PRODQA_Close_Accural_1521797020006
+    lineItemToChoose: Copay Programs;Copay Programs
+    GTNActualPaidCloseMonth: 2016-M11
+    isCloseMonth: "Yes"
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    
+Coverage Gap Explain Report Verification:
+  T56:
+    Closed_Accrual_Snapshot: PRODQA_Close_Accural_1521797020006
+    lineItemChoose: Coverage Gap;Coverage Gap
+    GTNActualPaidCloseMonth: 2016-M11
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+
+  T64:
+    Forecast_Accrual_Snapshot: QA_Forecast_Accural_1532093773547
+    lineItemToChoose: Coverage Gap;Coverage Gap
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+
+GPO Admin Fee Explain Report Verification:
+  T57:
+    Closed_Accrual_Snapshot: PRODQA_Close_Accural_1521797020006
+    lineItemChoose: GPO Admin Fee;Novation
+    GTNActualPaidMonth: 2016-M11
+    itemLevel: NDC11
+    itemName: 6666001130  Bromide -30 mg
+    
+Cash Discount Explain Report Verification:
+  T41:
+    Closed_Accrual_Snapshot: DRIVE-403Snap
+    lineItemToChoose: Cash Discount;Cash Discount
+    CashDiscountOverrideValue: "10.00"
+  T43:
+    Forecast_Accrual_Snapshot: QA Fed VA CBK 0205 Forecast Snapshot
+    lineItemToChoose: Cash Discount;Cash Discount
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    forecastPeriod: 2018-M12
+    CashDiscountOverrideValue: "20.00"
+    cashDiscountList: QA_1517364390034_1
+    directGrossAmtList: QA_1517364390034_0
+  T45:
+    Actual_Earned_Snapshot: QA ActualEarned 0319
+    itemLevel: NDC11
+    lineItemToChoose: Cash Discount;Cash Discount
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Actual $
+    view: Default
+    Frequency: Month
+    valueEComponent: "100.00"
+  
+Returns Explain Report Verification:
+  T42:
+    Closed_Accrual_Snapshot: DRIVE-403Snap
+    lineItemToChoose: Returns;Returns
+    manualAdjustmentValue: "10.00"
+    valueQComponent: "100.00"
+    returnUtilizationList: QA_1521454120202_2
+    directGrossAmtList: DGA 20Mar
+    wacList: QA_1521454120202WAC.3
+    currentCloseMonth: 2016-M11
+  T44:
+    Forecast_Accrual_Snapshot: QA Fed VA CBK 0205 Forecast Snapshot
+    lineItemToChoose: Returns;Returns
+    itemLevel: NDC11
+    itemName: 66666001130  Bromide -30 mg
+    forecastPeriod: 2018-M12
+    manualAdjustmentValue: "20.00"
+    returnUtilizationList: QA_1517364390034_2
+    directGrossAmtList: QA_1517364390034_0
+    wacList: QA_1517364390034WAC.5
+  T46:
+    Actual_Earned_Snapshot: QA ActualEarned 0319
+    itemLevel: NDC11
+    lineItemToChoose: Returns;Returns
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Actual $
+    view: Default
+    Frequency: Month
+    valueFComponent: "100.00"
+ 
+Gross Demand Explain Report Verification:
+  T47:
+    Closed_Accrual_Snapshot: QA Fed VA CBK 0205 Snapshot
+    itemLevel: NDC11
+    lineItemToChoose: Gross Shipment Sales;Gross Demand Sales
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Accrual $
+    view: Accruals
+    Frequency: Month
+    grossDemandUtilizationList: Gross_Demand_Sales_Utilization
+    wacListName: QA_1521454120202WAC.3
+  T48:
+    Forecast_Accrual_Snapshot: QA Fed VA CBK 0205 Forecast Snapshot
+    itemLevel: NDC11
+    lineItemToChoose: Gross Shipment Sales;Gross Demand Sales
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Accrual $
+    view: Accruals
+    Frequency: Month
+    ForecastPeriod: 2018-M12
+    
+Gross Inventory Change Explain Report Verification:
+  T49:
+    Closed_Accrual_Snapshot: QA Fed VA CBK 0205 Snapshot
+    itemLevel: NDC11
+    lineItemToChoose: Gross Shipment Sales;Gross Inventory Change
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Accrual $
+    view: Accruals
+    Frequency: Month
+  T50:
+    Forecast_Accrual_Snapshot: QA Fed VA CBK 0205 Forecast Snapshot
+    itemLevel: NDC11
+    lineItemToChoose: Gross Shipment Sales;Gross Inventory Change
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Accrual $
+    view: Accruals
+    Frequency: Month
+    ForecastPeriod: 2018-M12
+    forecastedGrossUtilList: QA_1517364390034Forecasted_Gross_Packages.1
+  T51:
+    Actual_Earned_Snapshot: QA ActualEarned 0319
+    itemLevel: NDC11
+    lineItemToChoose: Gross Shipment Sales;Gross Inventory Change
+    itemName: 66666001130  Bromide -30 mg
+    valueType: Actual $
+    view: Default
+    Frequency: Month
+    valueFComponent: "100.00"
+    
+CloseSummary:
+ currentCloseMonth: 2016-M11
+ trueUpCloseMonth: 2016-M11
+ Line1_explainReport_Verification: Tricare;Tricare
+ Line1_Sales: Gross Shipment Sales
+ Line2_Sales: Net Sales
+ itemLevel: NDC11
+ itemName: 66666001130  Bromide -30 mg
+ brandName: Montblanc
+ 
+Internal BS Screen:
+ currentCloseMonth: 2016-M11
+ columnsOnPage: GTN Channel;Beginning Balance;Accruals & Adjustments;Payments;Ending Balance;Required Reserves;Manual Balance Sheet Adjustments;Balance Sheet Adjustments
+ lineItemToChoose: Federal Chargebacks;VA
+ Line1_Sales: Gross Shipment Sales
+ Line2_Sales: Net Sales
+ itemLevel: Company
+ itemName: Demo Pharmaceuticals
+ valueType_ActualPaid: Actual $
+ view_ActualPaid: Default
+ valueType_ReqRsrv: Required Reserve $
+ frequency: Month
+ accrualColName: Accruals & Adjustments
+ pymtColName: Payments
+ rrColName: Required Reserves
+ 
+External BS Report:
+ currentCloseMonth: 2016-M11
+ columnsOnPage: Balance Sheet Account Name;Beginning Balance;Accruals & Adjustments;Payments;Balance Sheet Adjustments;Ending Balance per d-rive;Ending Balance per Ledger;Variance (d-rive vs Ledger);Balance Sheet Code
+ lineItemToChoose: Chargebacks
+ 
+Smoke:
+ systemPriceList: WAC
+ systemMetricList: Gross Demand Sales Utilization
+ selectListAlert: Please select at least one editor list from search grid
+ scenarioName:
+   actualEarned: GTN Actuals Earned Scenario
+   actualPaid: GTN Actuals Paid Scenario
+   closeAcc: GTN Close Accrual Scenario
+   forecastAcc: GTN Forecast Accrual Scenario
+   trueUp: GTN True Up Accrual Scenario
+   pipeline: GTN Pipeline Accrual Scenario
+   rqdReserve: GTN Required Reserve Scenario
+   Blncsheet: GTN Balance Sheet Adjustment Scenario
+ currentCloseMonth: 2016-M11
+ InternalBSlineItemToChoose: Federal Chargebacks;VA
+ ExternalReportlineItemToChoose: Chargebacks
+ GTN filters:
+  itemLevel_1: NDC11
+  itemLevel_2: Brand
+  itemLevel_3: Profit Center
+  itemLevel_4: Company
+ DataSlicer:
+   LineItemHeading: Commercial
+   LineItemsvalue: Aetna
+   ItemNames: Bromide -30 mg
+   ValueTypes: Accrual %
+   ItemLevel: NDC11
+ Internal BS Screen:
+   columnsOnPage: GTN Channel;Beginning Balance;Accruals & Adjustments;Payments;Ending Balance;Required Reserves;Manual Balance Sheet Adjustments;Balance Sheet Adjustments
+ External BS Report:
+   columnsOnPage: Balance Sheet Account Name;Beginning Balance;Accruals & Adjustments;Payments;Balance Sheet Adjustments;Ending Balance per d-rive;Ending Balance per Ledger;Variance (d-rive vs Ledger);Balance Sheet Code
+ requestApprovalSnapAlert: Are you sure you want to request for approval?
+ requestSentSnapAlert: GTN snapshot sent for Approval.
+  
+Tech_Config:
+  lineCatColumns: Category ID;Organization Name;Parent Category;Category Name;Order Number;LAST UPDATED BY;LAST UPDATED ON;Action
+  blankEntryAlert: Please Insert Valid details first..
+  newCategoryName: QA_Category
+  childCategoryName: QA_Child
+  orgName: Demo Pharmaceuticals
+  existingIDAlert: already Exist in the system
+  lineMetaColumns: Line ID;Organization;d-Rive Module;Line Name;Line Description;Explain Header;Order Number;Lag Months;Category;Line Type;Frequency;Edit Level;Calculation Level;Calculation Frequency;Calculation Order;Customer;Contract;Effective Start Date ID;Effective End Date ID;Last Updated By;Last Updated On;Action
+  lineViewXREFColumns: Organization;GTN Report View;Category;Line;Last Updated By;Last Updated On;Action;Delete
+  reportLinesColumns: Organization;Report;Line;Lag Months;Last Updated By;Last Updated On;Action;Delete
+  reportHeadersColumns: Organization;Report;Line;Explain Header;Order Number;Is Default;Last Updated By;Last Updated On;Action
+  calcProcedureCol: Organization;d-Rive Module;Report;Line;Procedure;Procedure Parameters;Order Number;Is For Batch;Last Updated By;Last Updated On;Action;Delete
+  codeMasterCol: GL ID;Organization;GL Code;GL Type;GL Name;Last Updated By;Last Updated On;Action
+  codeXREFCol: Organization;GL;Line;Product;Last Updated By;Last Updated On;Action
+  pymnFilterCol: Organization;GL Code;Line;Data Type Description;Data Source Type;Data Filter;Last Updated By;Last Updated On;Action
+  
+  New Line View XREF:
+    orgName: Demo Pharmaceuticals
+    reportView: 150-GTN Trueup Accrual
+    lineDetails: 1211;1230
+    
+ExtendedSmoke:
+  alertMessage:
+     successfully_cloned: clone is created successfully.
+     successfully_saved: list values are saved successfully.
+     new_list_created: New list is created successfully
+     valid_data: contains valid data
+     newTransactionListSuccess: Transaction list created successfully
+     apmCreateSuccess: Package Saved Successfully
+     approvalRequestSent: Package Approval Request Sent Successfully
+     approvedPackage: Package Approved Successfully
+     snapshotCalculationAlert: Batch calculation started.
+     publishConfirmAlert: Are you sure you want to publish?
+     publishedSnapAlert: GTN Snapshots Published.
+     alert_priceChange: Price Change signed successfully
+  T01:
+    pricingManager:
+     Wholesaler: 
+       marketType: WHL - Wholesaler
+       startDate: 01/01/2015
+       endDate: 12/31/2020
+       scenarioName: QA Automation PCM WHL
+       NDC11_name: 66666-0011-30
+       customerName2: AETNA
+       alert_scenariocreated: saved in Draft status
+       alertMsg_submitForApproval: The Price Change has been submitted for approval
+       alertMsg_ApprovedPCM: The Price Change has been approved
+       PCM_PriceTerm: Wholesaler Admin Fee %
+       PCM_PriceTermValue:  10
+  T02:
+    PricingScenario:
+      APMPageVar: GTN Scenarios
+      PricingCollectioName: QA_AutoTest
+      Note: Test
+      CurrentSignedCheckBox: false
+    TransactionSummaryList:
+      TransacSummaryName: APMTransactionNew
+      TransacSummaryNameToBeCloned: Assistance Program Rebate Amount
+      Asofdate: 11/21/2017 11:47
+      DropDown: Data Type
+      DataTypeVal: Chargeback Utilization
+      NewClonedListName: QA_APMTransaction_Cloning
+    EditTransactionList:
+      TransactionMarketType: Hospital
+  T03:
+    CloseAccrual:
+      CloseAccuralAssumpPackageName: AutoTesting Close APM 
+      Note: Test
+      CloseMnth: 2016-M11
+      
+    ForecastAccrual:
+      forecastAccuralAssumpPackageName: AutoTesting Forecast APM
+      Note: Forecast Automation Test
+      ForecastCycle: 2018-M12
+  T04:
+    GTN:
+      GTNActualEarnedSnapshot: QA Earned Snapshot
+      GTNActualEarnedScenario: GTN Actuals Earned Scenario
+      GTNActualEarnedCloseMonth: 2016-M11
+      GTNActualEarnedNotes: AA test
+   
+      GTNActualPaidScenario: GTN Actuals Paid Scenario
+      GTNActualPaidSnapshot: QA Paid Snapshot
+      GTNActualPaidCloseMonth: 2016-M11
+      GTNActualPaidNotes: AP test
+   
+      GTNCloseAccuralSnapshot: QA_Close_Accural
+      GTNCloseAccuralCloseMnth:  2016-M11
+      GTNCloseAccuralNotes: Close test
+   
+      GTNForecastAccuralSnapshot: QA_Forecast_Accural
+      GTNForecastAccuralStartMonth: 2018-M12
+      ForecastCycle: 2018-M12
+      GTNForecastAccuralNotes: Forecast test
+  T05:
+    GTNCloseAccuralCloseMnth: 2016-M11
+    GTN_Scenarios_Data:
+      TrueUpSnapshot_name: QA_True_Up_Snapshot
+      PipelineSnapshot_name: QA_PipeLine_Snapshot
+  T06:
+    GTNCloseAccuralCloseMnth: 2016-M11
+    GTN_Scenarios_Data:
+      RequiredReserveSnapshot_name: QA Required Reserve Snapshot
+      BlncSheetAdjSnapshot_name: QA Balance Sheet Adj Snapshot
+      
+Govt Pricing:
+  T39:
+    defaultPriceType: Monthly AMP-RCP
+    searchPriceType: Monthly AMP-RCP
+    searchResultPriceType: MAMP
+    searchEndYr: 2019
+    newPriceType: Monthly AMP-RCP
+    resultNewPriceType: MAMP
+    newPeriod: 2019
+    selectPeriod1: 2019-M02
+    newPeriod2: 2019
+    selectPeriod2: 2019-M03
+  T40:
+   MAMPPriceType: Monthly AMP
+   resultMAMPPriceType: MAMP
+   QAMPPriceType: Quarterly AMP
+   resultQAMPPriceType: QAMP
+   year1: 2018
+   quarter1: 2018-Q1
+   monthInQuarter1: 2018-M01;2018-M02;2018-M03
+   quarter2: 2018-Q3
+   monthInQuarter2: 2018-M07;2018-M08;2018-M09
+   ndcValueToPick: Bromide -30 mg
+   bpPriceType: Best Price
+   resultBPPriceType: BP
+   uraPriceType: URA
+   phsPriceType: Public Health Service
+   recordPHSPriceType: PHS
+   quarterForPHS: 2017-Q1
+  
+Claims:
+  Medicaid:
+    Header Validation:
+      type: Medicaid
+      state: AK MEDICAID FFS
+      labeler: 22885
+      submissionPeriod1: 2015Q1
+      name: AK Medicaid FFS
+      editHeader1: AK MEDICAID FFS-MEDI-666666-2017Q1-1
+      editHeader2: ESI-MC-COMM-2010-M04-01
+      headerToSearch: AK
+      headerToDelete: Hello
+      headerToWithdraw: Hello
+      headerToApprove: Yes
+      headerToValidate: Validate
+    
+  Managed Care:
+    Header Validation:
+      type: Managed Care Commercial
+      customerName: ESI
+      submissionPeriod: 2017-M01
+      headerToEdit: ESI-MC-COMM-2010-M04-01
+      headerToDelete1: AK MEDICAID FFS-MEDI-666666-2017Q4-1
+      headerToDelete2: ESI-MC-COMM-2010-M04-01
+      headerToWithdraw: Hello
+      headerToApprove: Yes
+      headerToValidate: Validate
+
+GTN Forecast:
+  TC_GTN_FA_Snapshot_Update:
+    DependentFASnapshotName: FA_UpdateSS_V6
+    FASnapshotNameForAPMchange: FA_UpdateSS_V6
+    FASnapshotNameForCategorychange: FA_UpdateSS_V6
+    FASnapshotNameApproved: FA_Workflow_Custom_Metho
+    Organization: R951_Client_3_Org1
+    CloseMonth: 2020-M05
+    CloseName: FA_UpdateSS_V6
+    LineCategoryName: Returns
+    LineName: Product Returns
+    APMName: FA_Return_V3
+
+  TC_GTN_FA_Snapshot_Update_O2:
+    DependentFASnapshotName: FA_UpdateSS_V7_Org2
+    FASnapshotNameForAPMchange: FA_UpdateSS_V7_Org2
+    FASnapshotNameForCategorychange: FA_UpdateSS_V7_Org2
+    FASnapshotNameApproved: FA_Dependency_Workflow_Org2
+    Organization: R951_Client_3_Org2
+    CloseMonth: 2020-M04
+    CloseName: FA_UpdateSS_V7_Org2
+    LineCategoryName: Returns
+    LineName: Returns
+    APMName: FA_Return_Org2_V2
+
+GTN Close:
+  TC_GTN_CA_Snapshot_Update:
+    DependentFASnapshotName: CA-CloseWorkflowDependency
+    FASnapshotNameForAPMchange: CA-CloseWorkflowDependency
+    FASnapshotNameForCategorychange: CA-CloseWorkflowDependency
+    FASnapshotNameApproved: PV_612_External_Balance_Sheet_Org1
+    Organization: R951_Client_3_Org1
+    CloseMonth: 2020-M05
+    CloseName: CA-CloseWorkflowDependency
+    LineCategoryName: Returns
+    LineName: Product Returns
+    APMName: CA_WF_APM
+
+  TC_GTN_CA_Snapshot_Update_O2:
+    DependentFASnapshotName: CA-Org2CloseWorkflowDependency
+    FASnapshotNameForAPMchange: CA-Org2CloseWorkflowDependency
+    FASnapshotNameForCategorychange: CA-Org2CloseWorkflowDependency
+    FASnapshotNameApproved: PV_612_External_Balance_Sheet_Org2
+    Organization: R951_Client_3_Org2
+    CloseMonth: 2020-M05
+    CloseName: CA-Org2CloseWorkflowDependency
+    LineCategoryName: Returns
+    LineName: Returns
+    APMName: HB Base Assumption Package
+
+
+TC_Forecast_Approval_Summary_Verification:
+  Organization1: R951_Client_3_Org1
+  Organization: R951_Client_3_Org2
+  CloseMonth2: 2020-M10
+  CloseMonth1: 2020-M05
+  CloseMonth3: 2020-M02
+  CloseMonth: 2020-M04
+  SnapshotName2: FA_Dependency_Workflow_Test
+  SnapshotName1: FA_Workflow_Custom_Metho
+  SnapshotName3: FA_Dependency_Workflow_Org2
+  SnapshotName: FA_Workflow_Custom_Metho_Org2
+  LineCategoryName: Returns
+  LineName: Returns
+  DependentLineCategoryName: Gross Sales
+  DependentLineName: Gross Inventory Change
+  GTNAccItemLevelFilter: NDC11
+  GTNAccTypeFilter: item
+  GTNAccTypeValueFilter: 62856071230  LENVIMA 12MG
+  GTNAccTypeValueFilter1: 61958040101  1001-VIREAD 300MG TABLETS
+  Filter_AccrualDollar: Accrual $
+  Filter_Accruals: Accruals
+  Filter_Frequency: Month
+  Returns:
+    LineCategoryName: Returns
+    LineName1: Returns
+    LineName: Product Returns
+    DependentLineCategoryName: Gross Sales
+    DependentLineName: Gross Inventory Change
+    DependentLineName1: Gross Demand
+    DependentLineName2: Inventory Change
+  CustomMeth:
+    LineCategoryName: FA_3053_Regaression_p_Org2
+    LineName1: Org2_Regression_3053_P1
+    DependentLineCategoryName: Gross Sales
+    DependentLineName1: Gross Demand
+    DependentLineName2: Inventory Change
+    DependentLineCategoryName2: Managed Care
+    DependentLineSubCategoryName2: Private Plans
+    DependentLineName21: Aetna - Commercial
+    DependentLineName22: QA Atena - Commercial
+
+Close Manual Adjustment:
+  Organization11: R951_Client_3_Org1
+  CloseMonth11: 2020-M05
+  CloseName11: CloseWorkflowDependency
+  LineCategoryName11: G2N_2889_Child
+  LineName11: ChildLine_OtherCatagory
+  GTNCloseAccItemLevelFilter11: NDC11
+  GTNCloseAccTypeFilter11: item
+  GTNCloseAccTypeValueFilter11: 86195040101  9009-ERIVZW 300MG TABLETS
+  Filter_AccrualDollar11: Accrual $
+  Filter_Accruals11: Accruals
+  Filter_Frequency11: Month
+  CashDiscountOverrideValue11: "11.00"
+  itemName11: 86195040101 9009-ERIVZW 300MG TABLETS
+
+  Organization2: R951_Client_3_Org2
+  CloseMonth2: 2020-M05
+  CloseName2: Org2CloseWorkflowDependency
+  LineCategoryName2: Org2_G2N_2889_Child
+  LineName2: Org2_ChildLine_OtherCatagory
+  GTNCloseAccItemLevelFilter2: NDC11
+  GTNCloseAccTypeFilter2: item
+  GTNCloseAccTypeValueFilter2: 30017051700  9909-UOLOZM 0.5MG/VIAL INJECTION
+  Filter_AccrualDollar2: Accrual $
+  Filter_Accruals2: Accruals
+  Filter_Frequency2: Month
+  CashDiscountOverrideValue2: "11.00"
+  itemName2: 30017051700 9909-UOLOZM 0.5MG/VIAL INJECTION
+
+  Organization: R951_Client_3_Org2
+  CloseMonth: 2019-M02
+  CloseName: Cash discount
+  LineCategoryName: Cash Discount
+  LineName: Cash discount
+  GTNCloseAccItemLevelFilter: NDC11
+  GTNCloseAccTypeFilter: item
+  GTNCloseAccTypeValueFilter: 86195180101  9706-SZIELMR 90/400 MG TABLETS
+  Filter_AccrualDollar: Accrual $
+  Filter_Accruals: Accruals
+  Filter_Frequency: Month
+  CashDiscountOverrideValue: "11.00"
+  itemName: 86195180101 9706-SZIELMR 90/400 MG TABLETS
+
+  Organization1: R951_Client_3_Org1
+  CloseMonth1: 2020-M05
+  CloseName1: FA_UpdateSS_V5
+  LineCategoryName1: Returns
+  LineName1: Product Returns
+  GTNCloseAccItemLevelFilter1: NDC11
+  GTNCloseAccTypeFilter1: item
+  GTNCloseAccTypeValueFilter1: 86195090101  9609-XZBHGLM 75MG/VIAL KIT
+  Filter_AccrualDollar1: Accrual $
+  Filter_Accruals1: Accruals
+  Filter_Frequency1: Month
+  CashDiscountOverrideValue1: "11.00"
+  itemName1: 86195090101 9609-XZBHGLM 75MG/VIAL KIT
+
+  Organization2: R951_Client_3_Org2
+  CloseMonth2: 2020-M05
+  CloseName2: FA_UpdateSS_V6_Org2
+  LineCategoryName2: Returns
+  LineName2: Returns
+  GTNCloseAccItemLevelFilter2: NDC11
+  GTNCloseAccTypeFilter2: item
+  GTNCloseAccTypeValueFilter2: 86195150101  9708-HLEZOWR 400MG TABLETS
+  Filter_AccrualDollar: Accrual $
+  Filter_Accruals2: Accruals
+  Filter_Frequency2: Month
+  CashDiscountOverrideValue2: "11.00"
+  itemName2: 86195150101 9708-HLEZOWR 400MG TABLETS
+
+NumberCheck:
+  SnapshotName2: Org2CloseWorkflowDependency
+  NDC112: 30017051700
+  closeMonth2: 20200515
+  fullNDC2: 30017051700  9909-UOLOZM 0.5MG/VIAL INJECTION
+  ERName2: G2N_3365_CA_Child
+  LineName2: Org2_ChildLine_OtherCatagory
+   
+  SnapshotName: CloseWorkflowDependency
+  NDC11: 86195040101
+  closeMonth: 20200515
+  fullNDC: 86195040101  9009-ERIVZW 300MG TABLETS
+  ERName: G2N_3365_CA_Child
+  LineName: ChildLine_OtherCatagory
+   

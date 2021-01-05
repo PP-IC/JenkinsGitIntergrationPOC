@@ -1,0 +1,37 @@
+#Admin Page
+#elementname: locatortype: locatorvalue
+
+btn_MainMenu: xpath: //td[text()='${btnName}']
+btn_ModuleTabs: xpath: //td[text()='${ModuleName}']
+lnk_DropDownValues: xpath: //table[@class='menuTable']//*[text()='${itemName}']
+btn_logout: xpath: //td[text()='Logout']
+btn_onDialog: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[text()='${btnName}']
+txt_alertMsg: xpath: ((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span)
+btn_tabs: xpath: (//div[@class='toolStrip']//*[text()='${tab}'])[last()]
+lbl_loader: xpath: //div[@role='label']//td[text()='Loading...']
+btn_OkDialog: xpath: //div[contains(@role,'alertdialog') and not(contains(@style,'visibility: hidden'))]//div[text()='OK']
+loader:   xpath:  //*[contains(text(),'Loading..')]
+headerText:						xpath:           (//td[@class='windowHeaderText' and text()='${heading}'])[${index}]
+dialogHeader:  					xpath:				(//td[@class='dialogHeaderText' and text()='${heading}'])[${index}]
+txt_breadCrumbList:				xpath:			//div[@class='breadCrumbToolStrip']//div[@role='label']
+lnk_EditorsList: xpath: //*[@class='breadCrumbTitle' and text()='${listName}']
+
+#Validation Setup
+radio_Level: xpath: //input[@type='RADIO'][@value='${level}']
+input_ValidationSetName: xpath: //input[@name='VALIDATION_SET_NAME']
+input_ValidationSetComment: xpath: //input[@name='VALIDATION_SET_COMMENT']
+input_ValidationSetStartDate: xpath: //input[@name='VALIDATION_SET_START_DATE_dateTextField']
+input_ValidationSetEndDate: xpath: //input[@name='VALIDATION_SET_END_DATE_dateTextField']
+check_AllValidations: xpath: //span[contains(@style,'checked.png')]
+btn_ValidationAction: xpath: //div[contains(text(),'{action}')]
+
+#Process Configuration
+input_CBKPCSetName: xpath: //input[@name='PC_NAME']
+input_CBKPCComment: xpath: //input[@name='COMMENT']
+input_CBKPCStartDate: xpath: //input[@name='PC_START_DATE_dateTextField']
+input_CBKPCEndDate: xpath: //input[@name='PC_END_DATE_dateTextField']
+check_CBKPCSetDetails: xpath: //b[text()='${segment}']/following::span[${index}]
+input_CBKPCPaymentTimeline: xpath: //input[@name='CHARGEBACK_PAYMENT_TIMELINE_IN_DAYS#7']
+radio_CBKPCReceivedDate: xpath: //input[@value='RECEIVED_DATE#8']
+radio_CBKPCPostmarkDate: xpath: //input[@value='POSTMARK_DATE#9']
+

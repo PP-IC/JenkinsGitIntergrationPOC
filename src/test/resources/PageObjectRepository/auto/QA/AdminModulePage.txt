@@ -1,0 +1,27 @@
+#HomePage 
+#elementname: locatortype: locatorvalue
+
+btn_MainMenu: xpath: //td[contains(@class,'toolStripButton') and text()='${btnName}']
+lnk_filterDrop: xpath: //label[text()='${filterName}']/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
+list_filterDropValues: xpath: //tr[contains(@id,'PickListMenu')][.='${drpDownValue}']
+lbl_pageColumns: xpath: //div[@class='tabSetContainer']/div[not(contains(@style,'visibility: hidden'))]//div[@class='headerBar']//td[contains(@class,'headerTitle')]
+lnk_deleteRecord: xpath: //div[@class='gridBody']//tr[@role='listitem']//td[last()]//a[text()='Delete']
+list_allListsDisplayed: xpath: //td[@class='headerTitle']/ancestor::div[@class='headerBar']//following-sibling::div[@class='gridBody']//table[@role='presentation']//tr[@role='listitem']
+img_mandatoryField: xpath: //div[@class='gridBody']//tr[@role='listitem'][last()]//td[${colIndex}]//img[contains(@src,'exclamation')]
+inp_newLineCol: xpath: (//div[@class='gridBody']//tr[@role='listitem'][last()]//td[contains(@class,'tallCell')])[${ColIndex}]//input
+txt_alertMsg: xpath: ((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span)
+lnk_lastRowCells: xpath: (//div[@class='gridBody']//tr[@role='listitem'][last()]//td[contains(@class,'cell')])[${index}]
+txt_valueAtCell: xpath: (//div[@class='gridBody']//tr[@role='listitem'][${rowIndex}]//td[contains(@class,'cell')])[${colIndex}]
+lnk_tabName: xpath: //td[contains(@class,'tabButton') and text()='${tabName}']
+lnks_inColumn: xpath: //div[@class='gridBody']//tr[@role='listitem']//td[${index}]//a
+pnl_Newxref: xpath: //td[contains(.,'${label}')]/ancestor::div[@role='label']/following-sibling::div[@class='listGrid']
+lnk_lineDetail: xpath: //td[.='${lineName}']/preceding-sibling::td//span[contains(@class,'checkbox')]
+txt_lineId: xpath: //td[.='${lineName}']/preceding-sibling::td[1]
+list_recordsAdded: xpath: //td[contains(.,'${pnlHdr}')]/ancestor::div[@role='label']/following-sibling::div/div[@class='gridBody']//table[@class='listTable']//tr//td[5]
+img_filterIcon: xpath: //table[@class='formCell']//img[contains(@src,'filter')]
+btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+txt_filterApplied: xpath: //label[text()='${lblName}']/ancestor::td/following-sibling::td[1]
+btn_saveCancel: xpath: //div[@class='windowBody']//td[contains(@class,'buttonTitle')]//div[text()='${btnTitle}']
+
+#Revision History:
+txt_cellValHistory: xpath: //div[@class='tabSetContainer']/div[@class='normal' and not(contains(@style,'visibility: hidden'))]//div[@class='gridBody']//tr[@role='listitem'][${rowNum}]//td[${colIndex}]
