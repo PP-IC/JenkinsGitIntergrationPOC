@@ -1,4 +1,4 @@
-def RE_ENV = "X94Q1";
+def RE_ENV = "X951Q3";
     
 pipeline {
     agent any
@@ -32,7 +32,7 @@ pipeline {
                         bat """
                         IF EXIST Screenshots rmdir /s /q Screenshots
                         IF EXIST *.zip del *.zip
-                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome X94Q1
+                        java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite chrome RE_ENV
                         """
                         powershell 'Compress-Archive Screenshots Screenshots_Build_${BUILD_NUMBER}.zip'
                         powershell 'Compress-Archive test-output test-output_Build_${BUILD_NUMBER}.zip'
@@ -42,14 +42,14 @@ pipeline {
                     if (RE_ENV == 'A95Q3') {
                         echo 'I only execute on the A95Q3 Env'
                         bat """
-                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome A95Q3
+                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome RE_ENV
                         """
                         
                     }
                     if (RE_ENV == 'A951Q3') {
                         echo 'I only execute on the A951Q3 Env'
                         bat """
-                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome A951Q3
+                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome RE_ENV
                         """
                         
                     }
