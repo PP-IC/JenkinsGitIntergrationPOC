@@ -1,11 +1,8 @@
+def RE_ENV = "qa2";
+    
 pipeline {
     agent any
     
-    parameters { 
-        choice(name: 'RE_ENV', choices: ["dev", "test", "qa2", "qa3"], description: 'Available environment list')
-        booleanParam(defaultValue: true, name: 'Run_Smoke', description: 'Run Smoke Test Cases')
-    }
-
     stages {
         stage('test') {
             steps {
@@ -26,16 +23,16 @@ pipeline {
                         echo 'I execute elsewhere'
                     }
                     
-                    if ($params.RE_ENV == 'qa2') {
+                    if (${RE_ENV} == 'qa2') {
                         echo 'I only execute on the QA2 Env'
                     }
-                    if ($params.RE_ENV == 'qa3') {
+                    if (${RE_ENV} == 'qa3') {
                         echo 'I only execute on the QA3 Env'
                     }
-                    if ($params.RE_ENV == 'test') {
+                    if (${RE_ENV} == 'test') {
                         echo 'I only execute on the test Env'
                     }
-                    if ($params.RE_ENV == 'dev') {
+                    if (${RE_ENV} == 'dev') {
                         echo 'I only execute on the dev Env'
                     }
                 }
