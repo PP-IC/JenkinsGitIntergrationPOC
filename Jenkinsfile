@@ -1,4 +1,4 @@
-def RE_ENV = "X951Q3";
+def RE_ENV = 'X951Q3';
     
 pipeline {
     agent any
