@@ -34,8 +34,8 @@ pipeline {
                         IF EXIST *.zip del *.zip
                         java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite chrome ${RE_ENV}
                         """
-                        sh "echo ${env.BUILD_NUMBER}"
-                        sh "echo ${RE_ENV}"
+                        sh 'echo ${env.BUILD_NUMBER}'
+                        sh 'echo ${RE_ENV}'
                         powershell 'Compress-Archive Screenshots Screenshots_Build_$env.BUILD_NUMBER.zip'
                         powershell 'Compress-Archive test-output test-output_Build_$env.BUILD_NUMBER.zip'
                         s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${RE_ENV}', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '*.zip', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
