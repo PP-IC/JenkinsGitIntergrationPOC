@@ -1,34 +1,27 @@
-pipeline{
+pipeline {
+    agent any
 
-    agent none
-    parameters { 
-        choice(name: 'RE_ENV', choices: ["dev", "test", "qa2", "qa3"], description: 'Available environment list')
-        booleanParam(defaultValue: true, name: 'Run_Smoke', description: 'Run Smoke Test Cases')
-        
-
-        
-    }
-
-    stages{
-        stage("SmokeExecution"){
-             echo 'Smoke Execution'
-            when { 
-                expression { params.Run_Smoke }
-                }
+    stages {
+        stage('test') {
             steps {
-              echo 'Smoke Execution'
-              //
-              //
-              //
-              
+                sh 'echo hello'
             }
         }
-        
-    }
-    post {
-        always {
-            echo 'Post Complete'
+        stage('test1') {
+            steps {
+                sh 'echo $TEST'
+            }
+        }
+        stage('test3') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'I only execute on the main branch'
+                    } else {
+                        echo 'I execute elsewhere'
+                    }
+                }
+            }
         }
     }
-  
 }
