@@ -42,6 +42,7 @@ pipeline {
 
                         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'efaadd0b-0b0f-47c1-a6e3-5a6b88e40b74', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                         //sh "aws s3 mb s3://ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}"
+                        sh "mkdir s3://ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}"
                         sh "aws s3 cp test-output_Build_${env.BUILD_NUMBER}.zip s3://ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}"
 
                         }
