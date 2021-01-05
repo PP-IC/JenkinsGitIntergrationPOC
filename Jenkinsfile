@@ -23,7 +23,7 @@ pipeline {
                         echo 'I execute elsewhere'
                     }
                     
-                    if (RE_ENV == 'X94Q1') {
+                    if (RE_ENV == 'X951Q3') {
                         echo 'I only execute on the QA2 Env'
                         //sh 'IF EXIST "Screenshots" rmdir /s /q "Screenshots"'
                         //echo 'Deleted Screenshots folder'
@@ -46,8 +46,8 @@ pipeline {
                         """
                         
                     }
-                    if (RE_ENV == 'A951Q3') {
-                        echo 'I only execute on the A951Q3 Env'
+                    if (RE_ENV == 'X94Q1') {
+                        echo 'I only execute on the X94Q1 Env'
                         bat """
                         java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome RE_ENV
                         """
