@@ -25,7 +25,9 @@ pipeline {
                     
                     if (RE_ENV == 'qa2') {
                         echo 'I only execute on the QA2 Env'
-                        sh "java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome X94Q1"
+                        bat """
+                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome X94Q1
+                        """
                         
                     }
                     if (RE_ENV == 'qa3') {
