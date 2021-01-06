@@ -22,6 +22,7 @@ pipeline {
             steps {
                 echo 'Executed Stage3 Data Setup and Migration'
             }
+        }
          stage('Jasper Deployments') {
             steps {
                 echo 'Executed Stage4 Jasper Deployments'
