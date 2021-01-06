@@ -1,76 +1,61 @@
-def re_env = 'X951Q3';
-    
+def re_env = 'X951Q3'; 
+//re_env to use from choices RE_ENV [dev, qa1, qa2, qa3, qa4, perfdev]
+//add booleanParam for "Smoke Execution" with defaultValue: true
+//if "Smoke Execution" option is selected --> show choice for browser [chrome, edge, ie]   
+def re_browser = 'chrome';
+
 pipeline {
     agent any
     
     stages {
-        stage('test') {
+        stage("App and DACPAC") {
             steps {
-                echo 'hello'
+                echo 'Executed Stage1 App and DACPAC'
             }
         }
-        stage('test1') {
+        stage('DB Restore') {
             steps {
-                echo 'TEST1'
+                echo 'Executed Stage2 DB Restore'
+            }
+        stage('Data Setup Migration') {
+            steps {
+                echo 'Executed Stage3 Data Setup and Migration'
+            }
+         stage('Jasper Deployments') {
+            steps {
+                echo 'Executed Stage4 Jasper Deployments'
             }
         }
-        stage('test3') {
+        stage('Smoke Execution') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'main') {
-                        echo 'I only execute on the main branch'
+                    if (env.BRANCH_NAME == 'master') {
+                        echo 'Executing code from master branch'
                     } else {
-                        echo 'I execute elsewhere'
+                        //echo 'I execute elsewhere'
                     }
                     
-                    //if (re_env == 'X951Q3') {
-                        echo "I only execute on the ${re_env} Env"
-                        //sh 'IF EXIST "Screenshots" rmdir /s /q "Screenshots"'
-                        //echo 'Deleted Screenshots folder'
-                        //sh 'IF EXIST "*.zip" del "*.zip"'
-                        //echo 'Deleted Zip folders'
+                        echo "Aautomated Smoke Test started on the ${re_env} Env"
+                        
+                        //Clear old artifacts
                         bat """
                         IF EXIST Screenshots rmdir /s /q Screenshots
                         IF EXIST *.zip del *.zip
-                        java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite chrome ${re_env}
+                        java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite ${re_browser} ${re_env}
                         powershell Compress-Archive Screenshots Screenshots_Build_${env.BUILD_NUMBER}.zip
                         powershell Compress-Archive test-output test-output_Build_${env.BUILD_NUMBER}.zip
                         """
-                        //powershell 'Compress-Archive Screenshots Screenshots_Build_$env.BUILD_NUMBER.zip'
-                        //powershell 'Compress-Archive test-output test-output_Build_$env.BUILD_NUMBER.zip'
-                        s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: "ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}", excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '*.zip', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
 
-                       // withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'efaadd0b-0b0f-47c1-a6e3-5a6b88e40b74', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-                        //sh "aws s3 mb s3://ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}"
-                        //sh "mkdir s3://ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}"
-                       // sh "aws s3 cp '*.zip' s3://ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}"
-
-                       // }
-                        
-                    //}
-                    if (re_env == 'A95Q3') {
-                        echo 'I only execute on the A95Q3 Env'
-                        bat """
-                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome ${re_env}
-                        """
-                        
-                    }
-                    if (re_env == 'X94Q1') {
-                        echo 'I only execute on the X94Q1 Env'
-                        bat """
-                        java -jar SamplePOC_SS_Env_V1.jar ComponentBuilder_test POC chrome ${re_env}
-                        """
-                        
-                    }
-                    if (re_env == 'dev') {
-                        echo 'I only execute on the dev Env'
-                    }
+                    //Upload artifacts to AWS S3 Bucket
+                    s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: "ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}", excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '*.zip', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
+   
                 }
             }
         }
     }
     post {
         always {
+            //Email Notification of Smoke Result
             emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', body: '''Hi, Please see automation smoke suite execution report as below:
             ${FILE, path="test-output/emailable-report.html"}''', subject: '$DEFAULT_SUBJECT', to: 'ppandit@integrichain.com'
         }
