@@ -33,9 +33,7 @@ pipeline {
         stage('Smoke Execution') {
             steps {
                 script {
-                    when {
-                    expression { build_status }
-                    }
+                    if (build_status == true) {
                     if (env.BRANCH_NAME == 'master') {
                         echo 'Executing code from master branch'
                     } else {
@@ -56,6 +54,7 @@ pipeline {
                     //Upload artifacts to AWS S3 Bucket
                     s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: "ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}", excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '*.zip', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
    
+                }
                 }
             }
         }
