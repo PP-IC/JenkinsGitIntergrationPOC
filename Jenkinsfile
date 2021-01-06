@@ -69,4 +69,10 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            emailext body: '''Hi, Please see automation smoke suite execution report as below:
+            ${FILE, path="test-output/emailable-report.html"}''', subject: '$DEFAULT_SUBJECT', to: 'ppandit@integrichain.com'
+        }
+    }
 }
