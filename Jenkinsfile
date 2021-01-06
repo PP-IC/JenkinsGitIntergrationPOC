@@ -17,6 +17,7 @@ pipeline {
             steps {
                 echo 'Executed Stage2 DB Restore'
             }
+        }
         stage('Data Setup Migration') {
             steps {
                 echo 'Executed Stage3 Data Setup and Migration'
