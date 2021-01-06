@@ -27,7 +27,7 @@ pipeline {
          stage('Jasper Deployments') {
             steps {
                 echo 'Executed Stage4 Jasper Deployments'
-                //build_status = true;
+                build_status = true;
             }
         }
         stage('Smoke Execution') {
