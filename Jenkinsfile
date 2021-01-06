@@ -3,6 +3,7 @@ def re_env = 'X951Q3';
 //add booleanParam for "Smoke Execution" with defaultValue: true
 //if "Smoke Execution" option is selected --> show choice for browser [chrome, edge, ie]   
 def re_browser = 'chrome';
+def build_status= false;
 
 pipeline {
     agent any
@@ -26,11 +27,15 @@ pipeline {
          stage('Jasper Deployments') {
             steps {
                 echo 'Executed Stage4 Jasper Deployments'
+                //build_status = true;
             }
         }
         stage('Smoke Execution') {
             steps {
                 script {
+                    when {
+                    expression { build_status }
+                    }
                     if (env.BRANCH_NAME == 'master') {
                         echo 'Executing code from master branch'
                     } else {
