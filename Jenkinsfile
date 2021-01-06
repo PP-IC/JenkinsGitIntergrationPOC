@@ -23,8 +23,8 @@ pipeline {
                         echo 'I execute elsewhere'
                     }
                     
-                    if (re_env == 'X951Q3') {
-                        echo 'I only execute on the QA2 Env'
+                    //if (re_env == 'X951Q3') {
+                        echo "I only execute on the ${re_env} Env"
                         //sh 'IF EXIST "Screenshots" rmdir /s /q "Screenshots"'
                         //echo 'Deleted Screenshots folder'
                         //sh 'IF EXIST "*.zip" del "*.zip"'
@@ -47,7 +47,7 @@ pipeline {
 
                        // }
                         
-                    }
+                    //}
                     if (re_env == 'A95Q3') {
                         echo 'I only execute on the A95Q3 Env'
                         bat """
