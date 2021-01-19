@@ -3,11 +3,12 @@
 
 icon_CategoryPlus: xpath : //div[text()='+']
 drp_parentCatgory: xpath: //div[@class='dvzTextItemHint'][@role='presentation']
-drp_category: xpath: (//label[text()='Category']/ancestor::td/following-sibling::td[1])[2]
+drp_category: xpath: (//label[text()='Category']/ancestor::td/following-sibling::td[1])[2]//img
 drp_Type: xpath: //label[text()='Type']/ancestor::td/following-sibling::td[1]
 drp_channel: xpath: //label[text()='Channel']/ancestor::td/following-sibling::td[1]//span[@role='button']//img
 lnk_filterDrop: xpath: //label[contains(text(),'${filterName}')]/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
 lnk_dropDownItem: xpath : //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.='${name}']
+lnk_dropDownItem_Formula: xpath: //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')]//div[contains(text(),'${Element_ID}')]
 lnk_drpitemlist: xpath : //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.]
 link_multidrpitem_list: xpath: //tr[@role='option']//div[contains(text(),'${options}')]/ancestor::td/preceding-sibling::td[1]//span[@eventpart='valueicon']
 drp_multicheck_list: xpath: //tr[@role='option']//div[contains(text(),'')]/ancestor::td/preceding-sibling::td[1]//span
@@ -19,11 +20,14 @@ input_startdate: xpath : //input[@name='START_DATE_dateTextField']
 input_enddate: xpath : //input[@name='END_DATE_dateTextField']
 list_filterDropValues: xpath : //tr[contains(@id,'PickListMenu')]
 btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+btn_action_index_cg: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='${Button_Name}'])[2]
+btn_mainActions_index: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='${btnName}'])[3]
+btn_assign_apm: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='Assign'])
 btns_mainActions: xpath: //td[contains(@class,'buttonTitle')]
 btn_savecomp: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='Save'])[1]
 lbl_window_title: xpath: (//td[@class='windowHeaderText'][contains(text(),'${window_name}')])[1]
 lbl_GridComponentkey: xpath: //*[text()='${Componentkey}']
-lbl_GridComponentStatus: xpath: //*[@role='listitem']//div[text()='${ComponentName}']/../following-sibling::td[5]/div 
+lbl_GridComponentStatus: xpath: //*[@role='listitem']//div[text()='${ComponentName}']/../following-sibling::td[4]/div
 lbl_GridComponentPACount: xpath: //*[@role='listitem']//div[text()='${ComponentName}']/../following-sibling::td[4]/div 
 txt_alertMsg_comp: xpath: (((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span))[2]
 btn_com_clone: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='Clone'])[2]
@@ -40,7 +44,8 @@ drp_apminput: xpath : (//td[@class='comboBoxItemPickerCell']//img[contains(@src,
 drp_datecolumn: xpath : (//td[@class='comboBoxItemPickerCell']//img[contains(@src,'comboBoxPicker')])[6]
 drp_grpby: xpath : (//td[@class='comboBoxItemPickerCell']//img[contains(@src,'comboBoxPicker')])[7]
 drp_grpfunction: xpath : (//td[@class='comboBoxItemPickerCell']//img[contains(@src,'comboBoxPicker')])[8]
-icon_add_filter: xpath: //img[contains(@src,'add.png')]
+icon_add_filter: xpath: //td[contains(@class,'headerTitle')]//img[contains(@src,'add.png')]
+icon_add_filtertwo: xpath: (//td[contains(@class,'headerTitle')]//img[contains(@src,'add.png')])[2]
 lbl_filter_type_cb: xpath: //div[contains(@eventproxy,'isc_ListGrid')]//table//tr[@role='listitem']//td[3]
 lbl_filter_name_cb: xpath: //div[contains(@eventproxy,'isc_ListGrid')]//table//tr[@role='listitem']//td[4]
 check_apm: xpath : //label[contains(text(),'APM Required')]
@@ -73,13 +78,17 @@ chk_box_products: xpath: (//td[@class='headerTitle']//span[@eventpart='valueicon
 chk_box_glaccount_line: xpath: //div[@eventproxy='isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_0']//tr//td[@class='headerTitle']//span[@eventpart='valueicon']
 chk_box_glaccount_product: xpath: //div[@eventproxy='isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_2']//tr//td[@class='headerTitle']//span[@eventpart='valueicon']
 btn_choose_right: xpath : //div[contains(text(),'>>')]
+btn_choose_right_index: xpath: (//div[contains(text(),'>>')])[2]
+btn_remove_choose_item: xpath : //div[contains(text(),'<<')]
+
 input_metho_txt: xpath : (//input[@name='MAIN_METHODOLOGY$148l'])[2]
+input_sub_metho_txt: xpath : (//input[@name='SUB_METHODOLOGY$148l'])[2]
 slct_metho: xpath: //td[@class='cell']//div[@role='presentation'][text()='${methoname}']
 btn_close_window: xpath : //img[contains(@src,'close.png')]
 lbl_GL_account: xpath : //div[@role='presentation'][contains(text(),'Accrued Distributor/Wholesaler Fees - 23705')]
 btn_Actions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btn_name}']
 lbl_line_status: xpath: //tr[@role='treeitem']//td[contains(text(),'${Line_Name}')]/following::td[8]//div
-chk_GL_account: xpath: //div[contains(text(),'${gl_name}')]/preceding::td[2]//span
+chk_GL_account: xpath: //div[contains(text(),'${gl_name}')]/preceding::td[1]//div[contains(text(),'${Gl_Type}')]/preceding::td[1]//div//span
 
 
 
@@ -111,12 +120,16 @@ drp_closemonth_whole: xpath: //label[text()='Calculation Type']/ancestor::td/fol
 lnk_select_cat: xpath:  //label[text()='Parent Categories']/ancestor::td/following-sibling::td[1]//a[@href='javascript:void'] | //a[@href='javascript:void'][contains(text(),'Select Categories')]
 chkbox_parent_cat_name: xpath: //*[text()='${CategoryName}']/ancestor::td/preceding-sibling::td[1]//span[@eventpart='valueicon']
 chbox_list_name: xpath: (//div[contains(@eventproxy,'isc_GTNAssumption_PkgDataSourcePopup')]//div[text()='${list_name}']/ancestor::td/preceding-sibling::td[1]//span)[1]
-btn_edit: xpath: //img[contains(@src,'edit.png')]
+btn_edit: xpath: (//tr[@role='listitem'][not (@aria-setsize)]//img[contains(@src,'edit.png')])[${index}]
+apm_data_input_list: xpath: //tr[@role='listitem'][not (@aria-setsize)]
 lbl_data_input_name: xpath: //a[@href='javascript:void'][contains(text(),'${List_name}')]
 lbl_data_input_name: xpath: //div[contains(text(),'${List_name}')]
 lbl_Grid_APM_Status: xpath: //*[@role='listitem']//div[text()='${APM_Name}']/../following-sibling::td[8]/div	
 btn_assign: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='Assign'])[2]
 drp_closemonth_apm: xpath: //input[@name='CLOSE_MONTH']
+
+btn_onDialog: xpath: //div[contains(@role,'dialog') and not(contains(@style,'visibility: hidden'))]//div[text()='${btnName}']
+
 
 
 
@@ -155,5 +168,104 @@ lbl_cb_newcompwindow_note: xpath: //span[contains(@class,'formTitle')]//label
 
 
 
+#APMDetailed
+
+lnk_button: xpath: //a[@href='javascript:void'][contains(text(),'${Link_name}')]
+check_list_assig: xpath: (//div[contains(@eventproxy,'isc_GTNAssumption_PkgDataSourcePopup')]//div[contains(@onscroll,'return isc_GTNAssumption_PkgDataSourcePopup')]//tr[@role='listitem'][not(@aria-setsize)]//td//div[text()='SYSTEM']/preceding::td[4]//div//span)
+radio_btn_AllDS: xpath:  //label[text()='All Latest Data Sources Lists']
+radio_btn_DSUser: xpath:  //label[text()='Selected Latest List by Data Source and User']
+chk_datasource_list: xpath: //*[text()='${List_Name}']/ancestor::td[2]//span
+chk_base_list: xpath: //*[text()='${List_Name}']/ancestor::td/following::td[5]//tr//td//span
+
+#CBDetailed
+lbl_comp_status: xpath: //*[@role='listitem']//div[text()='${Comp_Key}']/following::td[5]//div
+cb_filter_type: xpath: //div[contains(@eventproxy,'isc_ListGrid')]//table//tr[@role='listitem']//td[3]//div[not(contains(text(),'clude'))] 
+cb_filter_Name: xpath: //div[contains(@eventproxy,'isc_ListGrid')]//table//tr[@role='listitem']//td[5]//div[contains(text(),'${Aliase_Name}')]/preceding::td[1]
+check_apm_state: xpath: //label[contains(text(),'APM Required')]/preceding::span[1]
+input_static_filter: xpath: //div[contains(@eventproxy,'isc_ListGrid')]//table//tr[@role='listitem']//td[5]//div[contains(text(),'${Aliase_Name}')]/following::td[1]
+lbl_metho_count: xpath: //*[@role='listitem']//div[text()='${Comp_Key}']/following::td[4]//div
+txt_alert_dialog: xpath: //div[contains(@eventproxy,'isc_DynamicForm')]//td[@class='formCell']//span[contains(text(),'Filter Should have unique records.')]
+input_comp_key: xpath: //input[@name='COMP_KEY$148l']
+list_grid_headers: xpath: //div[contains(@eventproxy,'isc_ImgButton')][contains(@class,'headerButton')]
+list_action_buttons: xpath: //tr//td[contains(@class,'buttonTitle')]//div
+list_tc_buttons: xpath: //tr//td[contains(@class,'buttonTitle')]//div[not(contains(text(),'▼')) and not(contains(text(),'▲'))]
+actionbuttonsonPage: xpath: //td[@class='buttonTitle']//div[contains(text(),'${ButtonName}')]
+
+#FBDetailed
+dropdwn_field: xpath: //*[text()='${dropdownName}']/ancestor::td/following-sibling::td[1]//td//img
+dropdwn_field_open: xpath: (//*[text()='${dropdownName}']/ancestor::td/following-sibling::td[1]//td//img)[1]
+icon_dropdown_filed: xpath: (//*[text()='${dropdownName}']/ancestor::td/following-sibling::td[1]//td//img)[1]
+dropdwn_field_multi_filter: xpath: (//*[text()='${dropdownName}']/ancestor::td/following-sibling::td[1]//td//img)[2]
+input_text: xpath: //*[@name='${text_name}']
+input_text_EEE: xpath: (//input[@name='${text_name}'])[2]
+checkbox_field: xpath: //*[text()='${checkbox_field}']/ancestor::td[1]
+checkbox__drildown_field: xpath: //*[text()='Drilldown Flag']/ancestor::td[1]
+select_name: xpath: //tr[@role='listitem']//td[3]//div[contains(text(),'${Name}')]
+drp_element_listname: xpath: //div[@class="pickListMenuBody"]//td//div[contains(text(),'${Element_list_name}')] 
+drop_option_with_dollar: xpath: //tr[contains(@id,'isc_PickListMenu')][@aria-posinset='${index}']
+ERTypeCell: xpath: //div[contains(@eventproxy,'isc_FBFormulaWindow')]//div[contains(@eventproxy,'isc_FBFormulaWindow_FBFormulaGrid')]//table//td[3]//div[contains(text(),'${Select_Type}')]
+EREntryCell: xpath: //div[contains(@eventproxy,'isc_FBFormulaWindow')]//div[contains(@eventproxy,'isc_FBFormulaWindow_FBFormulaGrid')]//table//td[3]//div[contains(text(),'${Select_Type}')]/following::td[1]
+add_icon: xpath: //div[contains(@eventproxy,'isc_ImgButton')]//table//td//div[contains(text(),'Type')]/preceding::td[2]//img
+add_icon_grid: xpath: //div[contains(@eventproxy,'isc_ImgButton')]//table//td//div[contains(text(),'Type')]/preceding::td[2]//img/following::div[17]//img
+remove_icon: xpath: //div[contains(@eventproxy,'isc_FBFormulaWindow')]//div[contains(@eventproxy,'isc_FBFormulaWindow_FBFormulaGrid')]//table//td[3]//div[contains(text(),'${Select_Type}')]/preceding::td[1]//div//img
+add_icon_idex: xpath: (//div[contains(@eventproxy,'isc_FBFormulaWindow')]//tr[@role='listitem']//td[1]//div//img)[${index}]
+entry_field: xpath: (//div[contains(@eventproxy,'isc_FBFormulaWindow')]//tr[@role='listitem']//td[4]//div)[${index}]
+input_user_defined_key: xpath: //input[@name='USER_DEFINED_KEYWORDS']
+btn_ActionButtons: xpath: //*[text()='${ActionName}']
+btn_action_ER_index: xpath: (//*[text()='${Button}'])[2]
+lnk_alldropDownItem: xpath: //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.]
+has_additional_offset: xpath: //label[contains(text(),'Additional Offset Element')]
+lbl_value_type_validation: xpath: //div[contains(@eventproxy,'isc_ListGrid')]//table[@class='listTable']//tr[1]//td[3]//div
+lbl_metho_status_grid: xpath: //*[@role='listitem']//div[text()='${Metho_Name}']/../following-sibling::td[2]/div	
+button_state_disable: xpath: //td[@class='buttonTitleDisabled']//div[text()='${Button_Name}']
+button_cb_unlock: xpath: (//td[@class='buttonTitleDisabled']//div[text()='Unlock'])[2]
+drodwn_field_disable: xpath: //*[text()='${dropdownName}']/ancestor::td/following-sibling::td[1]//td//img[contains(@src,'Disabled.png')]
 
 
+#TechConfigDetailed
+check_product_item: xpath: //table[@role='presentation']//tr//td//div[contains(text(),'${Line_Name}')]/following::td[1]//div[text()='${Line_Status}']/preceding::td[2]//div//span
+check_product_item_bkp: xpath: (//table[@role='presentation']//tr//td//div[contains(text(),'${Line_Name}')]/following::td[1]//div[text()='${Line_Status}']/preceding::td[2]//div//span)[2]
+TC_filter_Name: xpath: //div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1')]//table//tr[@role='listitem']//td[3]//div[contains(text(),'CLUDE')]/following::td[2]
+TC_filter_Type: xpath: //div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1')]//table//tr[@role='listitem']//td[3]//div[not(contains(text(),'CLUDE'))] 
+add_icon_filter: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1')]//tr[@role='listitem']//td[1]//div//span)[${index}]
+cell_select_filter_type: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1')]//tr[@role='listitem']//td[3])[${index}]
+cell_select_filter_Name: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1')]//tr[@role='listitem']//td[4])[${index}]
+cell_select_filter_Value: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1')]//tr[@role='listitem']//td[5])[${index}]
+input_filter_text_field: xpath: //input[@name='NUMBER']
+check_product_item_gl_page: xpath: //div[@role='presentation'][text()='${product_name}']//preceding::td[2]//div//span
+lbl_MinMaxlookback_value: xpath: //td//div[text()='${Value}']
+icon_disable_line: xpath: //tr[@role='treeitem']//td[contains(text(),'${Line_Name}')]/following::td[2]//div//span
+select_main_metho_grid: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid_1_body')]//tr//td[2])[1]//div
+lbl_error_message: xpath: (//td[@align='center']//span)[2]
+lbl_err_message_GL: xpath: //span[text()='Line is not assigned to any GL account']
+lbl_err_message_metho: xpath: //span[text()='Line is not assigned to any methodology']
+list_filterConfig: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_0')][@class='gridBody']//td//div)
+list_filterConfig_index: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_0')][@class='gridBody']//td//div)[${index}]
+list_lookback: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_1')][@class='gridBody']//td//div)
+list_lookback_index: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_1')][@class='gridBody']//td//div)[${index}]
+list_glAccount: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_2')][@class='gridBody']//td//div)
+list_glAccount_index: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_2')][@class='gridBody']//td//div)[${index}]
+list_metho: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_3')][@class='gridBody']//td//div)
+list_metho_index: xpath: (//div[contains(@eventproxy,'isc_TechConfigGTNLineValidateWindow_GenericGrid_3')][@class='gridBody']//td//div)[${index}]
+icon_remove_filter: xpath: //div[contains(@eventproxy,'isc_TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid')]//tr[@role='listitem']//td[4]//div[contains(text(),'${Filter_Name}')]/ancestor::td/preceding-sibling::td[2]/div/span
+add_icon_header: xpath: //div[contains(@eventproxy,'isc_ImgButton')]//table//td//div[contains(text(),'Type')]/preceding::td[2]//img/following::div[1]//img
+extra_filter_value: xpath: //div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${ElementType}')]/following::td[2]//div[not(contains(text(),'Explain Report Header'))]/following::td[1]
+extra_filter_value_index: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${ElementType}')]/following::td[2]//div[not(contains(text(),'Explain Report Header'))]/following::td[1]//div)[${index}]
+metho_extra_filter_txt: xpath: //td//div[contains(text(),'${methoname}')]/following::td[2]//div
+extra_filter_value_PreCalc: xpath: //div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${Element_Type}')]/following::td[2]//div[(contains(text(),'Explain Report Header'))]/following::td[1]
+extra_filter_value_PreCalc_index_one: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${Element_Type}')]/following::td[2]//div[not(contains(text(),'Explain Report Element'))and not(contains(text(),'Line'))]/following::td[1]//div)[${index}]
+extra_filter_value_PreCalc_index: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${Element_Type}')]/following::td[2]//div[not(contains(text(),'Explain Report Header'))and not(contains(text(),'Line'))]/following::td[1]//div)[${index}]
+extra_filter_precalc_index: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${Element_Type}')]/following::td[2]//div[not(contains(text(),'Explain Report Header'))and not(contains(text(),'Explain Report Element'))]/following::td[1]//div)[${index}]
+extra_filter_precalc_index_two: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${Element_Type}')]/following::td[2]//div[not(contains(text(),'Explain Report Header'))and not(contains(text(),'Explain Report Element'))and not(contains(text(),'Line'))]/following::td[1]//div)[${index}]
+chk_selectAll_extra_line: xpath: (//td[@class='headerTitle']//span[@eventpart='valueicon'])[3] 
+chk_specific_extra_line: xpath: //table[@role='presentation']//tr//td//div[contains(text(),'${LineName}')]/following::td[1]/preceding::td[2]//div//span
+input_txt_header: xpath: //input[@name='EXPLAIN_HEADER$148l']
+input_txt_lineFilter: xpath: (//input[@name='LINE_NAME$148l'])[2]
+input_txt_element: xpath: //input[@name='LETTER_LABEL$148l']
+input_txt_lkbackOffset: xpath: //input[@name='LOOKBACK_OFFSET_LABEL$148l']
+input_txt_valueType: xpath: //input[@name='VALUE_TYPE$148l']
+lbl_explain_head_elem: xpath: //div[contains(text(),'${Name}')]
+precalc_lowest_Line_value: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${Element_Type}')]/following::td[2]//div[contains(text(),'Line Category')]/following::td[1])
+precalc_lowest_value_index: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${ElementType}')]/following::td[2]//div[contains(text(),'Line Category')]/following::td[1])[${index}]
+precal_lowestvaluetype: xpath: (//div[contains(@eventproxy,'isc_TCGTNGrid')]//table//tr//td//div[contains(text(),'${ElementType}')]/following::td[2]//div[contains(text(),'Value Type')]/following::td[1])[${index}]
+lbl_categoryFilter: xpath: //div[contains(@eventproxy,'isc_TCGTNFilterValuesWindow_FilterCategoryTreeGrid')]//td[contains(text(),'${Category_Name}')]
