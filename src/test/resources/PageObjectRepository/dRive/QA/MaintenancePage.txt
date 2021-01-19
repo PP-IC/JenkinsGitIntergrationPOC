@@ -8,12 +8,15 @@ inp_filterlastUpdatedby: xpath: (//td[@class='recordEditorCell'])[8]//input
 inp_cloneTitle: xpath: //label[contains(text(),'List Name')]/../../../following-sibling::td//input
 txt_alertMsg: xpath: //div[contains(@role,'dialog')]//td[@class='formCell']//span
 btn_mainActions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
+btn_closeCommentReport: xpath: //div[@role='button'][@class='imgButton']//img[contains(@src,'close.png')]
+btn_Actions: xpath: //img[contains(@src,'close.png')]
 btn_mainActions_er: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='Save'])[2]
+btn_action_index_cg: xpath: (//td[contains(@class,'buttonTitle')]//div[text()='${Button_Name}'])[2]
 txt_listStatus: xpath: (//table[@class='listTable']//*[text()='${pkgName}'])[1]//ancestor::tr[@role='listitem']//td[9]
 txt_snapshotCount: xpath: (//table[@class='listTable']//*[text()='${pkgName}'])[1]//ancestor::tr[@role='listitem']//td[8]
 btn_windowBody: xpath: //div[@class='windowBody']//td[contains(@class,'buttonTitle')]//div[text()='${btnName}']
 btn_cmntHistory: xpath: //div[@aria-label='Comment History']
-txt_cmntInHistory: xpath: //td[5][starts-with(.,'${newVal}')]/following-sibling::td[.='${cmnt}']
+txt_cmntInHistory: xpath: (//td[6]//*[starts-with(.,'${newVal}')]/../following-sibling::td[.='${cmnt}'])[1]
 span_updateImg: xpath:(//div[@class='gridBody'][2]//tr[@role='listitem'])[1]//td[${index}]//span[contains(@style,'color: red')]
 span_updateColImg: xpath:(//div[@class='gridBody'][2]//tr[@role='listitem'])[${rowIndex}]//td[${index}]//span[contains(@style,'color: red')]
 
@@ -64,12 +67,12 @@ dropdown_create_list_fields:xpath://label[text()='${fieldName}']/ancestor::td/fo
 dropdown_value:xpath://tr[contains(@id,'PickListMenu')]//*[text()='${value}']
 input_new_list_name:xpath://input[@name="NEW_METRIC_SUMMARY_LIST_NAME"]
 btn_clone_metric_summary_list:xpath://div[text()='Clone Metric Summary']
-txt_pkgCount: xpath: (//table[@class='listTable']//*[text()='${listName}'])[1]//ancestor::tr[@role='listitem']//td[10]
+txt_pkgCount: xpath: (//table[@class='listTable']//*[text()='${listname}'])[1]//ancestor::tr[@role='listitem']//td[11]/div
 list_msItemsGrid: xpath: (//div[@class='gridBody'])[1]//table//tr[@role='listitem']
 list_msValueGrid: xpath: (//div[@class='gridBody'])[2]//table//tr[@role='listitem']
 lbl_copiedBrandName: xpath: //div[@class='gridBody'][1]//table//tr[1]//td[1]//span/../..//following-sibling::td[2]
 lbl_copiedGTNType: xpath: //div[@class='gridBody'][1]//table//tr[1]//td[1]//span/../..//following-sibling::td[3]
-lnk_editNewRowAdded: xpath: ((//div[@class='gridBody'])[1]//table//tr[@role='listitem'])[${rowIndex}]//td[4]//span
+lnk_editNewRowAdded: xpath: (//div[@role='presentation']//img[contains(@src,'edit.png')])[1]
 lbl_typeCodeGTNChooser: xpath: //div[@class='windowBody']//td[.='${typeCode}']
 btn_addRecord:xpath://div[@class='gridBody'][1]//table//tbody//tr[${rowIndex}]//td[1]//span
 lnk_firstRecordValueOfRow: xpath: //div[@class='gridBody'][2]//table//tbody//tr[${rowIndex}]//td[1]
@@ -174,6 +177,9 @@ Sec_DropDown:						xpath		://*[text()='Data Type']/following::*[contains(text(),
 Table_TransactionSummaryMainTable:	xpath		://*[text()='List Name']/following::table[@class='listTable']//*[contains(text(),'${option}')]
 Btn_TransactionClone:				xpath		://*[text()='Clone List']
 Inp_TransactionCloneName:			xpath		://*[text()='Enter Transaction Summary List Name']/following::input[1]
+Search_InputText:                   xpath       :(//input[@class='textItem'])[1]
+Search_Cloned_List:                 xpath       ://tr[@role='listitem']//td[@class='myHighGridCell']//div[text()='${option}']
+inp_listType:                       xpath       :(//tr[@role='listitem'])[2]//td[1]
 Btn_TransactionCloneSubmit:			xpath		://*[text()='Enter Transaction Summary List Name']/following::div[1]
 Btn_OKForClonedList:				xpath		://*[text()='OK']
 
@@ -268,6 +274,7 @@ img_scrollHoriz:					xpath		://div[@class='listGrid']//img[contains(@src,'hthumb
 
 #Release History
 lnk_print: xpath: //img[contains(@src,'actions/print')]
+lnk_printIcon: xpath: //img[contains(@src,'actions/print')]
 txt_printPreview: xpath: //div[@role='label']//td[@class='windowHeaderText' and text()='Print Preview']
 lnk_closeIcon: xpath: //div[contains(@eventproxy,'PrintWindow')]//img[contains(@src,'close.png')]
 lbl_printCol: xpath: //td[@class='printHeader'][.='${columnName}']
@@ -325,3 +332,12 @@ hrd_dialogColumns: xpath: //div[contains(@role,'dialog') and not(contains(@style
 btn_grossUp: xpath: //div[contains(text(),'Gross Up')]
 #Start Year, End Year, Alert pop up
 #Alert1: Last Year of data must be visible to perform Gross Up
+GrossUpDialogBox: xpath: //table[@role='presentation']//td[contains(text(),'${hdrTitle}')]
+CommentBox: xpath: //table[@role='presentation']//label[contains(text(),'${hdrTitle}')]
+btnActiongrossup: xpath: (//td[contains(@class,'buttonTitle')]//div[text()= '${hdrTitle}'])[2]
+missingpercent: xpath: (//tr[@role='listitem']/td[@class='myHighGridCellDark'][3]/div[@role='presentation'])[1]
+inp_missingpercent: xpath: //input[@name='MISSING_PRCNT']
+text_area: xpath: //textarea[@name='EDITOR_COMMENT']
+
+list_grid_headers: xpath: //div[contains(@eventproxy,'isc_ImgButton')][contains(@class,'headerButton')]
+list_action_buttons: xpath: //tr//td[contains(@class,'buttonTitle')]//div

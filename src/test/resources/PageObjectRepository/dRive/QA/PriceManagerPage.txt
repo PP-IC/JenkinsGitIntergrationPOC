@@ -21,7 +21,7 @@ inp_textField:							  xpath:							//div[@class='gridBody']//table[@class="list
 txt_alertMsg:                             xpath:                   			//span[contains(text(),'The Price Change: ')]
 data_PCM:								  xpath:                   			(//div[@class='gridBody'])[${index}]//tr//td[1]
 lnk_DropDownValues:						  xpath: 							//table[@class='menuTable']//*[text()='${itemName}']
-option_scenario:						  xpath:								//td[text()='${input}']
+option_scenario:						  xpath:								//div[text()='${input}']
 optionitem:								  xpath:                             (//table[@class='menuTable'])[1]//tr[@role='menuitem']//td[2]
 div_staticValue:						xpath:							(//td/div[@class='staticTextItem'])[${index}]
 btn_basic:								xpath:                            //td[contains(@class,'buttonTitle')]//td[text()='${value}']
@@ -79,7 +79,9 @@ dialog_dashboard: xpath: //div[@class="breadCrumbToolStrip"]//following-sibling:
 txt_dialogHdrs: xpath: //div[@class="breadCrumbToolStrip"]//following-sibling::div//div[@role='dialog']//div[@role="label"]//td[@class='windowHeaderText']
 hdr_sceMgr: xpath: //div[@class="breadCrumbToolStrip"]//following-sibling::div//div[@class='toolStrip']//b[text()='Scenario Manager']
 txt_priceChangeNum: xpath: (//div[@class='gridBody']//tr//td[contains(@class,'cell')][1])[1]
+txt_priceChangeNum_new: xpath: (//div[@class='gridBody']//tr//td[contains(@class,'cell')][2])[1]
 inp_priceChangeNum: xpath: (//td[@class='recordEditorCell'])[1]//input
+inp_priceChangeNum_new: xpath: (//td[@class='recordEditorCell'])[2]//input
 list_searchPCMResult: xpath: //div[@class='gridBody']//td[contains(@class,'cell')]/parent::tr
 list_custNames: xpath: //div[@class='gridBody']//tr//td[contains(@class,'cell')][1]
 lnk_pcmReport: xpath: //a[text()='${linkText}']

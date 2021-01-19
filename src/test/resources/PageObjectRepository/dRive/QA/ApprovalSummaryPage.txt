@@ -46,6 +46,8 @@ lbl_Line_RequiredReserveValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[
 lbl_Line_BalancedSheetValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[5]
 lbl_Line_CloseSummaryBalancedSheetValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[4]
 lbl_Line_CloseSummaryPOSValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[6]
+lbl_Line_SubTotalValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[5]
+lbl_Line_TotalValue: xpath: (//tr[@aria-posinset='${num}']//div/span)[7]
 all_lines: xpath: (//*[@class='gridBody'])[1]//*[(@aria-posinset) and not(@aria-expanded)]//descendant::td[4]
 
 
@@ -60,7 +62,7 @@ item_checkbox: xpath: //td[@class='myHighGridCell']//div[contains(text(),'${item
 chkbox_parent_cat_name: xpath: //*[text()='${CategoryName}']/ancestor::td//span[2]
 lbl_category: xpath: //*[text()='${CategoryName}']
 btn_action: xpath: //td[contains(@class,'button')]//div[text()='${action_btn}']	
-expand_icon: xpath: //*[text()='${CategoryName}']/ancestor::td//span[1]	
+expand_icon: xpath: (//*[text()='${CategoryName}']/ancestor::td//span[1])[1]
 lbl_cat_value: xpath: //tr[@role='treeitem']//td[contains(text(),'${Cat_name}')]/following::td[1]
 
 all_lines_close_summary: xpath: //td[contains(@id,'isc_GTNCloseSummary_GTNCloseSummaryTreeGrid')]
@@ -69,7 +71,7 @@ radio_selected: xpath: //td[contains(@class,'labelAnchor')]//label[contains(text
 toggle1btn_selected: xpath: (//td[contains(@class,'buttonSelected')])[1]
 toggle2btn_selected: xpath: (//td[contains(@class,'buttonSelected')])[2]
 lbl_radio: xpath: //td[contains(@class,'labelAnchor')]//label[contains(text(),'${radiobutn}')]
-toggle_button: xpath: //div[contains(@eventproxy,'isc_Button')]//table//td[contains(@class,'buttonSelected')]//div[text()='${Toggle_button}']
+toggle_button: xpath: //div[contains(@eventproxy,'isc_Button')]//table//td[contains(@class,'button')]//div[text()='${Toggle_button}']
 toogle_tooltip: xpath: //div[contains(@aria-label,'${Toogle_btn}')]
 lbl_cat_status: xpath: //table[@role='presentation']//tr//td[contains(@class,'myOtherGridCell')]//*[text()='${cat_name}']/preceding::span[contains(@style,'${status}')]
 lbl_items: xpath: //tr[@role='listitem']//td[2]//div
