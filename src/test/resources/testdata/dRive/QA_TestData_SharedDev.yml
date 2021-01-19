@@ -161,11 +161,11 @@ users1:
 
 users:
   analyst:
-     user_name: agurav_a@ic3.com
+     user_name: ppandit_a@davizta.com
      password: Admin@123
   manager:
-     user_name: agurav_m@ic3.com
-     password: Admin@123
+     user_name: atiwari_m@davizta.com 
+     password: Admin@111
   implementation analyst:
      user_name: ppandit_a@client3.com
      password: Admin@123
