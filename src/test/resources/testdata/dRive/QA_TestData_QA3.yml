@@ -1,5 +1,5 @@
 Login:
-  url: https://qa3-gtn-shared.integrichain.net/davizta/Davizta.html
+  url: https://qa3-gtn-shared.integrichain.net/davizta/login.html
   
 alertMessage:
   successfully_cloned: clone is created successfully.
@@ -1425,9 +1425,9 @@ ComponentBuilderSmoke:
 TechConfigurationSmoke:
   ExcludeCalculationType: Actuals Earned,Actuals Paid 
   SingleFilterConfigCalculationType: Close Accrual,Actuals Earned
-  CategoryName : CategoryNewAutomation
+  CategoryName : Auto_Category
   Channel: MED - Medicaid
-  LineName: Line A Automation
+  LineName: Auto_Line
   LineDescription: Line Created From Script
   LineType: Discount
   LineStartDate: 01/01/2020
