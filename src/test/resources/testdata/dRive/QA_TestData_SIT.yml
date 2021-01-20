@@ -1,5 +1,5 @@
 Login:
-  url: https://clientsit.davizta.com:6753/davizta/login.html
+  url: http://sit-gtn-shared.integrichain.net/davizta/login.html
   
 alertMessage:
   successfully_cloned: clone is created successfully.
@@ -159,12 +159,26 @@ users1:
      user_name: atiwari_adm@amneal.com
      password: Feb@2020
 
-users:
+usersT1:
   analyst:
      user_name: swawage_a@nspharma.com
      password: Admin@123
   manager:
      user_name: swawage_m@nspharma.com
+     password: Admin@123
+  implementation analyst:
+     user_name: ppandit_a@client3.com
+     password: Admin@123
+  gp analyst:
+     user_name: ppandit_m@client3.com
+     password: Admin@123
+
+users:
+  analyst:
+     user_name: akekre_a@intracellular.com
+     password: Admin@123
+  manager:
+     user_name: akekre_m@intracellular.com
      password: Admin@123
   implementation analyst:
      user_name: ppandit_a@client3.com
