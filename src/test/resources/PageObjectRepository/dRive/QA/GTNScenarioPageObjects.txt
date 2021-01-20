@@ -133,7 +133,7 @@ inp_overrideCmnt: xpath: //td[.='${valueType}']//following-sibling::td[5]//input
 inp_NewSnapshotDetail: xpath: //label[contains(.,'${fieldName}')]/ancestor::td/following-sibling::td//input
 lnk_fieldDetailDropdown: xpath: //label[contains(.,'${fieldName}')]/ancestor::td/following-sibling::td//input/../following-sibling::td//img[contains(@src,'comboBoxPicker')]
 btn_refreshGrid: xpath: //div[@aria-label='Refresh Grid']
-txt_statusSnapshot: xpath: (//table[@class='listTable'])[4]/tbody/tr//td[.='${SnapshotName}']//following-sibling::td[5]
+txt_statusSnapshot: xpath: (//table[@class='listTable'])[4]/tbody/tr//td//div[contains(text(),'${SnapshotName}')]//following::td[5]
 txt_explnReportTooltip: xpath: //div[contains(@eventproxy,'isc_Label_')]//td[@class='gridHover']
 txt_noItemsInGrid: xpath: //table//td[@class='myHighGridEmptyMessage' and text()='No items to display']
 

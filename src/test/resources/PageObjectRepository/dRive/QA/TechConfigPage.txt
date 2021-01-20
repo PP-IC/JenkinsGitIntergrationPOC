@@ -189,7 +189,7 @@ input_comp_key: xpath: //input[@name='COMP_KEY$148l']
 list_grid_headers: xpath: //div[contains(@eventproxy,'isc_ImgButton')][contains(@class,'headerButton')]
 list_action_buttons: xpath: //tr//td[contains(@class,'buttonTitle')]//div
 list_tc_buttons: xpath: //tr//td[contains(@class,'buttonTitle')]//div[not(contains(text(),'▼')) and not(contains(text(),'▲'))]
-actionbuttonsonPage: xpath: //td[@class='buttonTitle']//div[contains(text(),'${ButtonName}')]
+actionbuttonsonPage: xpath: //td[contains(@class,'buttonTitle')]//div[contains(text(),'${ButtonName}')]
 
 #FBDetailed
 dropdwn_field: xpath: //*[text()='${dropdownName}']/ancestor::td/following-sibling::td[1]//td//img
