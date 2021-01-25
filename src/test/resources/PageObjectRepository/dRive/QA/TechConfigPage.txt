@@ -8,6 +8,7 @@ drp_Type: xpath: //label[text()='Type']/ancestor::td/following-sibling::td[1]
 drp_channel: xpath: //label[text()='Channel']/ancestor::td/following-sibling::td[1]//span[@role='button']//img
 lnk_filterDrop: xpath: //label[contains(text(),'${filterName}')]/ancestor::td/following-sibling::td[1]//img[contains(@src,'comboBoxPicker')]
 lnk_dropDownItem: xpath : //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.='${name}']
+lnk_first_dropItem: xpath: (//div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')]//div)[1]
 lnk_dropDownItem_Formula: xpath: //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')]//div[contains(text(),'${Element_ID}')]
 lnk_drpitemlist: xpath : //div[@class="pickListMenuBody"]//td[contains(@class,'pickListCell')][.]
 link_multidrpitem_list: xpath: //tr[@role='option']//div[contains(text(),'${options}')]/ancestor::td/preceding-sibling::td[1]//span[@eventpart='valueicon']
@@ -89,7 +90,7 @@ lbl_GL_account: xpath : //div[@role='presentation'][contains(text(),'Accrued Dis
 btn_Actions: xpath: //td[contains(@class,'buttonTitle')]//div[text()='${btn_name}']
 lbl_line_status: xpath: //tr[@role='treeitem']//td[contains(text(),'${Line_Name}')]/following::td[8]//div
 chk_GL_account: xpath: //div[contains(text(),'${gl_name}')]/preceding::td[1]//div[contains(text(),'${Gl_Type}')]/preceding::td[1]//div//span
-
+chk_first_GL_account: xpath: (//div[contains(@eventproxy,'TechConfigGTNLineConfigWindow_TechConfigGTNLineItemGrid_1_body')]//div//tr//td//span)[1]
 
 
 drp_calc_type: xpath: //label[text()='Calculation Type']/ancestor::td/following-sibling::td[1]

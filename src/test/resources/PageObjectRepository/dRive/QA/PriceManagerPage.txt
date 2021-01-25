@@ -4,7 +4,8 @@ Title: (PROD_QAIT) d-Rive | Revenue Analytics Suite
 
 PricingManager: xpath: //td[text()='${option}']
 optionMenuItem:                           xpath:                           //tr[@role='menuitem']/td[@class='menuTitleField']/div[contains(text(),'${option}')]
-pricingSection:	                          xpath:                           //*[text()='${section}']					
+pricingSection:	                          xpath:                           //*[text()='${section}']	
+firstCustomerSelect:	                  xpath:                           (//div[contains(@eventproxy,'CustomerPaginationGrid')]//table[@class='listTable']//tr[@aria-posinset='1'])[2]								
 lbl_priceChangeInput:                     xpath:                           //*[text()='${input}']
 img_dropDownLabel:                        xpath:                           //*[text()='${input}']/following::img[1]
 div_inplabel:                             xpath:                           //*[text()='${value}']/following::div[1]

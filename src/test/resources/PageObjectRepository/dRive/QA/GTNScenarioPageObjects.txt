@@ -190,3 +190,4 @@ lnk_drpitemlistName: xpath : //div[@class="pickListMenuBody"]//td[contains(@clas
 btn_choose_right: xpath : //div[contains(text(),'>>')]
 chkbox_parent_cat_name: xpath: //*[text()='${CategoryName}']/ancestor::td/preceding-sibling::td[1]//span[@eventpart='valueicon']
 btn_tab: xpath: (//*[(text()='Chart')])[1]
+chk_default_snap: xpath:  //label[text()='Default for selected product items and categories']

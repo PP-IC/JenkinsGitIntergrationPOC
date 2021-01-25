@@ -19,4 +19,3 @@ txt_alertMsg_comp: xpath: (((//div[@eventproxy='isc_globalWarn_messageLabel'])//
 btn_refreshGrid: xpath: //div[@aria-label='Refresh Grid']
 txt_alertMsg_techconfig: xpath: (((//div[@eventproxy='isc_globalWarn_messageLabel'])//table[1]//tr//td)|(//div[contains(@role,'dialog')]//div[@class='sayStaticTextItem']//span))
 btn_close: xpath: (//img[contains(@src,'close.png')])[2]
-
