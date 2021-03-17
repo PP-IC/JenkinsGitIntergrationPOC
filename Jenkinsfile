@@ -38,12 +38,6 @@ pipeline {
         stage('Smoke Execution') {
             steps {
                 script {
-                    if (build_status == 'Success') {
-                    if (env.BRANCH_NAME == 'master') {
-                        echo 'Executing code from master branch'
-                    } else {
-                        //echo 'I execute elsewhere'
-                    }
                     
                         echo "Aautomated Smoke Test started on the ${re_env} Env"
                         
@@ -67,8 +61,6 @@ pipeline {
                         //allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
                         //s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '**/allure-report/', storageClass: 'STANDARD', uploadFromSlave: true, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
                     //s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: "ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}-${re_env}", excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '*.zip', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
-   
-                }
                 }
             }
         }
