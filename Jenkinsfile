@@ -77,11 +77,12 @@ pipeline {
         always {
             //Upload artifacts to AWS S3 Bucket
             allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
-            s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ic-qa-poc/Screenshot-Jenkins/${JOB_NAME}-${BUILD_NUMBER}', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '**/allure-report/', storageClass: 'STANDARD', uploadFromSlave: true, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
+            s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ic-qa-poc/AllureReports/${JOB_NAME}-${BUILD_NUMBER}', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '**/allure-report/', storageClass: 'STANDARD', uploadFromSlave: true, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
   
             //Email Notification of Smoke Result
-            emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', body: '''Hi, Please see automation smoke suite execution report as below:
-            ${FILE, path="test-output/emailable-report.html"}''', subject: '$DEFAULT_SUBJECT', to: 'ppandit@integrichain.com'
+            //emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', body: '''Hi, Please see automation smoke suite execution report as below:
+            //${FILE, path="test-output/emailable-report.html"}''', subject: '$DEFAULT_SUBJECT', to: 'ppandit@integrichain.com'
+            emailext body: 'Report URL - https://ic-qa-poc.s3.ap-south-1.amazonaws.com/AllureReports/${JOB_NAME}-${BUILD_NUMBER}/allure-report/index.html', subject: '$DEFAULT_SUBJECT', to: 'ppandit@integrichain.com'
         }
     }
 }
