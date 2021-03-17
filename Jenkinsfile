@@ -52,10 +52,10 @@ pipeline {
                         //java -jar SamplePOC_SS_V2.jar ${re_module} ${re_group} ${re_browser}
                         bat """
                         IF EXIST allure-report rmdir /s /q allure-report
-                        cd "d-Rive UI Test Automation Framework\daVIZta Automation Framework"
+                        cd "d-Rive UI Test Automation Framework\\daVIZta Automation Framework"
                         IF EXIST Screenshots rmdir /s /q Screenshots
                         IF EXIST *.zip del *.zip
-                        java -javaagent:"C:\Users\ppandit\.m2\repository\org\aspectj\aspectjweaver\1.9.2\aspectjweaver-1.9.2.jar" -DanalystUserName=agupta_a@ic3.com -DanalystPassword=Admin@123 -DmanagerUsername=agupta_m@ic3.com -DmanagerPassword=Admin@1234 -jar dRiveAutomationSuiteR96_allure.jar "ComponentBuilder_test" "GTN Smoke" ${re_browser} ${re_env} T2 O2
+                        java -javaagent:"C:\\Users\ppandit\\.m2\\repository\\org\\aspectj\\aspectjweaver\\1.9.2\\aspectjweaver-1.9.2.jar" -DanalystUserName=agupta_a@ic3.com -DanalystPassword=Admin@123 -DmanagerUsername=agupta_m@ic3.com -DmanagerPassword=Admin@1234 -jar dRiveAutomationSuiteR96_allure.jar "ComponentBuilder_test" "GTN Smoke" ${re_browser} ${re_env} T2 O2
                         powershell Compress-Archive Screenshots Screenshots_Build_${env.BUILD_NUMBER}.zip
                         powershell Compress-Archive test-output test-output_Build_${env.BUILD_NUMBER}.zip
                         allure generate -c
