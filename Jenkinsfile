@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage("App and DACPAC") {
             steps {
-                echo 'Executed Stage1 App and DACPAC'
+                echo 'Executed Stage1 App and DACPAC.'
             }
         }
         stage('DB Restore') {
