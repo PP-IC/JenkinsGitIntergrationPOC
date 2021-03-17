@@ -1,8 +1,10 @@
-def re_env = 'X951Q3'; 
+def re_env = 'QA1'; 
 //re_env to use from choices RE_ENV [dev, qa1, qa2, qa3, qa4, perfdev]
 //add booleanParam for "Smoke Execution" with defaultValue: true
 //if "Smoke Execution" option is selected --> show choice for browser [chrome, edge, ie]   
 def re_browser = 'chrome';
+def re_group = 'Smoke';
+def re_module = 'SeleniumModule';
 def build_status= '';
 
 pipeline {
@@ -46,10 +48,11 @@ pipeline {
                         echo "Aautomated Smoke Test started on the ${re_env} Env"
                         
                         //Clear old artifacts
+                        //java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite ${re_browser} ${re_env}
                         bat """
                         IF EXIST Screenshots rmdir /s /q Screenshots
                         IF EXIST *.zip del *.zip
-                        java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite ${re_browser} ${re_env}
+                        java -jar SamplePOC_SS_V2.jar ${re_module} ${re_group} ${re_browser}
                         powershell Compress-Archive Screenshots Screenshots_Build_${env.BUILD_NUMBER}.zip
                         powershell Compress-Archive test-output test-output_Build_${env.BUILD_NUMBER}.zip
                         """
