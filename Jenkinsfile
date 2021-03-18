@@ -10,17 +10,18 @@ def build_status= '';
 pipeline {
     agent any
     
-    parameters([
-        choice(choices: ['SharedDev', 'QA1', 'QA2', 'QA3', 'QA4', 'QA5', 'SIT', 'UAT', 'PROD', 'PerfDev', 'Demo'], description: 'Please select the Environment to Run the Automation Suite.', name: 'Environment'), 
-        choice(choices: ['chrome', 'Edge', 'IE'], description: 'Please select the Browser to Run the Automation Suite.', name: 'Browser'), 
-        choice(choices: ['Tenant1', 'Tenant2'], description: 'Please select tenant', name: 'Tenant'), 
-        choice(choices: ['Org1', 'Org2'], description: 'Please select organization', name: 'Org'), 
-        string(defaultValue: 'ComponentBuilder_test,FormulaBuilder_test,TechConfiguration_test,AssumptionPackage_test,GTNNewSnapshots_test,T09_Editors_TC_18to27,T13_Metric_Summary_TC_94_to_109,T14_TSE_TC_110_to_116_TC_119_120,InventorySummaryList,T01_PCM_Pricing_TC_01_to_10', description: 'Please select class files to be executed', name: 'ClassFiles', trim: false), 
-        string(defaultValue: 'GTN Smoke,Multi Org Smoke', description: 'Please select groups to be executed', name: 'Groups', trim: false), 
-        string(defaultValue: '', description: 'Please provide Analyst UserName', name: 'AnalystUserName', trim: true), 
-        password(defaultValueAsSecret: '', description: 'Please provide Analyst Password', name: 'AnalystPassword'), 
-        string(defaultValue: '', description: 'Please provide Manager UserName', name: 'ManagerUserName', trim: true), 
-        password(defaultValueAsSecret: '', description: 'Please provide Manager Password', name: 'ManagerPassword')])
+    parameters{
+        choice(choices: ['SharedDev', 'QA1', 'QA2', 'QA3', 'QA4', 'QA5', 'SIT', 'UAT', 'PROD', 'PerfDev', 'Demo'], description: 'Please select the Environment to Run the Automation Suite.', name: 'Environment') 
+        choice(choices: ['chrome', 'Edge', 'IE'], description: 'Please select the Browser to Run the Automation Suite.', name: 'Browser') 
+        choice(choices: ['Tenant1', 'Tenant2'], description: 'Please select tenant', name: 'Tenant') 
+        choice(choices: ['Org1', 'Org2'], description: 'Please select organization', name: 'Org') 
+        string(defaultValue: 'ComponentBuilder_test,FormulaBuilder_test,TechConfiguration_test,AssumptionPackage_test,GTNNewSnapshots_test,T09_Editors_TC_18to27,T13_Metric_Summary_TC_94_to_109,T14_TSE_TC_110_to_116_TC_119_120,InventorySummaryList,T01_PCM_Pricing_TC_01_to_10', description: 'Please select class files to be executed', name: 'ClassFiles', trim: false) 
+        string(defaultValue: 'GTN Smoke,Multi Org Smoke', description: 'Please select groups to be executed', name: 'Groups', trim: false) 
+        string(defaultValue: '', description: 'Please provide Analyst UserName', name: 'AnalystUserName', trim: true) 
+        password(defaultValueAsSecret: '', description: 'Please provide Analyst Password', name: 'AnalystPassword') 
+        string(defaultValue: '', description: 'Please provide Manager UserName', name: 'ManagerUserName', trim: true) 
+        password(defaultValueAsSecret: '', description: 'Please provide Manager Password', name: 'ManagerPassword')
+    }
     
     stages {
         stage("App and DACPAC") {
