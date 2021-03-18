@@ -85,7 +85,7 @@ pipeline {
             //Cleanup allure files
             bat """
             IF EXIST allure-results cd allure-results
-            for %i in (*.*) do if not %i==environment.properties if not %i==categories.json del %i
+            for %%i in (*.*) do if not %%i==environment.properties if not %%i==categories.json del %%i
                         
             """
             //Email Notification of Smoke Result
