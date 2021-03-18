@@ -10,7 +10,7 @@ def build_status= '';
 pipeline {
     agent any
     
-    properties([parameters([
+    parameters([
         choice(choices: ['SharedDev', 'QA1', 'QA2', 'QA3', 'QA4', 'QA5', 'SIT', 'UAT', 'PROD', 'PerfDev', 'Demo'], description: 'Please select the Environment to Run the Automation Suite.', name: 'Environment'), 
         choice(choices: ['chrome', 'Edge', 'IE'], description: 'Please select the Browser to Run the Automation Suite.', name: 'Browser'), 
         choice(choices: ['Tenant1', 'Tenant2'], description: 'Please select tenant', name: 'Tenant'), 
@@ -20,7 +20,7 @@ pipeline {
         string(defaultValue: '', description: 'Please provide Analyst UserName', name: 'AnalystUserName', trim: true), 
         password(defaultValueAsSecret: '', description: 'Please provide Analyst Password', name: 'AnalystPassword'), 
         string(defaultValue: '', description: 'Please provide Manager UserName', name: 'ManagerUserName', trim: true), 
-        password(defaultValueAsSecret: '', description: 'Please provide Manager Password', name: 'ManagerPassword')])])
+        password(defaultValueAsSecret: '', description: 'Please provide Manager Password', name: 'ManagerPassword')])
     
     stages {
         stage("App and DACPAC") {
