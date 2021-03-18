@@ -66,8 +66,6 @@ pipeline {
                         powershell Compress-Archive Screenshots Screenshots_Build_${env.BUILD_NUMBER}.zip
                         powershell Compress-Archive test-output test-output_Build_${env.BUILD_NUMBER}.zip
                         allure generate -c
-                        IF EXIST allure-results cd allure-results
-                        for %i in (*.*) do if not %i==environment.properties if not %i==categories.json del %i
                         """
 
                     //Upload artifacts to AWS S3 Bucket
@@ -84,6 +82,12 @@ pipeline {
             allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
             s3Upload consoleLogLevel: 'INFO', dontSetBuildResultOnFailure: false, dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ic-qa-poc/AllureReports/${JOB_NAME}-${BUILD_NUMBER}', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, selectedRegion: 'ap-south-1', showDirectlyInBrowser: false, sourceFile: '**/allure-report/', storageClass: 'STANDARD', uploadFromSlave: true, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'TestName', userMetadata: []
   
+            //Cleanup allure files
+            bat """
+            IF EXIST allure-results cd allure-results
+            for %i in (*.*) do if not %i==environment.properties if not %i==categories.json del %i
+                        
+            """
             //Email Notification of Smoke Result
             //emailext attachLog: true, attachmentsPattern: 'test-output/emailable-report.html', body: '''Hi, Please see automation smoke suite execution report as below:
             //${FILE, path="test-output/emailable-report.html"}''', subject: '$DEFAULT_SUBJECT', to: 'ppandit@integrichain.com'
