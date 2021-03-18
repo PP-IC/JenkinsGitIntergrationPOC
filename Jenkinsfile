@@ -10,6 +10,18 @@ def build_status= '';
 pipeline {
     agent any
     
+    properties([parameters([
+        choice(choices: ['SharedDev', 'QA1', 'QA2', 'QA3', 'QA4', 'QA5', 'SIT', 'UAT', 'PROD', 'PerfDev', 'Demo'], description: 'Please select the Environment to Run the Automation Suite.', name: 'Environment'), 
+        choice(choices: ['chrome', 'Edge', 'IE'], description: 'Please select the Browser to Run the Automation Suite.', name: 'Browser'), 
+        choice(choices: ['Tenant1', 'Tenant2'], description: 'Please select tenant', name: 'Tenant'), 
+        choice(choices: ['Org1', 'Org2'], description: 'Please select organization', name: 'Org'), 
+        string(defaultValue: 'ComponentBuilder_test,FormulaBuilder_test,TechConfiguration_test,AssumptionPackage_test,GTNNewSnapshots_test,T09_Editors_TC_18to27,T13_Metric_Summary_TC_94_to_109,T14_TSE_TC_110_to_116_TC_119_120,InventorySummaryList,T01_PCM_Pricing_TC_01_to_10', description: 'Please select class files to be executed', name: 'ClassFiles', trim: false), 
+        string(defaultValue: 'GTN Smoke,Multi Org Smoke', description: 'Please select groups to be executed', name: 'Groups', trim: false), 
+        string(defaultValue: '', description: 'Please provide Analyst UserName', name: 'AnalystUserName', trim: true), 
+        password(defaultValueAsSecret: <object of type hudson.util.Secret>, description: 'Please provide Analyst Password', name: 'AnalystPassword'), 
+        string(defaultValue: '', description: 'Please provide Manager UserName', name: 'ManagerUserName', trim: true), 
+        password(defaultValueAsSecret: <object of type hudson.util.Secret>, description: 'Please provide Manager Password', name: 'ManagerPassword')])])
+    
     stages {
         stage("App and DACPAC") {
             steps {
@@ -39,7 +51,7 @@ pipeline {
             steps {
                 script {
                     
-                        echo "Aautomated Smoke Test started on the ${re_env} Env"
+                        echo "Aautomated Smoke Test started on the ${params.Environment} Env"
                         
                         //Clear old artifacts
                         //java -jar SamplePOC_SS_Env_V1.jar TC_GTN_Snapshot_Verification Smoke_Suite ${re_browser} ${re_env}
@@ -49,7 +61,7 @@ pipeline {
                         cd "d-Rive UI Test Automation Framework\\daVIZta Automation Framework"
                         IF EXIST Screenshots rmdir /s /q Screenshots
                         IF EXIST *.zip del *.zip
-                        java -javaagent:"C:\\Users\\pandipr\\.m2\\repository\\org\\aspectj\\aspectjweaver\\1.9.2\\aspectjweaver-1.9.2.jar" -DanalystUserName=agupta_a@ic3.com -DanalystPassword=Admin@123 -DmanagerUsername=agupta_m@ic3.com -DmanagerPassword=Admin@1234 -jar dRiveAutomationSuiteR96_allure.jar "ComponentBuilder_test" "GTN Smoke" ${re_browser} ${re_env} T2 O2
+                        java -javaagent:"C:\\Users\\pandipr\\.m2\\repository\\org\\aspectj\\aspectjweaver\\1.9.2\\aspectjweaver-1.9.2.jar" -DanalystUserName=${params.AnalystUserName} -DanalystPassword=${params.AnalystPassword} -DmanagerUsername=${params.ManagerUserName} -DmanagerPassword=${params.ManagerPassword} -jar dRiveAutomationSuiteR96_allure.jar ${params.ClassFiles} ${params.Groups} ${params.Browser} ${params.Environment} ${params.Tenant} ${params.Org}
                         powershell Compress-Archive Screenshots Screenshots_Build_${env.BUILD_NUMBER}.zip
                         powershell Compress-Archive test-output test-output_Build_${env.BUILD_NUMBER}.zip
                         allure generate -c
