@@ -9,17 +9,7 @@ def build_status= '';
 
 pipeline {
     agent any
-    node('master') {
-    script{
-                                    // Get file using input step, will put it in build directory
-                                    print "=================Please upload your property files ====================="
-                                    def inputFile = input message: 'Upload file', parameters: [file(name: 'global.properties')]
-                                    // Read contents and write to workspace
-                                    writeFile(file: 'global.properties', text: inputFile.readToString())
-                                    // Stash it for use in a different part of the pipeline
-                                    stash name: 'data', includes: 'global.properties'
-                            }
-    }
+    
     parameters{
         choice(choices: ['SharedDev', 'QA1', 'QA2', 'QA3', 'QA4', 'QA5', 'SIT', 'UAT', 'PROD', 'PerfDev', 'Demo'], description: 'Please select the Environment to Run the Automation Suite.', name: 'Environment') 
         choice(choices: ['chrome', 'Edge', 'IE'], description: 'Please select the Browser to Run the Automation Suite.', name: 'Browser') 
@@ -62,6 +52,15 @@ pipeline {
         }
         stage('Smoke Execution') {
             steps {
+                script{
+                                    // Get file using input step, will put it in build directory
+                                    print "=================Please upload your property files ====================="
+                                    def inputFile = input message: 'Upload file', parameters: [file(name: 'global.properties')]
+                                    // Read contents and write to workspace
+                                    writeFile(file: 'global.properties', text: inputFile.readToString())
+                                    // Stash it for use in a different part of the pipeline
+                                    stash name: 'data', includes: 'global.properties'
+                            }
                 script {
                     
                     // Read contents and write to workspace
