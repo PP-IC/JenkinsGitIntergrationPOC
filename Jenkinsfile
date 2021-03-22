@@ -55,7 +55,8 @@ pipeline {
                 script {
                     
                     // Read contents and write to workspace
-                     writeFile(file: 'TestData.properties', text: inputFile.readToString())
+                     //writeFile(file: 'TestData.properties', text: inputFile.readToString())
+                    powershell 'Get-Content .\\TestData.properties'
                     
                         echo "Aautomated Smoke Test started on the ${params.Environment} Env"
                         
