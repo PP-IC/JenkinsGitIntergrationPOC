@@ -54,6 +54,9 @@ pipeline {
             steps {
                 script {
                     
+                    // Read contents and write to workspace
+                     writeFile(file: 'TestData.properties', text: inputFile.readToString())
+                    
                         echo "Aautomated Smoke Test started on the ${params.Environment} Env"
                         
                         //Clear old artifacts
