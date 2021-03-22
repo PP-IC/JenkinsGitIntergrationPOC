@@ -21,6 +21,8 @@ pipeline {
         string(defaultValue: '', description: 'Please provide Analyst Password', name: 'AnalystPassword') 
         string(defaultValue: '', description: 'Please provide Manager UserName', name: 'ManagerUserName', trim: true) 
         string(defaultValue: '', description: 'Please provide Manager Password', name: 'ManagerPassword')
+        file(description: 'Please input test data file', name: 'TestData.properties')
+
     }
     
     stages {
