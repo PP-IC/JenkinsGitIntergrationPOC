@@ -22,7 +22,9 @@ pipeline {
         string(defaultValue: '', description: 'Please provide Manager UserName', name: 'ManagerUserName', trim: true) 
         string(defaultValue: '', description: 'Please provide Manager Password', name: 'ManagerPassword')
         //file(description: 'Please input test data file', name: 'TestData.properties')
-
+        booleanParam(defaultValue: false, description: 'Execute Smoke Suite', name: 'Smoke_Test')
+        booleanParam(defaultValue: false, description: 'Execute Extended Smoke Suite', name: 'Extended_Smoke_Test')
+        booleanParam(defaultValue: false, description: 'Execute Regression Suite', name: 'Regression')
     }
     
     stages {
@@ -36,14 +38,20 @@ pipeline {
                 echo 'Executed Stage2 DB Restore'
             }
         }
-        stage('Data Setup Migration') {
+        stage('Regression Suite') {
             steps {
-                echo 'Executed Stage3 Data Setup and Migration'
+                 when { 
+                        expression { params.Regression }
+                    }
+                echo 'Executed Regression'
             }
         }
-         stage('Jasper Deployments') {
+         stage('Extended Smoke Execution') {
             steps {
-                echo 'Executed Stage4 Jasper Deployments'
+                 when { 
+                        expression { params.Extended_Smoke_Test }
+                    }
+                echo 'Executed Extended Smoke'
                 script {
                     build_status = 'Success';
                 }
@@ -51,6 +59,9 @@ pipeline {
             }
         }
         stage('Smoke Execution') {
+            when { 
+                        expression { params.Smoke_Test }
+                    }
             steps {
                 script{
                                     // Get file using input step, will put it in build directory
