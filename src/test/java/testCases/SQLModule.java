@@ -31,7 +31,7 @@ public class SQLModule {
   
   @Test(groups = { "Test","SQL"})
   public void Test_Case_3() {
-	  System.out.println("Executing SQL_Test_Case_3 from SQL Group");
+	  System.out.println("Executing SQL_Test_Case_3 from SQL Group ");
 	     
   }
   
